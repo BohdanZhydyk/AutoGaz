@@ -1,0 +1,27 @@
+
+.hello {
+  width:100%;
+
+  .header {
+    color:#555;
+    font-weight:bold;
+
+  }
+  .helloParagraph {
+    width:100%;
+
+    p {
+      width:80%;
+      text-indent:2vw;
+      text-align:justify;
+    }
+  }
+
+  .helloImg {
+    width:100%;
+
+    img {
+      width:20%;
+    }
+  }
+}

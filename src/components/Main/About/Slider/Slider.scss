@@ -1,0 +1,23 @@
+
+.slider {
+  min-height:40vh;
+  color:#fff;
+  background-color:#126;
+
+  .sliderDirBtn {
+    width:5%;
+
+    span {
+      width:2vw;
+      height:2vw;
+      margin:0.5vw;
+      background-color:#105;
+      border-radius:50%;
+    }
+
+  }
+
+  .sliderContent {
+    width:90%;
+  }
+}

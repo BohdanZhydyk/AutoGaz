@@ -1,0 +1,33 @@
+header {
+  position:fixed;
+  top:0;
+  width:100%;
+  height:6vw;
+  background-color:#fff;
+  border-top:0.5vw solid #126;
+
+  .logo {
+    width:20%;
+
+    img {width:80%;}
+  }
+
+  .navMenu {
+    width:80%;
+
+    .menuBtn {
+      width:10%;
+      margin:0.5vw;
+      padding:0.5vw;
+      color:#555;
+      font-weight:bold;
+      border:1px solid #126;
+      border-radius:0.5vw;
+
+      &:hover {
+        color:#eee;
+        background-color:#126;
+      }
+    }
+  }
+}
