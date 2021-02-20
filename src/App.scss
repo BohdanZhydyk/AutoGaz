@@ -1,0 +1,17 @@
+body {
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100%;
+  font-size:1vw;
+  color:#000;
+  background-color:#fff;
+}
+
+.flex 		{display:flex; justify-content:center; align-items:center;}
+.wrap 		{flex-wrap:wrap;}
+.stretch 	{align-items:stretch;}
+.column		{flex-direction:column;}
+.start		{justify-content:flex-start;}
+.end			{justify-content:flex-end;}
+.between	{justify-content:space-between;}
