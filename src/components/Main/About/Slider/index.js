@@ -8,9 +8,13 @@ import { SliderContent } from './SliderContent'
 const Slider = ({slider})=>{
   return(
     <div className="slider flex">
+
       <SliderDirBtn dir={`<`} />
+
       <SliderContent />
+
       <SliderDirBtn dir={`>`} />
+      
     </div>
   )
 }

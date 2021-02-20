@@ -4,8 +4,8 @@ import './Footer.scss'
 
 const Footer = ({footer})=>{
   return(
-    <footer>
-      FOOTER
+    <footer className="flex">
+      <span style={{color:'red'}}>Tutaj bede FOOTER...</span>
     </footer>
   )
 }
