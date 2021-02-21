@@ -1,8 +1,24 @@
 
 footer {
-  padding:3vw 0;
-  font-size:2vw;
-  background-color:#999;
-  border-top:5px solid #126;
-  border-bottom:5px solid #126;
+  margin:3vw 0;
+  min-height:10vw;
+  width:80%;
+  padding:1vw 10%;
+  color:#fff;
+  background-color:#126;
+
+  .information {
+    width:30%;
+
+    .infoLine {
+      display:block;
+      margin:0.5vw 0;
+      color:#fff;
+      text-decoration:none;
+    }
+  }
+
+  .opened {
+    width:20%;
+  }
 }
