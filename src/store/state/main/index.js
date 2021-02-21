@@ -9,4 +9,14 @@ import { partners } from './partners'
 import { service } from './service'
 
 
-export const main = {slider, about, offer, install, klima, credit, gallery, partners, service}
+export const main = {
+  slider,
+  about,
+  offer,
+  install,
+  klima,
+  credit,
+  gallery,
+  partners,
+  service
+}

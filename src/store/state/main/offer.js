@@ -1,20 +1,15 @@
 
-export const offer = {
-  header: {
-    txt: "Oferta",
-    content: [
-      {
-        tag:"p",
-        value: {
-          txt:"Oferujemy Państwu również sprawdzenie samochodu przed zakupem pod względem mechanicznym i diagnostycznym!"
-        }
-      }
-    ]
+export const offer = [
+  {
+    tag:"h1",
+    txt:"Oferta"
   },
-  content: [
-    {
-      tag:"ul",
-      value: {
+  {
+    tag:"wrapper",
+    itemWidth:45,
+    items: [
+      {
+        tag:"ul",
         txt:"Nasza firma zajmuje się montażem",
         li: [
           "instalacji gazowych wszystkich marek do samochodów osobowych, terenowych oraz dostawczych",
@@ -22,11 +17,9 @@ export const offer = {
           "czujników parkowania",
           "auto alarmów"
         ]
-      }
-    },
-    {
-      tag:"ul",
-      value: {
+      },
+      {
+        tag:"ul",
         txt:"Serwis klimatyzacji",
         li: [
           "diagnostyka",
@@ -34,11 +27,9 @@ export const offer = {
           "naprawa układu",
           "odgrzybianie klimatyzacji ozonem"
         ]
-      }
-    },
-    {
-      tag:"ul",
-      value: {
+      },
+      {
+        tag:"ul",
         txt:"Serwis instalacji gazowych wszystkich marek",
         li: [
           "gwarancyjny i pogwarancyjny",
@@ -47,12 +38,10 @@ export const offer = {
           "kalibracja komputerowa",
           "naprawa/wymiana podzespołów gazowych"
         ]
-      }
-    },
-    {
-      tag:"ul",
-      value: {
-        txt: "Naprawy mechaniczne",
+      },
+      {
+        tag:"ul",
+        txt:"Naprawy mechaniczne",
         li: [
           "wymiana układów rozrządu",
           "naprawy silnika",
@@ -67,11 +56,9 @@ export const offer = {
           "wymiana szczęk",
           "naprawa układu wydechowego"
         ]
-      }
-    },
-    {
-      tag:"ul",
-      value: {
+      },
+      {
+        tag:"ul",
         txt: "Diagnostyka komputerowa",
         li: [
           "posiadamy profesjonalny tester diagnostyczny do pojazdów z europy, azji i USA",
@@ -82,11 +69,12 @@ export const offer = {
           "mnóstwo funkcji specjalnych w tym kodowania wtryskiwaczy, kalibracje, regeneracje filtrów cząstek stałych i wiele innych",
           "możliwość przetestowania/przesterowania większości podzespołów (pompy, wtryskiwacze, zawory, cewki, etc.)"
         ]
+      },
+      {
+        tag:"img",
+        width:30,
+        src:"https://autogaz.bzdrive.com/images/computer.png"
       }
-    },
-    {
-      tag:"img",
-      value:"https://autogaz.bzdrive.com/images/computer.png"
-    }
-  ]
-}
+    ]
+  }
+]

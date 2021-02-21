@@ -2,14 +2,14 @@ import React from 'react'
 import './Main.scss'
 
 import Slider from './Slider'
-import About from './About'
-import Offer from './Offer'
-import Install from './Install'
-import Klima from './Klima'
-import Credit from './Credit'
-import Gallery from './Gallery'
-import Partners from './Partners'
-import Service from './Service'
+import { About } from './About'
+import { Offer } from './Offer'
+import { Install } from './Install'
+import { Klima } from './Klima'
+import { Credit } from './Credit'
+import { Gallery } from './Gallery'
+import { Partners } from './Partners'
+import { Service } from './Service'
 
 
 const Main = ({main})=>{
