@@ -6,8 +6,8 @@ export const header = {
     {to:"install", txt:"Instalacje gazowe"},
     {to:'kalkulator', txt:'Oblicz korżyści'},
     {to:'klima', txt:'Klimatyzacja'},
-    {to:'raty', txt:'Raty'},
-    {to:'galeria', txt:'Galeria'},
+    {to:'credit', txt:'Raty'},
+    {to:'gallery', txt:'Galeria'},
     {to:'kontakt', txt:'Kontakt'}
   ]
 }

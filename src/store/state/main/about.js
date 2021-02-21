@@ -24,7 +24,7 @@ export const about = {
     },
     {
       tag:"img",
-      value:"http://www.autogaz-mak.pl/wp-content/uploads/ccfdba3ab1cdb21970bf.jpg"
+      value:"https://autogaz.bzdrive.com/images/warranty.png"
     },
     {
       tag:"p",

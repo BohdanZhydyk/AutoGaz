@@ -68,7 +68,7 @@ export const klima = {
     },
     {
       tag:"img",
-      value:"http://www.autogaz-mak.pl/wp-content/uploads/0c8f5f9ae6fad2395fc9.jpg"
+      value:"https://autogaz.bzdrive.com/images/klima.png"
     }
   ]
 

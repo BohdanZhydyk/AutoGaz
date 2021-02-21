@@ -86,7 +86,7 @@ export const offer = {
     },
     {
       tag:"img",
-      value:"http://www.autogaz-mak.pl/wp-content/uploads/860dbc80788dcc103c99-400x258.png"
+      value:"https://autogaz.bzdrive.com/images/computer.png"
     }
   ]
 }
