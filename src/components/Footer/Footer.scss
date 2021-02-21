@@ -1,10 +1,11 @@
+@import './../../Variables.scss';
 
 footer {
   margin:3vw 0;
   min-height:10vw;
   width:100%;
-  color:#fff;
-  background-color:#126;
+  color:$fontLight;
+  background-color:$colorDark;
 
   .information {
     width:20%;
@@ -13,7 +14,7 @@ footer {
     .infoLine {
       display:block;
       margin:0.5vw 0;
-      color:#fff;
+      color:$fontLight;
       text-decoration:none;
     }
   }
@@ -35,7 +36,7 @@ footer {
   .copyright {
     width:100%;
     padding:1vw 0;
-    color:#000;
-    background-color:#fff;
+    color:$fontDark;
+    background-color:$colorLight;
   }
 }

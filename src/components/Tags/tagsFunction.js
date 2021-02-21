@@ -145,10 +145,10 @@ const TagTable = ({value})=>{
           color = !color
           return(
             <div className="line flex" key={`TabTableLine${index}`}>
-              { line.col1 && <span className={`${color ? `lightGrey` : `darkGrey` } col  flex start`} style={{width:width1}} >{line.col1}</span> }
-              { line.col2 && <span className={`${color ? `lightGrey` : `darkGrey` } col  flex`} style={{width:width2}} >{line.col2}</span> }
-              { line.col3 && <span className={`${color ? `lightGrey` : `darkGrey` } col  flex`} style={{width:width3}} >{line.col3}</span> }
-              { line.col4 && <span className={`${color ? `lightGrey` : `darkGrey` } col  flex`} style={{width:width4}} >{line.col4}</span> }
+              { line.col1 && <span className={`${color ? `colorOne` : `colorTwo` } col  flex start`} style={{width:width1}} >{line.col1}</span> }
+              { line.col2 && <span className={`${color ? `colorOne` : `colorTwo` } col  flex`} style={{width:width2}} >{line.col2}</span> }
+              { line.col3 && <span className={`${color ? `colorOne` : `colorTwo` } col  flex`} style={{width:width3}} >{line.col3}</span> }
+              { line.col4 && <span className={`${color ? `colorOne` : `colorTwo` } col  flex`} style={{width:width4}} >{line.col4}</span> }
             </div>
           )
         }
