@@ -1,46 +1,17 @@
 import React from 'react'
-import './Install.scss'
 
-import { Theme } from './Theme'
-import { Table } from './Table'
-import { Tags } from './Tags'
+import { TagHeader } from './../Tags/TagHeader'
+import { tagsFunction } from './../Tags/tagsFunction'
 
 
 const Install = ({install})=>{
   return(
-    <div className="install">
+    <div className="navContent lightStyle">
 
-      <h1 className="header flex">{install.header}</h1>
+      <TagHeader header={install.header} />
 
       {
-        install.content.map( (item, index)=>{
-          return(
-            <div className="content flex wrap">
-
-              <Theme theme={item.theme} />
-
-              <div className="information flex">
-
-                {
-                  item.table
-                  ?
-                  <>
-                    <div className="leftInfo">
-                      <Table table={item.table} />
-                    </div>
-                    <div className="rightInfo">
-                      <Tags tags={item.section.tags} />
-                    </div>
-                  </>
-                  :
-                  <Tags tags={item.section.tags} />
-                }
-
-              </div>
-
-            </div>
-          )
-        })
+        install.content.map( (item, index)=>{ return tagsFunction(item, index, "install") })
       }
 
     </div>

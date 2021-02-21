@@ -1,12 +1,12 @@
 import React from 'react'
 
 
-export const Theme = ({theme})=>{
+export const TagTheme = ({value})=>{
   return(
-    <h2 className="theme">
+    <h2 className="tagTheme">
       <div className="blueLine"></div>
       <div className="text flex">
-        <span>{theme}</span>
+        <span>{value.txt}</span>
       </div>
     </h2>
   )

@@ -1,16 +1,18 @@
 import React from 'react'
-import './About.scss'
 
-import Slider from './Slider'
-import Hello from './Hello'
+import { TagHeader } from './../Tags/TagHeader'
+import { tagsFunction } from './../Tags/tagsFunction'
+
 
 const About = ({about})=>{
   return(
-    <div className="about">
+    <div className="navContent lightStyle">
 
-      <Slider slider={about.slider} />
+      <TagHeader header={about.header} />
 
-      <Hello hello={about.hello} />
+      {
+        about.content.map( (item, index)=>{ return tagsFunction(item, index, "about") })
+      }
       
     </div>
   )

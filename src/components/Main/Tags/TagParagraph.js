@@ -1,9 +1,9 @@
 import React from 'react'
 
 
-export const TagP = ({value})=>{
+export const TagParagraph = ({value})=>{
   return(
-    <p>
+    <p className="tagParagraph">
       <span>{value.txt}</span>
       {
         value.a &&

@@ -1,4 +1,21 @@
 
 main {
   width:100%;
+  margin:6.5vw 0 0 0;
+
+  .navContent {
+    width:90%;
+    padding:1vw 5%;
+  }
+
+  .lightStyle {
+    color:#000;
+    background-color:#fff;
+  }
+
+  .darkStyle {
+    color:#fff;
+    background-color:#126;
+  }
+
 }

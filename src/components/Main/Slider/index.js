@@ -7,7 +7,7 @@ import { SliderContent } from './SliderContent'
 
 const Slider = ({slider})=>{
   return(
-    <div className="slider flex">
+    <div className="navContent slider darkStyle flex">
 
       <SliderDirBtn dir={`<`} />
 

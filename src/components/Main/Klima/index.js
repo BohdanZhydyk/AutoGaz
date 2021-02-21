@@ -4,18 +4,18 @@ import { TagHeader } from './../Tags/TagHeader'
 import { tagsFunction } from './../Tags/tagsFunction'
 
 
-const Offer = ({offer})=>{
+const Klima = ({klima})=>{
   return(
     <div className="navContent darkStyle">
-
-      <TagHeader header={offer.header} />
+      
+      <TagHeader header={klima.header} />
 
       {
-        offer.content.map( (item, index)=>{ return tagsFunction(item, index, "offer") })
+        klima.content.map( (item, index)=>{ return tagsFunction(item, index, "klima") })
       }
 
     </div>
   )
 }
 
-export default Offer
+export default Klima
