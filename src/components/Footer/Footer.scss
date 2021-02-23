@@ -39,4 +39,25 @@ footer {
     color:$fontDark;
     background-color:$colorLight;
   }
+
+  .cookie {
+    position:fixed;
+    bottom:0;
+    width:100%;
+    padding:0.5vw 0;
+    color:$fontLight;
+    background-color:$colorDark;
+    border-top:$borderLight;
+
+    a {
+      margin:0 0.5vw;
+      color:$fontLight;
+    }
+
+    .okBtn {
+      padding:0.5vw 1.5vw;
+      background-color:#191;
+      border-radius:$borderRadius;
+    }
+  }
 }

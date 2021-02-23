@@ -16,23 +16,23 @@ const Main = ({main})=>{
   return(
     <main>
 
-      <Slider about={main.slider}/>
+      <Slider object={main.slider}/>
 
-      <About about={main.about}/>
+      <About data={main.about}/>
 
-      <Offer offer={main.offer}/>
+      <Offer data={main.offer}/>
 
-      <Install install={main.install} />
+      <Install data={main.install} />
 
-      <Klima klima={main.klima} />
+      <Klima data={main.klima} />
 
-      <Credit credit={main.credit} />
+      <Credit data={main.credit} />
 
-      <Gallery gallery={main.gallery} />
+      <Gallery data={main.gallery} />
 
-      <Partners partners={main.partners} />
+      <Partners data={main.partners} />
 
-      <Service service={main.service} />
+      <Service data={main.service} />
       
     </main>
   )

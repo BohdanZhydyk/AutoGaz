@@ -3,10 +3,10 @@ import React from 'react'
 import { tagsFunction } from './../Tags/tagsFunction'
 
 
-export const Credit = ({credit})=>{
+export const Credit = ({data})=>{
   return(
-    <div className="navContent lightStyle">
-    { credit.map( (item, index)=>{ return tagsFunction(item, index, "credit") }) }
+    <div className={`navContent navContent-${data.theme}`} >
+    { data.object.map( (item, index)=>{ return tagsFunction(item, index, data.theme, data.name) }) }
     </div>
   )
 }

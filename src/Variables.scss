@@ -1,13 +1,18 @@
 
-$colorDark:#0B1F4A;
-$colorLight:#fff;
-
-$fontDark:#000;
-$fontLight:#fff;
-$fontLightGray:#ddd;
-$fontDarktGray:#555;
-
 $fontSize:1vw;
 
+$red:#f00;
+$grn:#171;
+
+$colorDark:#242424;
+$colorLight:#f2b841;
+
+$fontDark:#333;
+$fontLight:#ccc;
+
 $borderRadius:0.5vw;
+$borderLight:1px solid $colorLight;
 $borderDark:1px solid $colorDark;
+
+$gradientLight:#f2b841,#24242444, #f2b841;
+$gradientDark:#242424,#f2b84144, #242424;

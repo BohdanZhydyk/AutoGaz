@@ -28,11 +28,11 @@ const Information = ({info})=>{
         return(
           line.href
           ?
-          <a className="infoLine" href={line.href} target="_blank" rel="noreferrer">
+          <a className="infoLine" href={line.href} target="_blank" rel="noreferrer" key={`footerInfo${index}`}>
             {line.name}
           </a>
           :
-          <div className="infoLine">{line.name}</div>
+          <div className="infoLine" key={`footerInfo${index}`}>{line.name}</div>
         )
       })
     }
@@ -43,7 +43,7 @@ const Information = ({info})=>{
 const Photos = ({photos})=>{
   return(
     <div className="photos flex wrap">
-    { photos.map( (photo, index)=> <img src={photo} alt="photos" /> ) }
+    { photos.map( (photo, index)=> <img src={photo} alt="photos" key={`footerPhotos${index}`} /> ) }
     </div>
   )
 }
@@ -55,7 +55,7 @@ const Opened = ({opened})=>{
       {
         opened.lines.map( (line, index)=>{
           return(
-            <div className="flex between">
+            <div className="flex between" key={`footerOpened${index}`}>
               <span>{line.day}</span>
               <span>{line.hours}</span>
             </div>
@@ -76,19 +76,10 @@ const Copyright = ({txt})=>{
 
 const Cookie = ({cookie})=>{
   return(
-    <div className="cookie flex"
-        style={{
-          position:"fixed",
-          bottom:"0",
-          width:"100%",
-          padding:"0.5vw 0",
-          color:"#fff",
-          backgroundColor:"#126"
-        }}
-    >
+    <div className="cookie flex" >
       <span>Strona korzysta z plików cookies</span>
       <a href="http://www.autogaz-mak.pl/polityka-cookies">Więcej informacji</a>
-      <span>OK</span>
+      <span className="okBtn">OK</span>
     </div>
   )
 }

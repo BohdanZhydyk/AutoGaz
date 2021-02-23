@@ -1,7 +1,22 @@
+@import './../../Variables.scss';
 
-.tagH1 {
+.tagTitle {
+  width:100%;
+  margin:2vw 0;
   font-size:300%;
   font-weight:bold;
+
+  &-light {
+    border-top:$borderDark;
+    border-bottom:$borderDark;
+    background-image:linear-gradient( 90deg, $gradientLight );
+  }
+
+  &-dark {
+    border-top:$borderLight;
+    border-bottom:$borderLight;
+    background-image:linear-gradient( 90deg, $gradientDark );
+  }
 }
 
 .tagP {
@@ -10,11 +25,11 @@
   text-align:justify;
 
   a {
-    color:#191;
+    color:$grn;
     font-weight:bold;
     margin:0 0.5rem;
 
-    &:hover {color:#f00;}
+    &:hover {color:$red}
   }
 }
 
@@ -43,25 +58,48 @@
   position:relative;
   width:100%;
   margin:4vw 0 1vw 0;
-
+  
   .line {
     position:relative;
-    min-height:6px;
-    border-radius:3px;
+    min-height:0.3vw;
+    border-radius:0.1vw;
+
+    &-light {
+      background-color:$colorDark;
+    }
+    &-dark {
+      background-color:$colorLight;
+    }
   }
 
   .text {
     position:relative;
-    top:-1vw;
+    top:-1.5vw;
 
-    span {
-      padding:0 2vw;
+    &-light {
+      span {
+        background-color:$colorLight;
+        padding:0.5vw 2vw;
+        border:$borderDark;
+        border-radius:$borderRadius;
+      }
+    }
+
+    &-dark {
+      span {
+        background-color:$colorDark;
+        padding:0.5vw 2vw;
+        border:$borderLight;
+        border-radius:$borderRadius;
+      }
     }
   }
 }
 
 .TagIframe {
   width:100%;
+  opacity:0.7;
+  border-radius:$borderRadius;
 }
 
 .tagTable {
@@ -73,24 +111,37 @@
       margin:1px;
       padding:0.5vw;
       font-weight:bold;
-      border-radius:0.5vw;
+      border-radius:$borderRadius;
+
+      &-light {
+        color:$fontLight;
+        background-color:$colorDark;
+      }
+
+      &-dark {
+        color:$fontDark;
+        background-color:$colorLight;
+      }
     }
   }
 
   .line {
 
+    .colorOne {
+      &-light {background-color:#5555;}
+      &-dark {background-color:#5555;}
+    }
+  
+    .colorTwo {
+      &-light {background-color:#5552;}
+      &-dark {background-color:#5552;}
+    }
+
     .col {
       margin:1px;
       padding:0.5vw;
-      border-radius:0.5vw;
+      border-radius:$borderRadius;
     }
-  }
-  
-  .colorOne {
-    background-color:#eee5;
-  }
-  .colorTwo {
-    background-color:#ddd9;
   }
 }
 

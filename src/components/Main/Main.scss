@@ -2,66 +2,21 @@
 
 main {
   width:100%;
-  margin:6.5vw 0 0 0;
-
-  .lightStyle {
-    color:$fontDark;
-    background-color:$colorLight;
-
-    .tagH1 {color:$fontDarktGray;}
-
-    .tagTheme {
-      .line {background-color:$colorDark;}
-      .text {
-        span {
-          color:$fontDarktGray;
-          background-color:$colorLight;
-        }
-      }
-    }
-
-    .tagTable {
-      .title {
-        .col {
-          color:$fontLight;
-          background-color:$colorDark;
-        }
-      }
-    }
-  }
-
-  .darkStyle {
-    color:$fontLight;
-    background-color:$colorDark;
-
-    .tagH1 {
-      color:$fontLightGray;
-    }
-
-    .tagTheme {
-      .line {background-color:$colorLight;}
-      .text {
-        span {
-          color:$fontLightGray;
-          background-color:$colorDark;
-        }
-      }
-    }
-
-    .tagTable {
-      .title {
-        .col {
-          color:$fontDark;
-          background-color:$colorLight;
-        }
-      }
-    }
-  }
 
   .navContent {
     width:90%;
     min-height:80vh;
     padding:1vw 5%;
+
+    &-light {
+      color:$fontDark;
+      background-color:$colorLight;
+    }
+
+    &-dark {
+      color:$fontLight;
+      background-color:$colorDark;
+    }
   }
 
 }

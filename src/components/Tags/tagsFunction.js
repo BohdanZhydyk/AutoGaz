@@ -1,31 +1,43 @@
 import './Tags.scss'
 
 
-export const tagsFunction = (item, index, name)=>{
+export const tagsFunction = (item, index, theme, name)=>{
+
+  const obj = {item:item, index:index, theme:theme}
+  const key = name + index
+
   switch(item.tag){
     case "h1":
-      return <TagH1 value={item} key={`${name}TagHeader1${index}`}/>
+      return <TagTitle obj={obj} key={`TagTitle${key}`}/>
     case "p":
-      return <TagP value={item} key={`${name}Paragraph${index}`}/>
+      return <TagP obj={obj} key={`Paragraph${key}`}/>
     case "img":
-      return <TagImg value={item} key={`${name}Img${index}`}/>
+      return <TagImg obj={obj} key={`Image${key}`}/>
     case "ul":
-      return <TagUl value={item} key={`${name}Ul${index}`}/>
+      return <TagUl obj={obj} key={`Ul${key}`}/>
     case "theme":
-      return <TagTheme value={item} key={`${name}Theme${index}`} />
+      return <TagTheme obj={obj} key={`Theme${key}`} />
     case "iframe":
-      return <TagIframe value={item} key={`${name}Iframe${index}`} />
+      return <TagIframe obj={obj} key={`Iframe${key}`} />
     case "table":
-      return <TagTable value={item} key={`${name}Table${index}`}/>
+      return <TagTable obj={obj} key={`Table${key}`}/>
     case "wrapper":
-      return <TagWrapper value={item} key={`${name}Wrapper${index}`}/>
+      return <TagWrapper obj={obj} key={`Wrapper${key}`}/>
     default: return <></>
   }
 }
 
-const TagH1 = ({value})=>{
+const TagTitle = ({ obj:{item, index, theme} })=>{
+
+  const link = `https://autogaz.bzdrive.com/images/logo/`
+  const int = Math.floor(Math.random() * Math.floor(3))
+
   return(
-    <h1 className="tagH1 flex">{value.txt}</h1>
+    <div className={`tagTitle tagTitle-${theme} flex between`}>
+      <img src={`${link}lineLogo-${`L`}-${theme}-${int}.png`} alt="scrLeft" />
+      <span className="flex">{item.txt}</span>
+      <img src={`${link}lineLogo-${`R`}-${theme}-${int}.png`} alt="scrRight" />
+    </div>
   )
   // {
   //   tag:"h1",
@@ -33,11 +45,11 @@ const TagH1 = ({value})=>{
   // }
 }
 
-const TagP = ({value})=>{
+const TagP = ({ obj:{item, index, theme} })=>{
   return(
-    <p className="tagP">
-      {value.txt}
-      { value.a && <a href={value.href}>{` ${value.a}`}</a> }
+    <p className={`tagP tagP-${theme}`}>
+      {item.txt}
+      { item.a && <a href={item.href}>{` ${item.a}`}</a> }
     </p>
   )
   // {
@@ -48,10 +60,10 @@ const TagP = ({value})=>{
   // }
 }
 
-const TagImg = ({value})=>{
+const TagImg = ({ obj:{item, index, theme} })=>{
   return(
-    <div className="tagImg flex">
-      <img style={{width:value.width+"vw"}} src={value.src} alt="tagImg" />
+    <div className={`tagImg flex`}>
+      <img style={{width:item.width+"vw"}} src={item.src} alt="tagImg" />
     </div>
   )
   // {
@@ -61,11 +73,11 @@ const TagImg = ({value})=>{
   // }
 }
 
-const TagUl = ({value})=>{
+const TagUl = ({ obj:{item, index, theme} })=>{
   return(
-    <div className="tagUl">
-      <p className="ul">{value.txt}</p>
-      { value.li.map( (line, index)=> <p className="li">{`- ${line};`}</p> ) }
+    <div className={`tagUl`}>
+      <p className="ul">{item.txt}</p>
+      { item.li.map( (line, nr)=> <p className="li" key={index+nr+theme}>{`- ${line};`}</p> ) }
     </div>
   )
   // {
@@ -75,12 +87,12 @@ const TagUl = ({value})=>{
   // },
 }
 
-const TagTheme = ({value})=>{
+const TagTheme = ({ obj:{item, index, theme} })=>{
   return(
-    <h2 className="tagTheme">
-      <div className="line"></div>
-      <div className="text flex">
-        <span>{value.txt}</span>
+    <h2 className={`tagTheme`}>
+      <div className={`line line-${theme}`}></div>
+      <div className={`text text-${theme} flex`}>
+        <span className={`span span-${theme} flex`}>{item.txt}</span>
       </div>
     </h2>
   )
@@ -90,15 +102,15 @@ const TagTheme = ({value})=>{
   // }
 }
 
-const TagIframe = ({value})=>{
+const TagIframe = ({ obj:{item, index, theme} })=>{
   return(
     <div className="TagIframe flex">
       <iframe
-        title={value.title}
-        style={value.style}
-        allowFullScreen={value.allowfullscreen}
-        loading={value.loading}
-        src={value.src}
+        title={item.title}
+        style={item.style}
+        allowFullScreen={item.allowfullscreen}
+        loading={item.loading}
+        src={item.src}
       >
       </iframe>
     </div>
@@ -115,15 +127,15 @@ const TagIframe = ({value})=>{
   // }
 }
 
-const TagTable = ({value})=>{
+const TagTable = ({ obj:{item, index, theme} })=>{
 
   let width1, width2, width3, width4
-  let color = true
+  let color = false
 
   return(
     <div className="tagTable">
     {
-      value.lines.map( (line, index)=>{
+      item.lines.map( (line, index)=>{
         
         if(index === 0){
 
@@ -134,10 +146,10 @@ const TagTable = ({value})=>{
 
           return(
             <div className="title flex" key={`TabTableLine${index}`}>
-              { line.col1 && <span className="col flex" style={{width:width1}} >{line.col1.txt.toUpperCase()}</span> }
-              { line.col2 && <span className="col flex" style={{width:width2}} >{line.col2.txt.toUpperCase()}</span> }
-              { line.col3 && <span className="col flex" style={{width:width3}} >{line.col3.txt.toUpperCase()}</span> }
-              { line.col4 && <span className="col flex" style={{width:width4}} >{line.col4.txt.toUpperCase()}</span> }
+              { line.col1 && <span className={`col col-${theme} flex`} style={{width:width1}} >{line.col1.txt.toUpperCase()}</span> }
+              { line.col2 && <span className={`col col-${theme} flex`} style={{width:width2}} >{line.col2.txt.toUpperCase()}</span> }
+              { line.col3 && <span className={`col col-${theme} flex`} style={{width:width3}} >{line.col3.txt.toUpperCase()}</span> }
+              { line.col4 && <span className={`col col-${theme} flex`} style={{width:width4}} >{line.col4.txt.toUpperCase()}</span> }
             </div>
           )
         }
@@ -145,10 +157,42 @@ const TagTable = ({value})=>{
           color = !color
           return(
             <div className="line flex" key={`TabTableLine${index}`}>
-              { line.col1 && <span className={`${color ? `colorOne` : `colorTwo` } col  flex start`} style={{width:width1}} >{line.col1}</span> }
-              { line.col2 && <span className={`${color ? `colorOne` : `colorTwo` } col  flex`} style={{width:width2}} >{line.col2}</span> }
-              { line.col3 && <span className={`${color ? `colorOne` : `colorTwo` } col  flex`} style={{width:width3}} >{line.col3}</span> }
-              { line.col4 && <span className={`${color ? `colorOne` : `colorTwo` } col  flex`} style={{width:width4}} >{line.col4}</span> }
+              {
+                line.col1 &&
+                <span
+                  className={`${ color ? `colorOne-${theme}` : `colorTwo-${theme}` } col flex start`}
+                  style={{width:width1}}
+                >
+                  <span>{line.col1}</span>
+                </span>
+              }
+              {
+                line.col2 &&
+                <span 
+                  className={`${color ? `colorOne colorOne-${theme}` : `colorTwo colorTwo-${theme}` } col col-${theme}  flex`}
+                  style={{width:width2}}
+                >
+                  {line.col2}
+                </span>
+              }
+              {
+                line.col3 &&
+                <span 
+                  className={`${color ? `colorOne colorOne-${theme}` : `colorTwo colorTwo-${theme}` } col col-${theme}  flex`}
+                  style={{width:width3}}
+                >
+                  {line.col3}
+                </span>
+              }
+              {
+                line.col4 &&
+                <span 
+                  className={`${color ? `colorOne colorOne-${theme}` : `colorTwo colorTwo-${theme}` } col col-${theme}  flex`}
+                  style={{width:width4}}
+                >
+                  {line.col4}
+                </span>
+              }
             </div>
           )
         }
@@ -167,14 +211,18 @@ const TagTable = ({value})=>{
   // }
 }
 
-const TagWrapper = ({value})=>{
+const TagWrapper = ({ obj:{item, index, theme} })=>{
   return(
     <div className="tagWrapper flex wrap stretch">
     {
-      value.items.map( (item, index)=>{
+      item.items.map( (element, nr)=>{
         return(
-          <div className="wrapperItem flex" style={{width:value.itemWidth+"%"}}>
-          { tagsFunction(item, index, "partners") }
+          <div
+            className="wrapperItem flex"
+            style={{width:item.itemWidth+"%"}}
+            key={`subtagwrapper${index+nr+item.itemWidth}`}
+          >
+          { tagsFunction(element, nr, theme, `wrapper${element.tag}`) }
           </div>
         )
       })
