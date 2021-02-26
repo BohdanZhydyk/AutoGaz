@@ -1,7 +1,6 @@
 
-export const partners = {
-  name:"partners",
-  theme: "dark",
+export const skp1 = {
+  name:"skp1",
   object: [
     {
       tag:"h1",

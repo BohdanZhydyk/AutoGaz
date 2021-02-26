@@ -1,7 +1,6 @@
 
-export const credit = {
-  name:"credit",
-  theme: "light",
+export const gas_installments = {
+  name:"gas_installments",
   object: [
     {
       tag:"h1",

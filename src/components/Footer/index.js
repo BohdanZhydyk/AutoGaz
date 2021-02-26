@@ -8,8 +8,6 @@ const Footer = ({footer})=>{
 
       <Information info={footer.info} />
 
-      <Photos photos={footer.photos} />
-
       <Opened opened={footer.opened} />
 
       <Copyright txt={footer.info[0].name} />
@@ -36,14 +34,6 @@ const Information = ({info})=>{
         )
       })
     }
-    </div>
-  )
-}
-
-const Photos = ({photos})=>{
-  return(
-    <div className="photos flex wrap">
-    { photos.map( (photo, index)=> <img src={photo} alt="photos" key={`footerPhotos${index}`} /> ) }
     </div>
   )
 }

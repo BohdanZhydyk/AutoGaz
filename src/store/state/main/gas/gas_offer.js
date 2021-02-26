@@ -1,8 +1,59 @@
 
-export const install = {
-  name:"install",
-  theme: "light",
+export const gas_offer = {
+  name:"gas_offer",
   object: [
+    {
+      tag:"h1",
+      txt:"Oferta"
+    },
+    {
+      tag:"wrapper",
+      itemWidth:45,
+      items: [
+        {
+          tag:"ul",
+          txt:"Nasza firma zajmuje się montażem i serwisem instalacji gazowych wszystkich marek do samochodów osobowych, terenowych oraz dostawczych",
+          li: [
+            "gwarancyjny i pogwarancyjny",
+            "wymiana filtrów",
+            "sprawdzanie szczelności",
+            "kalibracja komputerowa",
+            "naprawa/wymiana podzespołów gazowych"
+          ]
+        }
+      ]
+    },
+    {
+      tag:"wrapper",
+      itemWidth:15,
+      items: [
+        {
+          tag:"img",
+          width:10,
+          src:"https://autogaz.bzdrive.com/images/service/stag.png"
+        },
+        {
+          tag:"img",
+          width:10,
+          src:"https://autogaz.bzdrive.com/images/service/ag.png"
+        },
+        {
+          tag:"img",
+          width:10,
+          src:"https://autogaz.bzdrive.com/images/service/landirenzo.png"
+        },
+        {
+          tag:"img",
+          width:10,
+          src:"https://autogaz.bzdrive.com/images/service/brc.png"
+        },
+        {
+          tag:"img",
+          width:10,
+          src:"https://autogaz.bzdrive.com/images/service/kme.png"
+        }
+      ]
+    },
     {
       tag:"h1",
       txt:"Instalacje gazowe LPG"
@@ -105,18 +156,6 @@ export const install = {
       txt:"Szczegółowe informacje znajdą Państwo na stronie producenta",
       a:"STAG – www.ac.com.pl",
       href:"https://www.ac.com.pl/"
-    },
-    {
-      tag:"theme",
-      txt:"Oblicz korzyści z instalacji gazowej"
-    },
-    {
-      tag:"iframe",
-      title:"iframe-gazeo",
-      style:{border:"0", width:"700px", minHeight:"20vw"},
-      allowfullscreen:"",
-      loading:"lazy",
-      src:"http://gazeo.pl/ajax/widget_preview.php?theme=new2&amp;type=pb&amp;width=800&amp;color1=2&amp;color2=6&amp;color3=7&amp;lang=pl&amp;nomove=1"
     }
   ]
 }

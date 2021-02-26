@@ -1,39 +1,32 @@
 import React from 'react'
+import { Switch, Route } from 'react-router-dom'
 import './Main.scss'
 
-import Slider from './Slider'
-import { About } from './About'
-import { Offer } from './Offer'
-import { Install } from './Install'
-import { Klima } from './Klima'
-import { Gallery } from './Gallery'
-import { Credit } from './Credit'
-import { Partners } from './Partners'
-import { Service } from './Service'
+
+import { TagsFunction } from './../Tags/TagsFunction'
+
 
 
 const Main = ({main})=>{
   return(
     <main>
 
-      <Slider object={main.slider}/>
+    <Switch>
 
-      <About data={main.about}/>
+      <Route exact path="/" component={ ()=> <TagsFunction object={main.services} /> } />
 
-      <Offer data={main.offer}/>
+      <Route exact path="/bmw" component={ ()=> <TagsFunction object={main.bmw} /> } />
 
-      <Install data={main.install} />
+      <Route exact path="/gas" component={ ()=> <TagsFunction object={main.gas} /> } />
 
-      <Klima data={main.klima} />
+      <Route exact path="/skp" component={ ()=> <TagsFunction object={main.skp} /> } />
 
-      <Gallery data={main.gallery} />
+      <Route exact path="/gallery" component={ ()=> <TagsFunction object={main.gallery} /> } />
 
-      <Credit data={main.credit} />
+      <Route exact path="/contacts" component={ ()=> <TagsFunction object={main.contacts} /> } />
 
-      <Partners data={main.partners} />
+    </Switch>
 
-      <Service data={main.service} />
-      
     </main>
   )
 }

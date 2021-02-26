@@ -1,11 +1,10 @@
 
-export const gallery = {
-  name:"gallery",
-  theme: "light",
+export const gallery_slider = {
+  name:"gallery_slider",
   object: [
     {
       tag:"h1",
-      txt:"Galeria"
+      txt:"Galeria Slajder"
     },
     {
       tag:"wrapper",

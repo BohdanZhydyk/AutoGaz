@@ -1,22 +1,16 @@
-import { slider } from './slider'
-import { about } from './about'
-import { offer } from './offer'
-import { install } from './install'
-import { klima } from './klima'
-import { gallery } from './gallery'
-import { credit } from './credit'
-import { partners } from './partners'
-import { service } from './service'
+import services from './services'
+import bmw from './bmw'
+import gas from './gas'
+import skp from './skp'
+import gallery from './gallery'
+import contacts from './contacts'
 
 
 export const main = {
-  slider,
-  about,
-  offer,
-  install,
-  klima,
+  services,
+  bmw,
+  gas,
+  skp,
   gallery,
-  credit,
-  partners,
-  service
+  contacts
 }

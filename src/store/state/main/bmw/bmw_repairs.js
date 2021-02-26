@@ -1,8 +1,29 @@
 
-export const about = {
-  name:"about",
-  theme: "light",
+export const bmw_repairs = {
+  name:"bmw_repairs",
   object: [
+    {
+      tag:"h1",
+      txt:"Naprawy mechaniczne"
+    },
+    {
+      tag:"ul",
+      txt:"Naprawy mechaniczne",
+      li: [
+        "wymiana układów rozrządu",
+        "naprawy silnika",
+        "wymiana sprzęgieł",
+        "wymiana elementów sterowania",
+        "wymiana amortyzatorów",
+        "wymiana wahaczy",
+        "wymiana łożysk i piast",
+        "naprawa układu kierowniczego",
+        "wymiana klocków hamulcowych",
+        "wymiana tarcz hamulcowych",
+        "wymiana szczęk",
+        "naprawa układu wydechowego"
+      ]
+    },
     {
       tag:"h1",
       txt:"Szanowni Państwo"

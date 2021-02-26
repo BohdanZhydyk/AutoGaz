@@ -23,12 +23,6 @@ export const footer = {
       name:"REGON: 221040801"
     }
   ],
-  photos: [
-    "https://autogaz.bzdrive.com/images/footer/001.jpg",
-    "https://autogaz.bzdrive.com/images/footer/002.jpg",
-    "https://autogaz.bzdrive.com/images/footer/003.jpg",
-    "https://autogaz.bzdrive.com/images/footer/004.jpg"
-  ],
   opened: {
     txt:"Godziny otwarcia",
     lines: [

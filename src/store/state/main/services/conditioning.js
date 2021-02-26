@@ -1,7 +1,6 @@
 
-export const klima = {
-  name:"klima",
-  theme: "dark",
+export const conditioning = {
+  name:"conditioning",
   object: [
     {
       tag:"h1",
@@ -45,6 +44,16 @@ export const klima = {
           li: [
             "osuszenie układu",
             "wprowadzenie czynnika UV umożliwiającego lokalizację nieszczelności"
+          ]
+        },
+        {
+          tag:"ul",
+          txt:"Serwis klimatyzacji",
+          li: [
+            "diagnostyka",
+            "napełnianie czynnikiem R-134a",
+            "naprawa układu",
+            "odgrzybianie klimatyzacji ozonem"
           ]
         }
       ]
