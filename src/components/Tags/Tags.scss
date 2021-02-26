@@ -9,13 +9,13 @@
   &-light {
     border-top:$borderDark;
     border-bottom:$borderDark;
-    background-image:linear-gradient( 90deg, $gradientLight );
+    // background-image:linear-gradient( 90deg, $gradientLight );
   }
 
   &-dark {
     border-top:$borderLight;
     border-bottom:$borderLight;
-    background-image:linear-gradient( 90deg, $gradientDark );
+    // background-image:linear-gradient( 90deg, $gradientDark );
   }
 }
 

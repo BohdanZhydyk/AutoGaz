@@ -6,8 +6,8 @@ import { About } from './About'
 import { Offer } from './Offer'
 import { Install } from './Install'
 import { Klima } from './Klima'
-import { Credit } from './Credit'
 import { Gallery } from './Gallery'
+import { Credit } from './Credit'
 import { Partners } from './Partners'
 import { Service } from './Service'
 
@@ -26,9 +26,9 @@ const Main = ({main})=>{
 
       <Klima data={main.klima} />
 
-      <Credit data={main.credit} />
-
       <Gallery data={main.gallery} />
+
+      <Credit data={main.credit} />
 
       <Partners data={main.partners} />
 

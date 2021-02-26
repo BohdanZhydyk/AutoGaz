@@ -3,8 +3,8 @@ import { about } from './about'
 import { offer } from './offer'
 import { install } from './install'
 import { klima } from './klima'
-import { credit } from './credit'
 import { gallery } from './gallery'
+import { credit } from './credit'
 import { partners } from './partners'
 import { service } from './service'
 
@@ -15,8 +15,8 @@ export const main = {
   offer,
   install,
   klima,
-  credit,
   gallery,
+  credit,
   partners,
   service
 }

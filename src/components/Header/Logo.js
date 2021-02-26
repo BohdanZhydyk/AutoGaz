@@ -4,7 +4,8 @@ import React from 'react'
 export const Logo = ()=>{
   return(
     <a className="logo flex" href="http://www.autogaz-mak.pl">
-      <img src="https://autogaz.bzdrive.com/images/logo/lineLogo-L-light-2.png" alt="logo" />
+      <span>Logo Firmy</span>
+      <img src="https://autogaz.bzdrive.com/images/logo/lineLogo-R-light-2.png" alt="logo" />
     </a>
   )
 }

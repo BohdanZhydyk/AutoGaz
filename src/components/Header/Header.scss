@@ -4,32 +4,72 @@ header {
   position:fixed;
   top:0;
   width:100%;
-  height:6vw;
   z-index:1000;
-  background-image:linear-gradient(#242424,#f2b841ee, #24242499);
+  background-color:$colorLight;
 
   .logo {
-    width:15%;
+    width:30%;
+    text-decoration:none;
+    color:$colorDark;
 
-    img {width:80%;}
+    span {
+      font-size:250%;
+      font-weight:bold;
+    }
+
+    img {
+      width:40%;
+      margin:0.5vw;
+    }
   }
 
   .navMenu {
-    width:85%;
+    width:70%;
+
+    .menuItem {
+      width:15%;
+      margin:0.5vw 0.2vw;
+      font-size:80%;
+      font-weight:bold;
+
+      &:hover .menuBtn {
+        color:$colorLight;
+        background-color:$colorDark;
+      }
+
+      &:hover .subMenu {
+        display:block;
+      }
+    }
 
     .menuBtn {
-      width:10%;
-      margin:0.5vw 0.2vw;
       padding:0.5vw;
       color:$fontDark;
-      font-size:90%;
-      font-weight:bold;
+      text-decoration:none;
+      border:$borderDark;
+      border-radius:$borderRadius;
+    }
+
+    .subMenu {
+      display:none;
+      width:12vw;
+      margin:0 -0.5vw;
+      position:absolute;
+      background-color:$colorLight;
       border:$borderDark;
       border-radius:$borderRadius;
 
-      &:hover {
-        color:$fontLight;
-        background-color:$colorDark;
+      .subMenuBtn {
+        display:block;
+        padding:0.5vw;
+        color:$fontDark;
+        text-decoration:none;
+
+        &:hover {
+          color:$colorLight;
+          background-color:$colorDark;
+          border-radius:$borderRadius;
+        }
       }
     }
   }

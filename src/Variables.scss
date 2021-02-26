@@ -1,18 +1,18 @@
 
 $fontSize:1vw;
 
-$red:#f00;
-$grn:#171;
+$red:#ff0000;
+$grn:#117711;
 
-$colorDark:#242424;
-$colorLight:#f2b841;
+$colorDark:#112266;
+$colorLight:#ffffff;
 
-$fontDark:#333;
-$fontLight:#ccc;
+$fontDark:#333333;
+$fontLight:#cccccc;
 
 $borderRadius:0.5vw;
 $borderLight:1px solid $colorLight;
 $borderDark:1px solid $colorDark;
 
-$gradientLight:#f2b841,#24242444, #f2b841;
-$gradientDark:#242424,#f2b84144, #242424;
+// $gradientLight:$colorLight,#1264, $colorLight;
+// $gradientDark:$colorDark, $colorLight, $colorDark;

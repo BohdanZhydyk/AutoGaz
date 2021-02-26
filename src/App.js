@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { HashRouter } from 'react-router-dom'
 import './App.scss'
 
 import { header } from './store/state/header'
@@ -14,7 +15,7 @@ function App() {
   const [state, setState] = useState({header, main, footer})
 
   return (
-    <div className="App">
+    <HashRouter className="App" >
 
       <Header header={state.header} />
 
@@ -22,7 +23,7 @@ function App() {
 
       <Footer footer={state.footer} />
 
-    </div>
+    </HashRouter>
   )
 }
 

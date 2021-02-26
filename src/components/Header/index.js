@@ -8,8 +8,8 @@ import { Menu } from './Menu'
 const Header = ({header})=>{
   return(
     <header className="header flex">
-      <Logo />
       <Menu menu={header.menu}/>
+      <Logo />
     </header>
   )
 }
