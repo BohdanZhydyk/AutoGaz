@@ -48,6 +48,7 @@ footer {
     color:$fontLight;
     background-color:$colorDark;
     border-top:$borderLight;
+    z-index:1000;
 
     a {
       margin:0 0.5vw;

@@ -10,7 +10,7 @@ function SLIDER_BTN_CLICK(data, main, setMain){
 
   let id = data.id
 
-  if(data.dir === "L")   id -= 1
+  if(data.dir === "L")  id -= 1
   if(data.dir === "R")  id += 1
 
   setMain({

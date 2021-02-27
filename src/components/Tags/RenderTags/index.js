@@ -9,6 +9,7 @@ import { TagIframe } from './TagIframe'
 import { TagTable } from './TagTable'
 import { TagWrapper } from './TagWrapper'
 import { TagSlider } from './TagSlider'
+import { TagGallery } from './TagGallery'
 
 
 const RenderTags = ({item, index, theme, name, act})=>{
@@ -35,6 +36,8 @@ const RenderTags = ({item, index, theme, name, act})=>{
       return <TagWrapper obj={obj} act={act} key={`Wrapper${key}`}/>
     case "slider":
       return <TagSlider obj={obj} act={act} key={`Slider${key}`}/>
+    case "gallery":
+      return <TagGallery obj={obj} act={act} key={`Gallery${key}`}/>
     default: return <></>
   }
 }

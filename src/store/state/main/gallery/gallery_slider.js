@@ -4,67 +4,50 @@ export const gallery_slider = {
   object: [
     {
       tag:"h1",
-      txt:"Galeria Slajder"
+      txt:"Galeria"
     },
     {
-      tag:"wrapper",
-      itemWidth:30,
-      items: [
-        {
-          tag:"img",
-          width:25,
-          src:"https://autogaz.bzdrive.com/images/gallery/1-1024x683.jpg"
-        },
-        {
-          tag:"img",
-          width:25,
-          src:"https://autogaz.bzdrive.com/images/gallery/2-1024x683.jpg"
-        },
-        {
-          tag:"img",
-          width:25,
-          src:"https://autogaz.bzdrive.com/images/gallery/3-1024x683.jpg"
-        },
-        {
-          tag:"img",
-          width:25,
-          src:"https://autogaz.bzdrive.com/images/gallery/4-1024x683.jpg"
-        },
-        {
-          tag:"img",
-          width:25,
-          src:"https://autogaz.bzdrive.com/images/gallery/6-1024x683.jpg"
-        },
-        {
-          tag:"img",
-          width:25,
-          src:"https://autogaz.bzdrive.com/images/gallery/7-1024x683.jpg"
-        },
-        {
-          tag:"img",
-          width:25,
-          src:"https://autogaz.bzdrive.com/images/gallery/8-1024x683.jpg"
-        },
-        {
-          tag:"img",
-          width:25,
-          src:"https://autogaz.bzdrive.com/images/gallery/9-1024x683.jpg"
-        },
-        {
-          tag:"img",
-          width:25,
-          src:"https://autogaz.bzdrive.com/images/gallery/10-1024x683.jpg"
-        },
-        {
-          tag:"img",
-          width:25,
-          src:"https://autogaz.bzdrive.com/images/gallery/11-1024x683.jpg"
-        },
-        {
-          tag:"img",
-          width:25,
-          src:"https://autogaz.bzdrive.com/images/gallery/12-1024x683.jpg"
-        }
+      tag:"gallery",
+      images: [
+        "https://autogaz.bzdrive.com/images/gallery/001-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/002-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/003-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/004-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/005-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/006-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/007-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/008-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/009-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/010-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/011-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/012-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/014-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/015-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/016-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/017-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/018-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/019-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/020-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/021-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/022-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/023-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/024-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/025-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/026-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/027-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/028-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/029-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/030-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/031-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/032-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/033-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/034-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/035-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/036-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/037-1024x576.png",
+        "https://autogaz.bzdrive.com/images/gallery/038-1024x576.png"
+
+
       ]
     }
   ]
