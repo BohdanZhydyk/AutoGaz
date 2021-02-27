@@ -1,5 +1,5 @@
 
-export const header = {
+export const initialHeader = {
   menu: [
     [
       {to:"/", txt:"Uslugi"},

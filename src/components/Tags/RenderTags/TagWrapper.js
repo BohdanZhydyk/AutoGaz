@@ -3,7 +3,7 @@ import React from 'react'
 import RenderTags from './../RenderTags'
 
 
-export const TagWrapper = ({ obj:{item, index, theme} })=>{
+export const TagWrapper = ({ obj:{item, index, theme}, act })=>{
   return(
     <div className="tagWrapper flex wrap stretch">
     {
@@ -14,7 +14,13 @@ export const TagWrapper = ({ obj:{item, index, theme} })=>{
             style={{width:item.itemWidth+"%"}}
             key={`subtagwrapper${index+nr+item.itemWidth}`}
           >
-          <RenderTags item={element} index={nr} theme={theme} name={`wrapper${element.tag}`} />
+          <RenderTags
+            item={element}
+            index={nr}
+            theme={theme}
+            name={`wrapper${element.tag}`}
+            act={act}
+          />
           </div>
         )
       })

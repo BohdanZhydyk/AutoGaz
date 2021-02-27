@@ -5,44 +5,44 @@ import './Main.scss'
 import { TagsFunction } from './../Tags/TagsFunction'
 
 
-const Main = ({main})=>{
+const Main = ({main, act})=>{
   return(
     <main>
 
     <Switch>
 
-      <Route exact path="/" component={ ()=> <TagsFunction array={main.services} /> } />
+      <Route exact path="/" component={ ()=> <TagsFunction array={main.services} act={act} /> } />
       {
         main.services.map( (elem, index)=>
-          <Route path={`/${elem.name}`} key={`route${elem.name}`}
-            component={ ()=> <TagsFunction array={[elem]} /> }
+          <Route path={`/${elem.name}`} key={`route${elem.name+index}`}
+            component={ ()=> <TagsFunction array={[elem]} act={act} /> }
           />
         )
       }
 
-      <Route path="/bmw" component={ ()=> <TagsFunction array={main.bmw} /> } />
+      <Route path="/bmw" component={ ()=> <TagsFunction array={main.bmw} act={act} /> } />
       {
         main.bmw.map( (elem, index)=>
-          <Route path={`/${elem.name}`} key={`route${elem.name}`}
-            component={ ()=> <TagsFunction array={[elem]} /> }
+          <Route path={`/${elem.name}`} key={`route${elem.name+index}`}
+            component={ ()=> <TagsFunction array={[elem]} act={act} /> }
           />
         )
       }
 
-      <Route path="/gas" component={ ()=> <TagsFunction array={main.gas} /> } />
+      <Route path="/gas" component={ ()=> <TagsFunction array={main.gas} act={act} /> } />
       {
         main.gas.map( (elem, index)=>
-          <Route path={`/${elem.name}`} key={`route${elem.name}`}
-            component={ ()=> <TagsFunction array={[elem]} /> }
+          <Route path={`/${elem.name}`} key={`route${elem.name+index}`}
+            component={ ()=> <TagsFunction array={[elem]} act={act} /> }
           />
         )
       }
 
-      <Route path="/skp" component={ ()=> <TagsFunction array={main.skp} /> } />
+      <Route path="/skp" component={ ()=> <TagsFunction array={main.skp} act={act} /> } />
 
-      <Route path="/gallery" component={ ()=> <TagsFunction array={main.gallery} /> } />
+      <Route path="/gallery" component={ ()=> <TagsFunction array={main.gallery} act={act} /> } />
 
-      <Route path="/contacts" component={ ()=> <TagsFunction array={main.contacts} /> } />
+      <Route path="/contacts" component={ ()=> <TagsFunction array={main.contacts} act={act} /> } />
 
       <Route component={ ()=> <>{`ERROR!!!`}</> }	/>
 

@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-export const TagTitle = ({ obj:{item, index, theme} })=>{
+export const TagTitle = ({ obj:{item, index, theme}, act })=>{
 
   const link = `https://autogaz.bzdrive.com/images/logo/`
   const int = Math.floor(Math.random() * Math.floor(3))

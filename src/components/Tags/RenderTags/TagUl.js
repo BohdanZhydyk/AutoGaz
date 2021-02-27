@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-export const TagUl = ({ obj:{item, index, theme} })=>{
+export const TagUl = ({ obj:{item, index, theme}, act })=>{
   return(
     <div className={`tagUl`}>
       <p className="ul">{item.txt}</p>

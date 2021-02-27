@@ -1,5 +1,5 @@
 
-export const footer = {
+export const initialFooter = {
   info: [
     {
       name:"Auto-Gaz M.A.K Marcin Kaszuba"

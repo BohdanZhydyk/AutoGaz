@@ -6,7 +6,7 @@ import gallery from './gallery'
 import contacts from './contacts'
 
 
-export const main = {
+export const initialMain = {
   services,
   bmw,
   gas,

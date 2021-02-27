@@ -4,7 +4,7 @@ import './Tags.scss'
 import RenderTags from './RenderTags'
 
 
-export const TagsFunction = ({array})=>{
+export const TagsFunction = ({array, act})=>{
 
   let theme = "light"
 
@@ -28,6 +28,7 @@ export const TagsFunction = ({array})=>{
                 index={index}
                 theme={theme}
                 name={component.name}
+                act={act}
                 key={`RenderTags${theme+component.name+index}`}
               />
               

@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-export const TagTable = ({ obj:{item, index, theme} })=>{
+export const TagTable = ({ obj:{item, index, theme}, act })=>{
 
   let width1, width2, width3, width4
   let color = false

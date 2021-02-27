@@ -11,30 +11,30 @@ import { TagWrapper } from './TagWrapper'
 import { TagSlider } from './TagSlider'
 
 
-const RenderTags = ({item, index, theme, name})=>{
+const RenderTags = ({item, index, theme, name, act})=>{
 
   const obj = {item:item, index:index, theme:theme}
   const key = name + index
 
   switch(item.tag){
     case "h1":
-      return <TagTitle obj={obj} key={`TagTitle${key}`}/>
+      return <TagTitle obj={obj} act={act} key={`TagTitle${key}`}/>
     case "p":
-      return <TagP obj={obj} key={`Paragraph${key}`}/>
+      return <TagP obj={obj} act={act} key={`Paragraph${key}`}/>
     case "img":
-      return <TagImg obj={obj} key={`Image${key}`}/>
+      return <TagImg obj={obj} act={act} key={`Image${key}`}/>
     case "ul":
-      return <TagUl obj={obj} key={`Ul${key}`}/>
+      return <TagUl obj={obj} act={act} key={`Ul${key}`}/>
     case "theme":
-      return <TagTheme obj={obj} key={`Theme${key}`} />
+      return <TagTheme obj={obj} act={act} key={`Theme${key}`} />
     case "iframe":
-      return <TagIframe obj={obj} key={`Iframe${key}`} />
+      return <TagIframe obj={obj} act={act} key={`Iframe${key}`} />
     case "table":
-      return <TagTable obj={obj} key={`Table${key}`}/>
+      return <TagTable obj={obj} act={act} key={`Table${key}`}/>
     case "wrapper":
-      return <TagWrapper obj={obj} key={`Wrapper${key}`}/>
+      return <TagWrapper obj={obj} act={act} key={`Wrapper${key}`}/>
     case "slider":
-      return <TagSlider obj={obj} key={`Slider${key}`}/>
+      return <TagSlider obj={obj} act={act} key={`Slider${key}`}/>
     default: return <></>
   }
 }

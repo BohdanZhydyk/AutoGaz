@@ -1,31 +1,45 @@
 import React from 'react'
 
 
-export const TagSlider = ({ obj:{item, index, theme} })=>{
+export const TagSlider = ({ obj:{item, index, theme}, act })=>{
   return(
-    <div  className={`tagSlider tagSlider-${theme} flex between`}>
+    <div className={`tagSlider tagSlider-${theme}`} >
 
-      <img className="sliderBtn" src="https://autogaz.bzdrive.com/images/slider/sliderBtnLeft.png" alt="sliderBtnLeft" />
-      
-      <div className="sliderImage flex">
+      <div className="sliderTop flex">
       {
-        item.images.map( (image, index)=>{
+        item.images.map( (image, id)=>{
+
           switch(image.active){
             case true:
               return(
-                <div key={`sliderImage${image.txt+index}`}>
-                  <img src={image.img} alt="sliderImg" />
-                  <span>{image.txt}</span>
+                <div className="flex between" key={`tagSlider${image.txt+index}`}>
+                  <SliderBtn dir="L" id={id} act={act} />
+                  <SliderImage image={image}/>
+                  <SliderBtn dir="R" id={id} act={act} />
                 </div>
               )
-            default: return(<div key={`sliderImage${image.txt+index}`}></div>)
+            default:
+              return(
+                <div key={`tagSlider${image.txt+index}`}></div>
+              )
           }
+
         })
       }
       </div>
 
-      <img className="sliderBtn" src="https://autogaz.bzdrive.com/images/slider/sliderBtnRight.png" alt="sliderBtnRight" />
-    
+      <div className="sliderBottom flex">
+      {
+        item.images.map( (image, id)=>
+            <div
+              className={ image.active ? `sliderLineItem sliderLineItem-active flex` : `sliderLineItem flex` }
+              onClick={ ()=> act({ tag:"slider", type:"SLIDER_BTN_CLICK", data:{dir:'none', id} }) }
+              key={`sliderLineItem${id}`}
+            ></div>
+        )
+      }
+      </div>
+
     </div>
   )
   // {
@@ -38,4 +52,28 @@ export const TagSlider = ({ obj:{item, index, theme} })=>{
   //     }
   //   ]
   // }
+}
+
+
+const SliderBtn = ({dir, id, act})=>{
+  return(
+    <div
+      className="sliderBtn flex"
+      onClick={ ()=> act({ tag:"slider", type:"SLIDER_BTN_CLICK", data:{dir, id} }) }
+    >
+      <img
+        src={`https://autogaz.bzdrive.com/images/slider/sliderBtn${dir}.png`}
+        alt={`sliderBtn${dir}`}
+      />
+    </div>
+  )
+}
+
+const SliderImage = ({image})=>{
+  return(
+    <div className="sliderImage flex">
+      <img src={image.img} alt="sliderImg" />
+      <span>{image.txt}</span>
+    </div>
+  )
 }

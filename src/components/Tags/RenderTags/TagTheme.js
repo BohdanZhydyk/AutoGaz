@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-export const TagTheme = ({ obj:{item, index, theme} })=>{
+export const TagTheme = ({ obj:{item, index, theme}, act })=>{
   return(
     <h2 className={`tagTheme`}>
       <div className={`line line-${theme}`}></div>
