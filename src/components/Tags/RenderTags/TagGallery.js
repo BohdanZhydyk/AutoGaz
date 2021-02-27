@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 
 export const TagGallery = ({ obj:{item, index, theme}, act })=>{
 
-  const [gallery, setGallery] = useState({
+  let initialGallery = {
     mode: {
       maximize:false,
       id: 0,
@@ -11,7 +11,9 @@ export const TagGallery = ({ obj:{item, index, theme}, act })=>{
       max: 6,
     },
     images: item.images
-  })
+  }
+
+  const [gallery, setGallery] = useState(initialGallery)
 
   const galleryFn = (action)=>{
     switch(action.type){
@@ -32,13 +34,15 @@ export const TagGallery = ({ obj:{item, index, theme}, act })=>{
       case "SLIDER_BTN_CLICK":
 
         let len = gallery.images.length
+        let id = gallery.mode.id
+        let min = gallery.mode.min
+        let max = gallery.mode.max
+        let dir = action.data.dir
 
         if(gallery.mode.maximize){
 
-          let id = gallery.mode.id
-
-          if(action.data.dir === "R") id += 1
-          if(action.data.dir === "L") id -= 1
+          if(dir === "R") id += 1
+          if(dir === "L") id -= 1
 
           if(id === -1)   id = len - 1
           if(id === len)  id = 0
@@ -52,11 +56,8 @@ export const TagGallery = ({ obj:{item, index, theme}, act })=>{
         }
         else{
 
-          let min = gallery.mode.min
-          let max = gallery.mode.max
-
-          if(action.data.dir === "R"){ min += 3; max += 3; }
-          if(action.data.dir === "L"){ min -= 3; max -= 3; }
+          if(dir === "R"){ min += 3; max += 3; }
+          if(dir === "L"){ min -= 3; max -= 3; }
 
           if(min > -1 && max < len + 3){
             setGallery({

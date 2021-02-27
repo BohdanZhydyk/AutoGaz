@@ -1,11 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 
 export const TagSlider = ({ obj:{item, index, theme}, act })=>{
+
+  let initialSlider = {
+    active: 0,
+    images: item.images
+  }
+
+  const [slider, setSlider] = useState(initialSlider)
+
+  const sliderFn = (action)=>{
+    switch(action.type){
+      case "SLIDER_BTN_CLICK":
+        let len = slider.images.length
+        let id = action.data.id
+        let dir = action.data.dir
+
+        if(dir === "L")  id -= 1
+        if(dir === "R")  id += 1
+
+        if(id === -1)   id = len - 1
+        if(id === len)  id = 0
+
+        setSlider({
+          ...slider,
+          active: id
+        })
+        break
+      default: break
+    }
+  }
+
   return(
     <div className={`tagSlider tagSlider-${theme}`} >
-      <SliderTop images={item.images} index={index} act={act} />
-      <SliderBottom images={item.images} act={act} />
+      <SliderTop slider={slider} index={index} sliderFn={sliderFn} />
+      <SliderBottom slider={slider} sliderFn={sliderFn} />
     </div>
   )
   // {
@@ -21,19 +51,19 @@ export const TagSlider = ({ obj:{item, index, theme}, act })=>{
 }
 
 
-const SliderTop = ({images, index, act})=>{
+const SliderTop = ({slider, index, sliderFn})=>{
   return(
     <div className="sliderTop flex">
     {
-      images.map( (image, id)=>{
+      slider.images.map( (image, id)=>{
 
-        switch(image.active){
-          case true:
+        switch(id){
+          case slider.active:
             return(
               <div className="flex between" key={`tagSlider${image.txt+index}`}>
-                <SliderBtn dir="L" id={id} act={act} />
+                <SliderBtn dir="L" id={id} sliderFn={sliderFn} />
                 <SliderImage image={image}/>
-                <SliderBtn dir="R" id={id} act={act} />
+                <SliderBtn dir="R" id={id} sliderFn={sliderFn} />
               </div>
             )
           default:
@@ -48,11 +78,11 @@ const SliderTop = ({images, index, act})=>{
   )
 }
 
-const SliderBtn = ({dir, id, act})=>{
+const SliderBtn = ({dir, id, sliderFn})=>{
   return(
     <div
       className="sliderBtn flex"
-      onClick={ ()=> act({ tag:"slider", type:"SLIDER_BTN_CLICK", data:{dir, id} }) }
+      onClick={ ()=> sliderFn({ type:"SLIDER_BTN_CLICK", data:{dir, id} }) }
     >
       <img
         src={`https://autogaz.bzdrive.com/images/slider/sliderBtn${dir}.png`}
@@ -71,14 +101,14 @@ const SliderImage = ({image})=>{
   )
 }
 
-const SliderBottom = ({images, act})=>{
+const SliderBottom = ({slider, sliderFn})=>{
   return(
     <div className="sliderBottom flex">
     {
-      images.map( (image, id)=>
+      slider.images.map( (image, id)=>
         <div
-          className={ image.active ? `sliderLineItem sliderLineItem-active flex` : `sliderLineItem flex` }
-          onClick={ ()=> act({ tag:"slider", type:"SLIDER_BTN_CLICK", data:{dir:'none', id} }) }
+          className={ id === slider.active ? `sliderLineItem sliderLineItem-active flex` : `sliderLineItem flex` }
+          onClick={ ()=> sliderFn({ type:"SLIDER_BTN_CLICK", data:{dir:false, id} }) }
           key={`sliderLineItem${id}`}
         ></div>
       )

@@ -10,7 +10,6 @@ import Header from './components/Header'
 import Main from './components/Main'
 import Footer from './components/Footer'
 
-import { sliderAct } from './store/actions/sliderAct'
 
 function App() {
 
@@ -24,7 +23,6 @@ function App() {
 
   const act = ({tag, type, data})=>{
     switch(tag){
-      case "slider": sliderAct( {tag, type, data}, main, setMain ); break;
       default: break;
     }
   }
