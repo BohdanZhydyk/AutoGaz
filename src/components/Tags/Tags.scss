@@ -149,3 +149,36 @@
   width:100%;
   padding:1vw;
 }
+
+.tagSlider {
+  position:relative;
+  width:100%;
+  min-height:80vh;
+
+  .sliderBtn {
+    width:5vw;
+  }
+
+  .sliderImage {
+
+    img {
+      width:50vw;
+    }
+  
+    span {
+      position:absolute;
+      top:70%;
+      left:15%;
+      padding:0.5vw;
+      font-size:200%;
+      font-weight:bold;
+      color:$colorLight;
+      background-color:#5f698166;
+      border-radius:$borderRadius;
+    }
+  }
+
+
+  // &-light {background-color:#5552;}
+  // &-dark {background-color:#5552;}
+}

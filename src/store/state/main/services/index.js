@@ -1,3 +1,4 @@
+import { slider } from './slider'
 import { repairs } from './repairs'
 import { convergence } from './convergence'
 import { conditioning } from './conditioning'
@@ -9,6 +10,7 @@ import { glass } from './glass'
 
 
 const services = [
+  slider,
   repairs,
   convergence,
   conditioning,

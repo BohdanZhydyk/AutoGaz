@@ -8,6 +8,7 @@ import { TagTheme } from './TagTheme'
 import { TagIframe } from './TagIframe'
 import { TagTable } from './TagTable'
 import { TagWrapper } from './TagWrapper'
+import { TagSlider } from './TagSlider'
 
 
 const RenderTags = ({item, index, theme, name})=>{
@@ -32,6 +33,8 @@ const RenderTags = ({item, index, theme, name})=>{
       return <TagTable obj={obj} key={`Table${key}`}/>
     case "wrapper":
       return <TagWrapper obj={obj} key={`Wrapper${key}`}/>
+    case "slider":
+      return <TagSlider obj={obj} key={`Slider${key}`}/>
     default: return <></>
   }
 }
