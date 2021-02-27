@@ -8,7 +8,7 @@ export const Menu = ({menu})=>{
     <nav className="navMenu flex">
     {
       menu.map( (btn, index)=>
-        <MenuItem btn={btn} key={`menuBtn${index}`} />
+        <MenuItem btn={btn} key={`menuItem${index}`} />
       )
     }
     </nav>

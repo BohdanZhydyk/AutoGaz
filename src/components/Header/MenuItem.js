@@ -1,18 +1,38 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
-import { SubMenu } from './SubMenu'
-
 
 export const MenuItem = ({btn})=>{
   return(
     <div className="menuItem" >
 
-      <NavLink to={btn.sub.to} className="menuBtn flex" >
-        <span>{btn.sub.txt}</span>
-      </NavLink>
+      {
+        btn.map( (subBtn, index)=>{
+          switch(index){
+            case 0: return(
+                <NavLink to={subBtn.to} className="menuBtn flex" key={`menuBtn${subBtn.to}`} >
+                  <span>{subBtn.txt}</span>
+                </NavLink>
+              )
+            default: return(<div key={`menuBtn${subBtn.to}`}></div>)
+          }
+        })
+      }
 
-      { btn.links && <SubMenu links={btn.links} /> }
+      <div className="subMenu">
+      {
+        btn.map( (subBtn, index)=>{
+          switch(index){
+            case 0: return(<div key={`subMenuBtn${subBtn.to}`}></div>)
+            default: return(
+                <NavLink to={subBtn.to} className="subMenuBtn" key={`subMenuBtn${subBtn.to}`} >
+                  <span>{subBtn.txt}</span>
+                </NavLink>
+              )
+          }
+        })
+      }
+      </div>
 
     </div>
   )

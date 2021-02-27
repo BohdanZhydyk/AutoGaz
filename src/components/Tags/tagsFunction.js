@@ -4,14 +4,14 @@ import './Tags.scss'
 import RenderTags from './RenderTags'
 
 
-export const TagsFunction = ({object})=>{
+export const TagsFunction = ({array})=>{
 
   let theme = "light"
 
   return( 
     <>
     {
-      object.map( (component, nr)=>{
+      array.map( (component, nr)=>{
 
         (theme === "light" ? theme = "dark" : theme = "light")
         
@@ -22,6 +22,7 @@ export const TagsFunction = ({object})=>{
           >
           {
             component.object.map( (item, index)=>
+
               <RenderTags
                 item={item}
                 index={index}
@@ -29,6 +30,7 @@ export const TagsFunction = ({object})=>{
                 name={component.name}
                 key={`RenderTags${theme+component.name+index}`}
               />
+              
             )
           }
           </div>

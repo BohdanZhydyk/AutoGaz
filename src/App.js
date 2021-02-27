@@ -14,6 +14,8 @@ function App() {
 
   const [state, setState] = useState({header, main, footer})
 
+  console.log('state', state)
+
   return (
     <HashRouter className="App" >
 

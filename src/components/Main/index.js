@@ -2,9 +2,7 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import './Main.scss'
 
-
 import { TagsFunction } from './../Tags/TagsFunction'
-
 
 
 const Main = ({main})=>{
@@ -13,17 +11,40 @@ const Main = ({main})=>{
 
     <Switch>
 
-      <Route exact path="/" component={ ()=> <TagsFunction object={main.services} /> } />
+      <Route exact path="/" component={ ()=> <TagsFunction array={main.services} /> } />
+      {
+        main.services.map( (elem, index)=>
+          <Route path={`/${elem.name}`} key={`route${elem.name}`}
+            component={ ()=> <TagsFunction array={[elem]} /> }
+          />
+        )
+      }
 
-      <Route exact path="/bmw" component={ ()=> <TagsFunction object={main.bmw} /> } />
+      <Route path="/bmw" component={ ()=> <TagsFunction array={main.bmw} /> } />
+      {
+        main.bmw.map( (elem, index)=>
+          <Route path={`/${elem.name}`} key={`route${elem.name}`}
+            component={ ()=> <TagsFunction array={[elem]} /> }
+          />
+        )
+      }
 
-      <Route exact path="/gas" component={ ()=> <TagsFunction object={main.gas} /> } />
+      <Route path="/gas" component={ ()=> <TagsFunction array={main.gas} /> } />
+      {
+        main.gas.map( (elem, index)=>
+          <Route path={`/${elem.name}`} key={`route${elem.name}`}
+            component={ ()=> <TagsFunction array={[elem]} /> }
+          />
+        )
+      }
 
-      <Route exact path="/skp" component={ ()=> <TagsFunction object={main.skp} /> } />
+      <Route path="/skp" component={ ()=> <TagsFunction array={main.skp} /> } />
 
-      <Route exact path="/gallery" component={ ()=> <TagsFunction object={main.gallery} /> } />
+      <Route path="/gallery" component={ ()=> <TagsFunction array={main.gallery} /> } />
 
-      <Route exact path="/contacts" component={ ()=> <TagsFunction object={main.contacts} /> } />
+      <Route path="/contacts" component={ ()=> <TagsFunction array={main.contacts} /> } />
+
+      <Route component={ ()=> <>{`ERROR!!!`}</> }	/>
 
     </Switch>
 
