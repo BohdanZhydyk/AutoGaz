@@ -1,76 +1,26 @@
 import React from 'react'
 import './Footer.scss'
 
+import { Contacts } from './Contacts'
+import { Opened } from './Opened'
+import { Copyright } from './Copyright'
+import { CookieLine } from './CookieLine'
 
-const Footer = ({footer})=>{
+
+const Footer = ({footer, act})=>{
   return(
-    <footer className="flex wrap">
+    <footer>
 
-      <Information info={footer.info} />
+      <div className="footerTop flex">
+        <Contacts info={footer.info} />
+        <Opened opened={footer.opened} />
+      </div>
 
-      <Opened opened={footer.opened} />
+      <Copyright txt={footer.info.lines[0].name} />
 
-      <Copyright txt={footer.info[0].name} />
-
-      <Cookie txt={footer.cookie} />
+      <CookieLine cookieline={footer.cookieline} act={act} />
 
     </footer>
-  )
-}
-
-const Information = ({info})=>{
-  return(
-    <div className="information">
-    {
-      info.map( (line, index)=>{
-        return(
-          line.href
-          ?
-          <a className="infoLine" href={line.href} target="_blank" rel="noreferrer" key={`footerInfo${index}`}>
-            {line.name}
-          </a>
-          :
-          <div className="infoLine" key={`footerInfo${index}`}>{line.name}</div>
-        )
-      })
-    }
-    </div>
-  )
-}
-
-const Opened = ({opened})=>{
-  return(
-    <div className="opened">
-      <h3>{opened.txt}</h3>
-      {
-        opened.lines.map( (line, index)=>{
-          return(
-            <div className="flex between" key={`footerOpened${index}`}>
-              <span>{line.day}</span>
-              <span>{line.hours}</span>
-            </div>
-          )
-        })
-      }
-    </div>
-  )
-}
-
-const Copyright = ({txt})=>{
-  return(
-    <div className="copyright flex">
-      <span>{`© 2018-${ new Date().getFullYear() } ${txt}`}</span>
-    </div>
-  )
-}
-
-const Cookie = ({cookie})=>{
-  return(
-    <div className="cookie flex" >
-      <span>Strona korzysta z plików cookies</span>
-      <a href="http://www.autogaz-mak.pl/polityka-cookies">Więcej informacji</a>
-      <span className="okBtn">OK</span>
-    </div>
   )
 }
 

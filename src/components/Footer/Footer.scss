@@ -7,30 +7,31 @@ footer {
   color:$fontLight;
   background-color:$colorDark;
 
-  .information {
-    width:20%;
-    margin:0 5%;
+  .footerTop {
+    width:100%;
+    padding:2vw;
+    align-items:flex-start;
 
-    .infoLine {
-      display:block;
-      margin:0.5vw 0;
-      color:$fontLight;
-      text-decoration:none;
+    .contacts {
+      width:25%;
+      margin:0 5%;
+  
+      .contactLine {
+        display:block;
+        margin:0.5vw 0;
+        color:$fontLight;
+        text-decoration:none;
+      }
     }
-  }
+  
+    .opened {
+      width:25%;
+      margin:0 5%;
 
-  .photos {
-    width:35%;
+      .days {width:50%;}
 
-    img {
-      width:45%;
-      margin:0.5vw;
+      .hours {width:30%;}
     }
-  }
-
-  .opened {
-    width:20%;
-    margin:0 5%;
   }
 
   .copyright {
@@ -45,20 +46,32 @@ footer {
     bottom:0;
     width:100%;
     padding:0.5vw 0;
-    color:$fontLight;
+    color:$colorLight;
+    font-size:120%;
     background-color:$colorDark;
     border-top:$borderLight;
     z-index:1000;
 
     a {
-      margin:0 0.5vw;
+      margin:0 1vw;
       color:$fontLight;
+
+      &:hover {
+        color:$colorLight;
+      }
     }
 
-    .okBtn {
-      padding:0.5vw 1.5vw;
-      background-color:#191;
+    .btn {
+      width:8vw;
+      min-height:2.5vw;
+      text-decoration:none;
+      background-color:$Grn;
       border-radius:$borderRadius;
+
+      &:hover {
+        font-size:120%;
+        background-color:$lightGrn;
+      }
     }
   }
 }

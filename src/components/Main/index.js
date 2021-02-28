@@ -44,7 +44,9 @@ const Main = ({main, act})=>{
 
       <Route path="/contacts" component={ ()=> <TagsFunction array={main.contacts} act={act} /> } />
 
-      <Route component={ ()=> <>{`ERROR!!!`}</> }	/>
+      <Route path="/cookie" component={ ()=> <TagsFunction array={main.cookie} act={act} /> } />
+
+      <Route component={ ()=> <TagsFunction array={main.error} act={act} /> } />
 
     </Switch>
 

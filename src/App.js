@@ -21,8 +21,17 @@ function App() {
   console.log('main', main)
   // console.log('footer', footer)
 
-  const act = ({tag, type, data})=>{
-    switch(tag){
+  const act = ({type, data})=>{
+    switch(type){
+      case "COOKIES_ACCEPT":
+        setFooter({
+          ...footer,
+          cookieline: {
+            ...footer.cookieline,
+            active: data
+          }
+        })
+        break
       default: break;
     }
   }
@@ -34,7 +43,7 @@ function App() {
 
       <Main main={main} act={act} />
 
-      <Footer footer={footer} />
+      <Footer footer={footer} act={act} />
 
     </HashRouter>
   )

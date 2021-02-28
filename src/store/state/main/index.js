@@ -4,6 +4,8 @@ import gas from './gas'
 import skp from './skp'
 import gallery from './gallery'
 import contacts from './contacts'
+import cookie from './cookie'
+import error from './error'
 
 
 export const initialMain = {
@@ -12,5 +14,7 @@ export const initialMain = {
   gas,
   skp,
   gallery,
-  contacts
+  contacts,
+  cookie,
+  error
 }
