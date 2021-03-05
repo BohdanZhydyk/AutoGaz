@@ -5,11 +5,20 @@ import { Logo } from './Logo'
 import { Menu } from './Menu'
 
 
-const Header = ({header})=>{
+const Header = ({state, act})=>{
+
+  let logo
+  let menu = []
+  state.map( (el)=>{ if(el.tag === "logo") logo = el })
+  state.map( (el)=>{ if(el.tag === "menu") menu.push(el) })
+
   return(
     <header className="header flex">
-      <Menu menu={header.menu}/>
-      <Logo />
+
+      <Menu menu={menu} act={act} />
+
+      { logo && <Logo logo={logo} act={act} /> }
+      
     </header>
   )
 }

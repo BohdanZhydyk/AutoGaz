@@ -8,7 +8,7 @@ footer {
   background-color:$colorDark;
 
   .footerTop {
-    width:100%;
+    width:96vw;
     padding:2vw;
     align-items:flex-start;
 
@@ -36,6 +36,7 @@ footer {
 
   .copyright {
     width:100%;
+    min-height:6vw;
     padding:1vw 0;
     color:$fontDark;
     background-color:$colorLight;

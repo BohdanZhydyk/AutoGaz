@@ -1,0 +1,64 @@
+@import './../../../Variables.scss';
+
+.adminPannel {
+  width:100%;
+  padding:3vw 0;
+  color:$colorLight;
+
+  .adminModeIndicator {
+    width:30vw;
+
+    .txt {
+      margin:0.5vw 0;
+      color:$Org;
+      font-size:150%;
+      font-weight:bold;
+    }
+  }
+  
+  .forms {
+    width:60%;
+
+    input {
+      width:30vw;
+      min-height:3vw;
+      margin:0.5vw 0;
+      padding:0 1vw;
+      font-size:150%;
+      border-radius:$borderRadius;
+    }
+
+    .err {
+      min-height:1.5vw;
+      color:$Org;
+    }
+  }
+
+  .button {
+    width:20vw;
+    min-height:3vw;
+    margin:1vw 0 2vw 0;
+    padding:0 1vw;
+    font-size:130%;
+    border:none;
+    color:$colorLight;
+    border-radius:$borderRadius;
+
+    &-Y { 
+      background-color:$Grn;
+      &:hover {
+        font-size:150%;
+        background-color:$lightGrn;
+      }
+    }
+
+    &-N {
+      color:$colorLight;
+      background-color:$Red;
+      &:hover {
+        font-size:150%;
+        background-color:$Org;
+      }
+    }
+  }
+}

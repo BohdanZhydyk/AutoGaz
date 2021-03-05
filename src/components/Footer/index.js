@@ -7,20 +7,31 @@ import { Copyright } from './Copyright'
 import { CookieLine } from './CookieLine'
 
 
-const Footer = ({footer, act})=>{
+const Footer = ({state, act})=>{
   return(
-    <footer>
+    <>
+    {
+      state.map( (el, index)=>{
+        if( el.tag === "footer" ){
+          return(
+            <footer key={`Footer${index}`}>
 
-      <div className="footerTop flex">
-        <Contacts info={footer.info} />
-        <Opened opened={footer.opened} />
-      </div>
+              <div className="footerTop flex">
+                <Contacts info={el.info} />
+                <Opened opened={el.opened} />
+              </div>
 
-      <Copyright txt={footer.info.lines[0].name} />
+              <Copyright txt={el.info.lines[0].name} act={act} />
 
-      <CookieLine cookieline={footer.cookieline} act={act} />
+              <CookieLine cookieline={el.cookieline} act={act} />
 
-    </footer>
+              </footer>
+          )
+        }
+        else{ return }
+      })
+    }
+    </>
   )
 }
 

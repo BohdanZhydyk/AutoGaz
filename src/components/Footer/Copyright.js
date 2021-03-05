@@ -1,10 +1,14 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 
-export const Copyright = ({txt})=>{
+export const Copyright = ({txt, act})=>{
+
+  let to = "/admin"
+
   return(
-    <div className="copyright flex">
-      <span>{`© 2018-${ new Date().getFullYear() } ${txt}`}</span>
-    </div>
+    <NavLink to={to} className="copyright flex" key={`menuBtn${to}`} >
+      <span>{`© 2020-${ new Date().getFullYear() } ${txt}`}</span>
+    </NavLink>
   )
 }

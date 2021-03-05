@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 
 export const CookieLine = ({cookieline, act})=>{
 
-  const btnClick = ()=> act({type:"COOKIES_ACCEPT", data:false})
+  const btnClick = ()=> act({ addr:"cookies", type:"COOKIES_ACCEPT", data:false })
 
   return(
     <div className="cookie flex" >

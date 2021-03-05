@@ -4,49 +4,52 @@ import './Main.scss'
 
 import { TagsFunction } from './../Tags/TagsFunction'
 
+import { Cookie } from './Cookie'
+import { Error } from './Error'
 
-const Main = ({main, act})=>{
+import Admin from './../Admin'
+
+
+const Main = ({state, act})=>{
   return(
     <main>
+    {
+      state.map( (element, nr)=>{
+        if(element.tag === "menu"){
+          return(
+            <Switch key={`Switch${nr}`} >
+
+              <Route exact path={element.to} component={ ()=>
+                <TagsFunction array={element} nr={nr} act={act} />
+              } />
+
+              {
+                element.subMenu &&
+                element.subMenu.map( (item, index)=>{
+                  return(
+                    <Route exact path={item.to} key={`route${item.to + index}`} component={ ()=>
+                      <TagsFunction array={item} nr={index} act={act} />
+                    } />
+                  )
+                })
+              }
+
+            </Switch>
+          )
+        }
+        else{ return }
+      })
+    }
 
     <Switch>
+      
+      <Route exact path="/cookie" component={ ()=> <Cookie state={state} act={act} /> } />
 
-      <Route exact path="/" component={ ()=> <TagsFunction array={main.services} act={act} /> } />
-      {
-        main.services.map( (elem, index)=>
-          <Route path={`/${elem.name}`} key={`route${elem.name+index}`}
-            component={ ()=> <TagsFunction array={[elem]} act={act} /> }
-          />
-        )
-      }
 
-      <Route path="/bmw" component={ ()=> <TagsFunction array={main.bmw} act={act} /> } />
-      {
-        main.bmw.map( (elem, index)=>
-          <Route path={`/${elem.name}`} key={`route${elem.name+index}`}
-            component={ ()=> <TagsFunction array={[elem]} act={act} /> }
-          />
-        )
-      }
+      {/* <Route path="/admin" component={ ()=> <Admin initHeader={header} initMain={main} initFooter={footer} act={act} /> } /> */}
 
-      <Route path="/gas" component={ ()=> <TagsFunction array={main.gas} act={act} /> } />
-      {
-        main.gas.map( (elem, index)=>
-          <Route path={`/${elem.name}`} key={`route${elem.name+index}`}
-            component={ ()=> <TagsFunction array={[elem]} act={act} /> }
-          />
-        )
-      }
 
-      <Route path="/skp" component={ ()=> <TagsFunction array={main.skp} act={act} /> } />
-
-      <Route path="/gallery" component={ ()=> <TagsFunction array={main.gallery} act={act} /> } />
-
-      <Route path="/contacts" component={ ()=> <TagsFunction array={main.contacts} act={act} /> } />
-
-      <Route path="/cookie" component={ ()=> <TagsFunction array={main.cookie} act={act} /> } />
-
-      <Route component={ ()=> <TagsFunction array={main.error} act={act} /> } />
+      <Route component={ ()=> <Error state={state} act={act} /> } />
 
     </Switch>
 

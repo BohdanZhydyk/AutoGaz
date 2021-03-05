@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 
-export const TagGallery = ({ obj:{item, index, theme}, act })=>{
+export const TagGallery = ({ item, theme, index, act })=>{
 
   let initialGallery = {
     mode: {
@@ -74,7 +74,7 @@ export const TagGallery = ({ obj:{item, index, theme}, act })=>{
   }
   
   return(
-    <div className={`tagGallery tagGallery-${theme} flex wrap`} >
+    <div className={`tagGallery tagGallery-${theme} flex wrap`} key={`Gallery${index}`} >
     {
       gallery.mode.maximize
       ? <SliderMax gallery={gallery} galleryFn={galleryFn} />

@@ -1,9 +1,9 @@
 import React from 'react'
 
 
-export const TagImg = ({ obj:{item, index, theme}, act })=>{
+export const TagImg = ({ item, theme, index, act })=>{
   return(
-    <div className={`tagImg flex`}>
+    <div className={`tagImg flex`} key={`Image${index}`} >
       <img style={{width:item.width+"vw"}} src={item.src} alt="tagImg" />
     </div>
   )

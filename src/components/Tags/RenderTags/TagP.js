@@ -1,9 +1,9 @@
 import React from 'react'
 
 
-export const TagP = ({ obj:{item, index, theme}, act })=>{
+export const TagP = ({ item, theme, index, act })=>{
   return(
-    <p className={`tagP tagP-${theme}`}>
+    <p className={`tagP tagP-${theme}`} key={`Paragraph${index}`} >
       {item.txt}
       { item.a && <a href={item.href}>{` ${item.a}`}</a> }
     </p>

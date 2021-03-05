@@ -1,9 +1,9 @@
 import React from 'react'
 
 
-export const TagUl = ({ obj:{item, index, theme}, act })=>{
+export const TagUl = ({ item, theme, index, act })=>{
   return(
-    <div className={`tagUl`}>
+    <div className={`tagUl`} key={`Ul${index}`}>
       <p className="ul">{item.txt}</p>
       { item.li.map( (line, nr)=> <p className="li" key={index+nr+theme}>{`- ${line};`}</p> ) }
     </div>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 
-export const TagSlider = ({ obj:{item, index, theme}, act })=>{
+export const TagSlider = ({ item, theme, index, act })=>{
 
   let initialSlider = {
     active: 0,
@@ -33,7 +33,7 @@ export const TagSlider = ({ obj:{item, index, theme}, act })=>{
   }
 
   return(
-    <div className={`tagSlider tagSlider-${theme}`} >
+    <div className={`tagSlider tagSlider-${theme}`} key={`Slider${index}`} >
       <SliderTop slider={slider} index={index} sliderFn={sliderFn} />
       <SliderBottom slider={slider} sliderFn={sliderFn} />
     </div>
@@ -41,11 +41,7 @@ export const TagSlider = ({ obj:{item, index, theme}, act })=>{
   // {
   //   tag:"slider",
   //   images: [
-  //     {
-  //       active:bool,
-  //       txt:string,
-  //       img:string
-  //     }
+  //     {txt:string, src:string}, {txt:string, src:string}, ...
   //   ]
   // }
 }

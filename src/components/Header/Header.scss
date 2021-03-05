@@ -7,41 +7,25 @@ header {
   z-index:1000;
   background-color:$colorLight;
 
-  .logo {
-    width:30%;
-    text-decoration:none;
-    color:$colorDark;
-
-    span {
-      font-size:250%;
-      font-weight:bold;
-    }
-
-    img {
-      width:40%;
-      margin:0.5vw;
-    }
-  }
-
   .navMenu {
     width:70%;
-
+    
     .menuItem {
       width:15%;
       margin:0.5vw 0.2vw;
       font-size:80%;
       font-weight:bold;
-
+      
       &:hover .menuBtn {
         color:$colorLight;
         background-color:$colorDark;
       }
-
+      
       &:hover .subMenu {
         display:block;
       }
     }
-
+    
     .menuBtn {
       padding:0.5vw;
       color:$fontDark;
@@ -49,7 +33,7 @@ header {
       border:$borderDark;
       border-radius:$borderRadius;
     }
-
+    
     .subMenu {
       display:none;
       width:12vw;
@@ -57,19 +41,35 @@ header {
       position:absolute;
       background-color:$fontLight;
       border-radius:$borderRadius;
-
+      
       .subMenuBtn {
         display:block;
         padding:0.5vw;
         color:$fontDark;
         text-decoration:none;
-
+        
         &:hover {
           color:$colorLight;
           background-color:$colorDark;
           border-radius:$borderRadius;
         }
       }
+    }
+  }
+
+  .logo {
+    width:30%;
+    text-decoration:none;
+    color:$colorDark;
+  
+    span {
+      font-size:250%;
+      font-weight:bold;
+    }
+  
+    img {
+      width:40%;
+      margin:0.5vw;
     }
   }
 }

@@ -1,13 +1,13 @@
 import React from 'react'
 
 
-export const TagTable = ({ obj:{item, index, theme}, act })=>{
+export const TagTable = ({ item, theme, index, act })=>{
 
   let width1, width2, width3, width4
   let color = false
 
   return(
-    <div className="tagTable">
+    <div className="tagTable" key={`Table${index}`}>
     {
       item.lines.map( (line, index)=>{
         

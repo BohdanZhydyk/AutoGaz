@@ -6,30 +6,19 @@ export const MenuItem = ({btn})=>{
   return(
     <div className="menuItem" >
 
-      {
-        btn.map( (subBtn, index)=>{
-          switch(index){
-            case 0: return(
-                <NavLink to={subBtn.to} className="menuBtn flex" key={`menuBtn${subBtn.to}`} >
-                  <span>{subBtn.txt}</span>
-                </NavLink>
-              )
-            default: return(<div key={`menuBtn${subBtn.to}`}></div>)
-          }
-        })
-      }
+      <NavLink to={btn.to} className="menuBtn flex" >
+        <span>{btn.txt}</span>
+      </NavLink>
 
       <div className="subMenu">
       {
-        btn.map( (subBtn, index)=>{
-          switch(index){
-            case 0: return(<div key={`subMenuBtn${subBtn.to}`}></div>)
-            default: return(
-                <NavLink to={subBtn.to} className="subMenuBtn" key={`subMenuBtn${subBtn.to}`} >
-                  <span>{subBtn.txt}</span>
-                </NavLink>
-              )
-          }
+        btn.subMenu &&
+        btn.subMenu.map( (subBtn, index)=>{
+          return(
+            <NavLink to={subBtn.to} className="subMenuBtn" key={`subMenuBtn${subBtn.to + index}`} >
+              <span>{subBtn.txt}</span>
+            </NavLink>
+          )
         })
       }
       </div>
