@@ -46,10 +46,10 @@ const Main = ({state, act})=>{
       <Route exact path="/cookie" component={ ()=> <Cookie state={state} act={act} /> } />
 
 
-      {/* <Route path="/admin" component={ ()=> <Admin initHeader={header} initMain={main} initFooter={footer} act={act} /> } /> */}
+      <Route exact path="/admin" component={ ()=> <Admin  state={state} act={act} /> } />
 
 
-      <Route component={ ()=> <Error state={state} act={act} /> } />
+      {/* <Route path='*' component={ ()=> <Error state={state} act={act} /> } /> */}
 
     </Switch>
 

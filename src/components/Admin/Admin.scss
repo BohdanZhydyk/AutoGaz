@@ -22,35 +22,6 @@ $borderRadius:0.5vw;
   color:$color;
   background-color:$bgColor;
 
-  .testBtns {
-    position:fixed;
-    top:6vw;
-    right:2vw;
 
-    button {
-      width:5vw;
-      min-height:2vw;
-      margin:0.5vw;
-      color:$Wht;
-      border:$border;
-      border-radius:$borderRadius;
-    }
-
-    .testBtn {
-      background-color:$Grn;
-      &:hover {
-        background-color:$lightGrn;
-        font-size:120%;
-      }
-    }
-
-    .saveBtn {
-      background-color:$Red;
-      &:hover {
-        background-color:$Org;
-        font-size:120%;
-      }
-    }
-  }
 
 }
