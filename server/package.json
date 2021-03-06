@@ -1,0 +1,15 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Server for site AutoGaz",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "server",
+    "autogaz"
+  ],
+  "author": "Bohdan Zhydyk bzua83@gmail.com bzdrive.com",
+  "license": "ISC"
+}
