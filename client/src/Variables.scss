@@ -1,10 +1,12 @@
 
 $fontSize:1vw;
 
+$Wht:#ffffff;
 $Red:#ff0000;
 $Org:#ff6600;
 $Grn:#117711;
 $lightGrn:#11aa11;
+$lightGry:#cccccc;
 
 $colorDark:#0C1F4A;
 $colorLight:#ffffff;
@@ -15,6 +17,7 @@ $fontLight:#cccccc;
 $borderRadius:0.5vw;
 $borderLight:1px solid $colorLight;
 $borderDark:1px solid $colorDark;
+$borderRed:1px solid $Red;
 
 // $gradientLight:$colorLight,#1264, $colorLight;
 // $gradientDark:$colorDark, $colorLight, $colorDark;

@@ -7,8 +7,6 @@ import { TagsFunction } from './../Tags/TagsFunction'
 import { Cookie } from './Cookie'
 import { Error } from './Error'
 
-import Admin from './../Admin'
-
 
 const Main = ({state, act})=>{
   return(
@@ -44,10 +42,6 @@ const Main = ({state, act})=>{
     <Switch>
       
       <Route exact path="/cookie" component={ ()=> <Cookie state={state} act={act} /> } />
-
-
-      <Route exact path="/admin" component={ ()=> <Admin  state={state} act={act} /> } />
-
 
       {/* <Route path='*' component={ ()=> <Error state={state} act={act} /> } /> */}
 

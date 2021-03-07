@@ -1,14 +1,23 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { AdminForm } from './AdminForm'
 
 
-export const Copyright = ({txt, act})=>{
+export const Copyright = ({admin, txt, act})=>{
 
-  let to = "/admin"
+  let OpenAdminPannel = ()=>
+    act({ addr:"footer", type:"OPEN_ADMIN_PANNEL", payload:!admin.active })
 
   return(
-    <NavLink to={to} className="copyright flex" key={`menuBtn${to}`} >
-      <span>{`© 2020-${ new Date().getFullYear() } ${txt}`}</span>
-    </NavLink>
+    <div className="copyright flex" >
+    {
+      admin.pannel.adminMode
+      ? <span>{admin.messages[0]}</span>
+      : admin.active
+        ?
+        <AdminForm admin={admin} act={act} />
+        :
+        <span onClick={ ()=> OpenAdminPannel() } >{`© 2020-${ new Date().getFullYear() } ${txt}`}</span>
+    }
+    </div>
   )
 }

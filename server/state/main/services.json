@@ -1,0 +1,350 @@
+{
+  "tag": "menu",
+  "to": "/",
+  "txt": "Uslugi",
+  "header": [
+    {
+      "tag": "slider",
+      "images": [
+        {
+          "txt": "Stacja kontroli pojazdów",
+          "src": "https://autogaz.bzdrive.com/images/slider/stacja-kontroli-pojazdow-wejherowo.jpg"
+        },
+        {
+          "txt": "Montaż instalacji gazowych LPG",
+          "src": "https://autogaz.bzdrive.com/images/slider/f170edbf843e293379c3.jpg"
+        },
+        {
+          "txt": "Autoryzowany serwis STAG",
+          "src": "https://autogaz.bzdrive.com/images/slider/bf0356580be9fe620fb6.jpg"
+        },
+        {
+          "txt": "Instalacje gazowe do samochodów osobowych, terenowych i dostawczych wszystkich marek",
+          "src": "https://autogaz.bzdrive.com/images/slider/instalacje-lpg-wejherowo.jpg"
+        },
+        {
+          "txt": "Profesjonalna diagnostyka komputerowa",
+          "src": "https://autogaz.bzdrive.com/images/slider/860dbc80788dcc103c99.png"
+        },
+        {
+          "txt": "Serwis klimatyzacji samochodowej",
+          "src": "https://autogaz.bzdrive.com/images/slider/6f2123e952542f94637a.jpg"
+        }
+      ]
+    }
+  ],
+  "subMenu": [
+    {
+      "tag": "theme",
+      "to": "/repairs",
+      "txt": "Naprawy mechaniczne",
+      "content": [
+        {
+          "tag": "h1",
+          "txt": "Szanowni Państwo"
+        },
+        {
+          "tag": "p",
+          "txt": "Ponad 10-letnie doświadczenie w branży instalacji gazowych pozwala nam zagwarantować pełen profesjonalizm i najwyższą jakość usług. Systematyczne szkolenia i egzaminy zapewniają wysokie kwalifikacje montażystów. Nasz warsztat jest wyposażony w profesjonalne narzędzia i urządzenia do montażu oraz serwisu instalacji LPG. Jednocześnie zapewniamy naprawy mechaniczne samochodów osobowych, terenowych i dostawczych wszystkich marek. Zapewniamy bezpłatne auto zastępcze."
+        },
+        {
+          "tag": "p",
+          "txt": "Ogólnopolska gwarancja zapewnia Państwu komfort korzystania z ponad 180 serwisów STAG w całej Polsce. Przedłużona gwarancja daje możliwość bezpłatnej naprawy usterek, nielimitowaną liczbę napraw oraz wymianę sterownika w przypadku braku możliwości jego naprawy."
+        },
+        {
+          "tag": "p",
+          "txt": "Autoryzowany serwis STAG to najlepszy wybór."
+        },
+        {
+          "tag": "img",
+          "width": 20,
+          "src": "https://autogaz.bzdrive.com/images/warranty.png"
+        },
+        {
+          "tag": "p",
+          "txt": "Zapewniamy Państwu również kompleksową obsługę układu klimatyzacji: naprawy mechaniczne oraz diagnostyka i serwis w samochodach wszystkich marek."
+        },
+        {
+          "tag": "p",
+          "txt": "Serwisujemy także innych producentów, tj. KME, AEB, BRC, AG Centrum, Elpigaz i inni. Na życzenie Klienta jesteśmy w stanie zamontować instalacje wymienionych firm. Używamy jedynie znanych i atestowanych przez TDT zbiorników: Tytangaz, Stako, GZWM, Bormech. Zapewniamy wysoką jakość montażu, estetykę wykonania oraz profesjonalny serwis instalacji LPG różnych firm w konkurencyjnych cenach."
+        },
+        {
+          "tag": "p",
+          "txt": "Zapraszamy do współpracy."
+        },
+        {
+          "tag": "ul",
+          "txt": "Naprawy mechaniczne",
+          "li": [
+            "wymiana układów rozrządu",
+            "naprawy silnika",
+            "wymiana sprzęgieł",
+            "wymiana elementów sterowania",
+            "wymiana amortyzatorów",
+            "wymiana wahaczy",
+            "wymiana łożysk i piast",
+            "naprawa układu kierowniczego",
+            "wymiana klocków hamulcowych",
+            "wymiana tarcz hamulcowych",
+            "wymiana szczęk",
+            "naprawa układu wydechowego"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "theme",
+      "to": "/convergence",
+      "txt": "Zbieznosc",
+      "content": [
+        {
+          "tag": "p",
+          "txt": "Cos tam na temat zbieznosci..."
+        }
+      ]
+    },
+    {
+      "tag": "theme",
+      "to": "/conditioning",
+      "txt": "Serwis kimatyzacji",
+      "content": [
+        {
+          "tag": "p",
+          "txt": "Warsztat AUTO-GAZ M.A.K. oferuje Państwu kompleksową obsługę w zakresie serwisowania, naprawy oraz przeglądu układów klimatyzacji w samochodach osobowych i terenowych. Bogate doświadczenie merytoryczne, jak i praktyczne pozwala świadczyć usługi na najwyższym poziomie."
+        },
+        {
+          "tag": "p",
+          "txt": "Jeżeli Państwa klimatyzacja działa nieprawidłowo (ponieważ w jej układzie jest zbyt mała/duża ilość czynnika chłodzącego lub brakuje oleju), możemy Państwu w tym pomóc."
+        },
+        {
+          "tag": "p",
+          "txt": "Wykonywanie corocznych przeglądów gwarantuje długoletnią pracę bez większej ingerencji w układ, dlatego zachęcamy do ich przeprowadzania."
+        },
+        {
+          "tag": "wrapper",
+          "itemWidth": 45,
+          "items": [
+            {
+              "tag": "ul",
+              "txt": "Podstawowy pakiet serwisowy obejmuje następujące czynności:",
+              "li": [
+                "kontrola temperatury chłodzenia przed przeglądem",
+                "wizualna kontrola przewodów",
+                "sprawdzenie zużycia paska klinowego",
+                "podciśnieniowe sprawdzenie szczelności klimatyzacji",
+                "wymiana czynnika chłodzącego R-134a",
+                "dopełnienie czynnikiem w przypadku stwierdzenia ubytku (bezpłatne pierwsze 150g)",
+                "kontrola lub wymiana filtra przeciwpyłowego (koszt filtra nie jest zawarty w cenie)",
+                "odgrzybianie metodą ozonowania",
+                "końcowy pomiar ciśnień",
+                "kontrola temperatury chłodzenia po przeglądzie"
+              ]
+            },
+            {
+              "tag": "ul",
+              "txt": "Pakiet zaawansowany obejmuje dodatkowo:",
+              "li": [
+                "osuszenie układu",
+                "wprowadzenie czynnika UV umożliwiającego lokalizację nieszczelności"
+              ]
+            },
+            {
+              "tag": "ul",
+              "txt": "Serwis klimatyzacji",
+              "li": [
+                "diagnostyka",
+                "napełnianie czynnikiem R-134a",
+                "naprawa układu",
+                "odgrzybianie klimatyzacji ozonem"
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "img",
+          "width": 50,
+          "src": "https://autogaz.bzdrive.com/images/klima.png"
+        }
+      ]
+    },
+    {
+      "tag": "theme",
+      "to": "/tireservice",
+      "txt": "Serwis ogumienia",
+      "content": [
+        {
+          "tag": "p",
+          "txt": "Cos tam na temat ogumienia..."
+        }
+      ]
+    },
+    {
+      "tag": "theme",
+      "to": "/electrician",
+      "txt": "Elektryka samochodowa",
+      "content": [
+        {
+          "tag": "ul",
+          "txt": "Nasza firma zajmuje się montażem",
+          "li": [
+            "haków holowniczych",
+            "czujników parkowania",
+            "auto alarmów"
+          ]
+        },
+        {
+          "tag": "ul",
+          "txt": "Diagnostyka komputerowa",
+          "li": [
+            "posiadamy profesjonalny tester diagnostyczny do pojazdów z europy, azji i USA",
+            "możliwość wydruku kodów błędu, parametrów i wykresów",
+            "możliwość obserwacji parametrów rzeczywistych na wykresach oraz możliwość ich nagrywania",
+            "pełny podgląd parametrów rzeczywistych z możliwością zapisania stanu aktualnego oraz nagrywania ich zmian",
+            "pełny opis kodu błędu z możliwością wykasowania",
+            "mnóstwo funkcji specjalnych w tym kodowania wtryskiwaczy, kalibracje, regeneracje filtrów cząstek stałych i wiele innych",
+            "możliwość przetestowania/przesterowania większości podzespołów (pompy, wtryskiwacze, zawory, cewki, etc.)"
+          ]
+        }
+      ]
+    },
+    {
+      "tag": "theme",
+      "to": "/doortodoor",
+      "txt": "Usluga Door-to-Door",
+      "content": [
+        {
+          "tag": "p",
+          "txt": "Door to door, to usługa polegająca na zleceniu naprawy pojazdu  bez konieczności udawania się  do punktu serwisowego."
+        },
+        {
+          "tag": "p",
+          "txt": "Samochód odbierany jest przez mechanika lub pracownika serwisu i po wykonanej naprawie dostarczany na miejsce, z którego był odebrany. Auto może być dostarczone również pod inny adres, wskazany przez klienta. Natomiast płatność po wykonanej usłudze może być zrealizowana w formie bezgotówkowej - przelewem. W przypadku naprawy klient musi zgłosić awarię lub konieczność przeprowadzenia przeglądu  telefonicznie lub online, np. wypełniając formularz na stronie internetowej lub pisząc maila."
+        },
+        {
+          "tag": "p",
+          "txt": "Jest to usługa z pewnością bardzo wygodna, oszczędzająca mnóstwo czasu, ale również, w obecnej sytuacji, o wiele bardziej bezpieczna, dzięki ograniczeniu kontaktu do niezbędnego minimum lub jego eliminacji."
+        },
+        {
+          "tag": "p",
+          "txt": "Warto nadmienić, że dla mechanika wracającego autem klienta do warsztatu jest to okazja do przeprowadzenia wstępnej diagnostyki samochodu. Auto może zostać również dostarczone do serwisu na lawecie."
+        }
+      ]
+    },
+    {
+      "tag": "theme",
+      "to": "/replacement",
+      "txt": "Samochod zastepczy",
+      "content": [
+        {
+          "tag": "p",
+          "txt": "Cos tam na temat Samochodu zastepczego..."
+        }
+      ]
+    },
+    {
+      "tag": "theme",
+      "to": "/glass",
+      "txt": "Glass Service",
+      "content": [
+        {
+          "tag": "p",
+          "txt": "Cos tam na temat Glass Service..."
+        }
+      ]
+    },
+    {
+      "tag": "theme",
+      "to": "/price",
+      "txt": "Cennik",
+      "content": [
+        {
+          "tag": "table",
+          "lines": [
+            {
+              "col1": {
+                "txt": "usługa",
+                "width": 40
+              },
+              "col2": {
+                "txt": "cena",
+                "width": 10
+              }
+            },
+            {
+              "col1": "Podstawowa diagnostyka silnika",
+              "col2": "od 50,00 zł"
+            },
+            {
+              "col1": "Wymiana oleju silnikowego",
+              "col2": "od 70,00 zł"
+            },
+            {
+              "col1": "Wymiana klocków hamulcowych",
+              "col2": "od 70,00 zł"
+            },
+            {
+              "col1": "Wymiana tarcz hamulcowych",
+              "col2": "od 150,00 zł"
+            },
+            {
+              "col1": "Wymiana amortyzatorów",
+              "col2": "od 100,00 zł"
+            },
+            {
+              "col1": "Wymiana płynu chłodzącego",
+              "col2": "od 50,00 zł"
+            },
+            {
+              "col1": "SWymiana płynu hamulcowego",
+              "col2": "od 120,00 zł"
+            },
+            {
+              "col1": "Wymiana paska rozrządu",
+              "col2": "od 120,00 zł"
+            },
+            {
+              "col1": "Podłączenie urządzenia, sprawdzenie ilości czynnika w układzie",
+              "col2": "150,00 zł"
+            },
+            {
+              "col1": "Każde 100g uzupełnienia czynnika (R-134a)",
+              "col2": "35,00 zł"
+            },
+            {
+              "col1": "Naprawa układu klimatyzacji",
+              "col2": "od 50,00 zł"
+            },
+            {
+              "col1": "Dezynfekcja układu",
+              "col2": "od 50,00 zł"
+            },
+            {
+              "col1": "Wymiana filtra kabinowego",
+              "col2": "od 10,00 zł"
+            },
+            {
+              "col1": "Montaż haka holowniczego",
+              "col2": "od 350,00 zł"
+            },
+            {
+              "col1": "Montaż świateł dziennych",
+              "col2": "od 200,00 zł"
+            },
+            {
+              "col1": "Sprawdzenie auta przed zakupem",
+              "col2": "od 150,00 zł"
+            },
+            {
+              "col1": "Zbieżność",
+              "col2": "od 90,00 zł"
+            },
+            {
+              "col1": "Geometria",
+              "col2": "od 150,00 zł"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

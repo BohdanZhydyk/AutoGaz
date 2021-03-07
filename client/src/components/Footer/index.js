@@ -21,7 +21,7 @@ const Footer = ({state, act})=>{
                 <Opened opened={el.opened} />
               </div>
 
-              <Copyright txt={el.info.lines[0].name} act={act} />
+              <Copyright admin={el.admin} txt={el.info.lines[0].name} act={act} />
 
               <CookieLine cookieline={el.cookieline} act={act} />
 
