@@ -3,7 +3,6 @@ import { HashRouter } from 'react-router-dom'
 import './App.scss'
 
 import { getState } from './store/functions/getState'
-import { adminActions } from './store/actions/adminActions'
 import { footerActions } from './store/actions/footerActions'
 
 import Header from './components/Header'
@@ -24,9 +23,6 @@ function App() {
   const act = ({addr, type, payload})=>{
     switch(addr){
 
-      // case "mode":        return( admin.adminMode );
-
-      // case "admin":       adminActions( type, payload, admin, setAdmin );     break;
       case "footer":      footerActions( type, payload, state, setState );  break;
 
       default: break;

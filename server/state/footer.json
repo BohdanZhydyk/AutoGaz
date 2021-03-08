@@ -66,8 +66,8 @@
   },
   "admin": {
     "active": false,
-    "adminMode": false,
     "pannel": {
+      "adminMode": true,
       "header": "Sprawdzimy, czy jestes adminem",
       "buttonTxt": "Sprawdzić",
       "login": {
