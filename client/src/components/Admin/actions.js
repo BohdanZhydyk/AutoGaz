@@ -16,7 +16,23 @@ export const adminActions = ( action, admin, setAdmin )=>{
       break
 
     case "SUB_MENU_BTN_CLICK":
-      alert(action.payload)
+      setAdmin(
+        admin.map( (element)=>{
+          if(element.tag === "menu"){
+            if(element.subMenu){
+              return{
+                ...element,
+                subMenu:element.subMenu.map( (submenu)=>{
+                  if(submenu.to === action.payload){ return{...submenu, active:true} }
+                  else{ return{...submenu, active:false} }
+                })
+              }
+            }
+            else{ return element }
+          }
+          else{ return element }
+        })
+      )
       break
 
     default: break

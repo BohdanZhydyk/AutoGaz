@@ -1,6 +1,6 @@
 @import './../../../../Variables.scss';
 
-.menuItemPannel {
+.menuPannel {
 
   .menuBtn {
     width:20vw;
@@ -19,27 +19,37 @@
     }
   }
 
-  .elementMenuHeader {
+  .menuItem {
     width:92vw;
     margin:0.5vw 2vw;
     padding:1vw;
     border:$borderDark;
     border-radius:$borderRadius;
 
-    .subMenuItemPannel {
-      
+    .addTag {
+      color:$Grn;
     }
 
-    .subMenuBtn {
-      width:15vw;
-      min-height:2vw;
-      margin:0.5vw 0;
-      border:$borderDark;
-      border-radius:$borderRadius;
-  
-      &:hover {
-        color:$fontLight;
-        background-color:$colorDark;
+    .header {
+
+    }
+
+    .subMenuPannel {
+
+      .subMenuItem {
+        
+        .subMenuBtn {
+          width:15vw;
+          min-height:2vw;
+          margin:0.5vw 0;
+          border:$borderDark;
+          border-radius:$borderRadius;
+      
+          &:hover {
+            color:$fontLight;
+            background-color:$colorDark;
+          }
+        }
       }
     }
   }
