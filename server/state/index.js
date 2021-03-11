@@ -1,6 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 
+const admin = require('./admin.json')
 const logo = require('./logo.json')
 const services = require('./main/services.json')
 const services_bmw = require('./main/services_bmw.json')
@@ -16,6 +17,7 @@ const error = require('./error.json')
 
 
 exports.state = [
+  admin,
   logo,
 
   services,

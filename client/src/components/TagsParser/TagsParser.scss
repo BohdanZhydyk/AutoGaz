@@ -1,59 +1,5 @@
 @import './../../Variables.scss';
 
-.tagH1 {
-  width:100%;
-  margin:2vw 0;
-  font-size:300%;
-  font-weight:bold;
-
-  &-light {
-    border-top:$borderDark;
-    border-bottom:$borderDark;
-    // background-image:linear-gradient( 90deg, $gradientLight );
-  }
-
-  &-dark {
-    border-top:$borderLight;
-    border-bottom:$borderLight;
-    // background-image:linear-gradient( 90deg, $gradientDark );
-  }
-}
-
-.tagP {
-  width:100%;
-  text-indent:2vw;
-  text-align:justify;
-
-  a {
-    color:$lightGrn;
-    font-weight:bold;
-    margin:0 0.5rem;
-
-    &:hover {color:$Red}
-  }
-}
-
-.tagImg {
-  width:100%;
-  margin:1vw;
-}
-
-.tagUl {
-  width:90%;
-
-  .ul {
-    font-size:120%;
-    font-weight:bold;
-    margin:2vw 1vw 1vw 1vw;
-  }
-  
-  .li {
-    width:80%;
-    margin:0 0 0 3vw;
-    text-indent:-0.5vw;
-  }
-}
-
 .tagTheme {
   position:relative;
   width:100%;
@@ -93,6 +39,60 @@
         border-radius:$borderRadius;
       }
     }
+  }
+}
+
+.tagH1 {
+  width:100%;
+  margin:2vw 0;
+  font-size:300%;
+  font-weight:bold;
+
+  &-light {
+    border-top:$borderDark;
+    border-bottom:$borderDark;
+    // background-image:linear-gradient( 90deg, $gradientLight );
+  }
+
+  &-dark {
+    border-top:$borderLight;
+    border-bottom:$borderLight;
+    // background-image:linear-gradient( 90deg, $gradientDark );
+  }
+}
+
+.tagP {
+  width:100%;
+  text-indent:2vw;
+  text-align:justify;
+
+  a {
+    color:$lightGrn;
+    font-weight:bold;
+    margin:0 0.5rem;
+
+    &:hover {color:$Red}
+  }
+}
+
+.tagImg {
+  width:100%;
+  margin:1vw;
+}
+
+.tagUl {
+  width:100%;
+  margin:2vw 1vw 1vw 1vw;
+
+  .ul {
+    font-size:120%;
+    font-weight:bold;
+  }
+  
+  .li {
+    width:80%;
+    margin:0 0 0 3vw;
+    text-indent:-0.5vw;
   }
 }
 

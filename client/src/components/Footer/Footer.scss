@@ -36,60 +36,10 @@ footer {
 
   .copyright {
     width:100%;
-    min-height:6vw;
+    min-height:4vw;
     padding:1vw 0;
     color:$fontDark;
     background-color:$colorLight;
-
-    .adminForm {
-      width:100%;
-      padding:1vw 0;
-      background-color:$lightGry;
-
-      input {
-        width:30vw;
-        min-height:2vw;
-        margin:0.5vw 0;
-        padding:0 1vw;
-        border:$borderDark;
-        border-radius:$borderRadius;
-        background-color:$Wht;
-
-        &:hover {
-          border:$borderRed;
-        }
-      }
-
-      .err {
-        min-height:1.2vw;
-        font-weight:bold;
-        color:$Org;
-      }
-
-      button {
-        width:32vw;
-        min-height:2vw;
-        margin:0.5vw 0;
-        padding:0 1vw;
-        color:$colorLight;
-        border:none;
-        border-radius:$borderRadius;
-        background-color:$Grn;
-
-        &:hover {
-          font-size:120%;
-          background-color:$lightGrn;
-        }
-      }
-
-      .info {
-        color:$Org;
-
-        span {
-          color:$lightGrn;
-        }
-      }
-    }
   }
 
   .cookie {

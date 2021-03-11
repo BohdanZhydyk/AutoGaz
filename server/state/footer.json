@@ -63,29 +63,5 @@
       "txt": "Więcej informacji"
     },
     "btn": "Akceptuję"
-  },
-  "admin": {
-    "active": false,
-    "pannel": {
-      "adminMode": true,
-      "header": "Sprawdzimy, czy jestes adminem",
-      "buttonTxt": "Sprawdzić",
-      "login": {
-        "placeholder": "wpisz swoj login...",
-        "value": "",
-        "err": false
-      },
-      "pass": {
-        "placeholder": "wpisz swoje hasło...",
-        "value": "",
-        "err": false
-      }
-    },
-    "messages": [
-      "Jestes adminem, teraz możesz wszystko )))",
-      "nie prawidłowy login!",
-      "nie prawidłowe hasło!",
-      "pole nie może być pustym!"
-    ]
   }
 }

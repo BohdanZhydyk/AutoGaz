@@ -7,7 +7,7 @@ import { Copyright } from './Copyright'
 import { CookieLine } from './CookieLine'
 
 
-const Footer = ({state, act})=>{
+const Footer = ({state, act, admin})=>{
   return(
     <>
     {
@@ -21,7 +21,7 @@ const Footer = ({state, act})=>{
                 <Opened opened={el.opened} />
               </div>
 
-              <Copyright admin={el.admin} txt={el.info.lines[0].name} act={act} />
+              <Copyright txt={el.info.lines[0].name} act={act} admin={admin} />
 
               <CookieLine cookieline={el.cookieline} act={act} />
 

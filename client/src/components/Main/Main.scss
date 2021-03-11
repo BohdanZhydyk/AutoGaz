@@ -4,12 +4,54 @@ main {
   width:100%;
   margin-top:4vw;
 
-  .navContent {
-    margin:0;
-    padding:0;
-    width:90%;
-    min-height:50vh;
-    padding:1vw 5%;
+  .addTagPannel {
+    width:100%;
+    margin:0.5vw 0;
+    color:$Red;
+
+    &-light {
+      border-top:$borderDark;
+      border-bottom:$borderDark;
+    }
+
+    &-dark {
+      border-top:$borderLight;
+      border-bottom:$borderLight;
+    }
+  }
+
+  .headerPannel {
+    width:100%;
+    color:$fontLight;
+    background-color:$colorDark;
+
+    .headerContent {
+      width:95vw;
+      margin:1vw 0;
+      padding:1vw;
+      background-color:$colorDark;
+      border:$borderDark;
+      border-radius:$borderRadius;
+      
+      &-admin {
+        border:$borderDashedRed;
+      }
+    }
+  }
+
+  .subMenuPannel {
+    width:100%;
+
+    .subMenuContent {
+      width:95vw;
+      margin:1vw 0;
+      padding:1vw;
+      border-radius:$borderRadius;
+      
+      &-admin {
+        border:$borderDashedRed;
+      }
+    }
 
     &-light {
       color:$fontDark;
@@ -21,5 +63,4 @@ main {
       background-color:$colorDark;
     }
   }
-
 }

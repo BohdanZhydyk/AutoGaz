@@ -2,31 +2,39 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import './Main.scss'
 
-import { TagsFunction } from './../Tags/TagsFunction'
+import { HeaderPannel } from './HeaderPannel'
+import { SubMenuPannels } from './SubMenuPannels'
+import { SubMenuPannel } from './SubMenuPannel'
 
 import { Cookie } from './Cookie'
-import { Error } from './Error'
+// import { Error } from './Error'
 
 
-const Main = ({state, act})=>{
+const Main = ({state, act, admin})=>{
   return(
     <main>
     {
-      state.map( (element, nr)=>{
+      state.map( (element, index)=>{
         if(element.tag === "menu"){
           return(
-            <Switch key={`Switch${nr}`} >
+            <Switch key={`Switch${index}`} >
 
               <Route exact path={element.to} component={ ()=>
-                <TagsFunction array={element} nr={nr} act={act} />
+                <>
+                  <HeaderPannel element={element} index={index} theme="dark" act={act} admin={admin} />
+                  {
+                    element.subMenu &&
+                    <SubMenuPannels submenu={element.subMenu} act={act} admin={admin} />
+                  }
+                </>
               } />
 
               {
                 element.subMenu &&
-                element.subMenu.map( (item, index)=>{
+                element.subMenu.map( (el, nr)=>{
                   return(
-                    <Route exact path={item.to} key={`route${item.to + index}`} component={ ()=>
-                      <TagsFunction array={item} nr={index} act={act} />
+                    <Route exact path={el.to} component={ ()=>
+                      <SubMenuPannel el={el} nr={nr} theme="light" act={act} admin={admin} />
                     } />
                   )
                 })
@@ -41,7 +49,7 @@ const Main = ({state, act})=>{
 
     <Switch>
       
-      <Route exact path="/cookie" component={ ()=> <Cookie state={state} act={act} /> } />
+      <Route exact path="/cookie" component={ ()=> <Cookie state={state} theme="light" act={act} admin={admin} /> } />
 
       {/* <Route path='*' component={ ()=> <Error state={state} act={act} /> } /> */}
 

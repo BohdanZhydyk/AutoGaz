@@ -1,7 +1,73 @@
 @import './../../Variables.scss';
 
 .adminPannel {
+  position:fixed;
+  top:7vw;
   width:100%;
-  padding:1vw 0;
-  background-color:$lightGry;
+  z-index:3000;
+
+  .form {
+    width:50vw;
+    padding:1vw;
+    background-color:$lightGry;
+    border:$borderDashedRed;
+    border-radius:$borderRadius;
+
+    input {
+      width:30vw;
+      min-height:2vw;
+      margin:0.5vw 0;
+      padding:0 1vw;
+      border:$borderDark;
+      border-radius:$borderRadius;
+      background-color:$Wht;
+
+      &:hover {
+        border:$borderRed;
+      }
+    }
+
+    .err {
+      min-height:1.2vw;
+      font-weight:bold;
+      color:$Org;
+    }
+
+    button {
+      width:32vw;
+      min-height:2vw;
+      margin:0.5vw 0;
+      padding:0 1vw;
+      color:$colorLight;
+      border:none;
+      border-radius:$borderRadius;
+      background-color:$Grn;
+
+      &:hover {
+        font-size:120%;
+        background-color:$lightGrn;
+      }
+    }
+
+    .info {
+      color:$Org;
+
+      span {
+        color:$lightGrn;
+      }
+    }
+  }
+
+  .exit {
+    position:fixed;
+    right:2.5vw;
+    width:6vw;
+    min-height:2vw;
+    color:$Org;
+    opacity:0.5;
+
+    &:hover {
+      opacity:1;
+    }
+  }
 }
