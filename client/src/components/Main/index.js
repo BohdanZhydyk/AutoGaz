@@ -14,7 +14,7 @@ const Main = ({state, act, admin})=>{
   return(
     <main>
     {
-      state.map( (element, index)=>{
+      state.content.map( (element, index)=>{
         if(element.tag === "menu"){
           return(
             <Switch key={`Switch${index}`} >

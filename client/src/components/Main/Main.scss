@@ -4,6 +4,30 @@ main {
   width:100%;
   margin-top:4vw;
 
+  .tag {
+    position:relative;
+
+    .Edit-Delete {
+      width:3vw;
+      min-height:6vw;
+      margin:0 0 0 0.5vw;
+      color:$Wht;
+      background-color:$colorDark;
+      border:$borderRed;
+      border-radius:$borderRadius;
+
+      img {
+        width:1.5vw;
+        margin:0.5vw;
+
+        &:hover {
+          width:2vw;
+          margin:0.25vw;
+        }
+      }
+    }
+  }
+
   .addTagPannel {
     width:100%;
     margin:0.5vw 0;
@@ -32,10 +56,6 @@ main {
       background-color:$colorDark;
       border:$borderDark;
       border-radius:$borderRadius;
-      
-      &-admin {
-        border:$borderDashedRed;
-      }
     }
   }
 
@@ -47,10 +67,6 @@ main {
       margin:1vw 0;
       padding:1vw;
       border-radius:$borderRadius;
-      
-      &-admin {
-        border:$borderDashedRed;
-      }
     }
 
     &-light {

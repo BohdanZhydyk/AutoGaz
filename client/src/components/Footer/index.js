@@ -9,29 +9,18 @@ import { CookieLine } from './CookieLine'
 
 const Footer = ({state, act, admin})=>{
   return(
-    <>
-    {
-      state.map( (el, index)=>{
-        if( el.tag === "footer" ){
-          return(
-            <footer key={`Footer${index}`}>
+    <footer>
 
-              <div className="footerTop flex">
-                <Contacts info={el.info} />
-                <Opened opened={el.opened} />
-              </div>
+      <div className="footerTop flex">
+        <Contacts info={state.footer.info} />
+        <Opened opened={state.footer.opened} />
+      </div>
 
-              <Copyright txt={el.info.lines[0].name} act={act} admin={admin} />
+      <Copyright txt={state.footer.info.lines[0].name} act={act} admin={admin} />
 
-              <CookieLine cookieline={el.cookieline} act={act} />
+      <CookieLine cookieline={state.footer.cookieline} act={act} />
 
-              </footer>
-          )
-        }
-        else{ return }
-      })
-    }
-    </>
+    </footer>
   )
 }
 

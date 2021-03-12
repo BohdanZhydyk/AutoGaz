@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 
-export const getState = (state, setState)=>{
+export const editState = (newState, callback)=>{
 
   let API
   let hostname = window.location.hostname
@@ -10,6 +10,7 @@ export const getState = (state, setState)=>{
   ? API = 'http://localhost:5000'
   : API = 'https://autogaz.bzdrive.com'
 
-  axios.get( API + "/getState" ).then( (res)=>{ setState(res.data) })
+  axios.post( API + "/editState", {state:newState} )
+  .then( (res)=> callback(res.data) )
   
 }

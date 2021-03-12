@@ -18,8 +18,8 @@ function App() {
 
   const [state, setState] = useState("")
 
-  if(state === ""){ getState( setState ) }
-  else{ state.map( (el)=>{ if(el.tag === "admin") admin = el.pannel.adminMode }) }
+  if(state === ""){ getState( state, setState ) }
+  else{ admin = state.admin.adminMode }
 
   console.log('state', state)
 

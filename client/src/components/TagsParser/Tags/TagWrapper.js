@@ -1,25 +1,24 @@
 import React from 'react'
 
-import RenderTags from './../RenderTags'
+import TagsParser from './../../TagsParser'
 
 
-export const TagWrapper = ({ item, theme, index, act })=>{
+export const TagWrapper = ({ item, index, theme, act, admin })=>{
   return(
-    <div className="tagWrapper flex wrap stretch" key={`Wrapper${index}`} >
+    <div className="tagWrapper flex wrap stretch" >
     {
-      item.items.map( (element, nr)=>{
+      item.items.map( (el)=>{
         return(
           <div
             className="wrapperItem flex"
             style={{width:item.itemWidth+"%"}}
-            key={`subtagwrapper${index+nr+item.itemWidth}`}
           >
-          <RenderTags
-            item={element}
+          <TagsParser 
+            array={[el]}
+            index={index}
             theme={theme}
-            index={nr}
-            name={`wrapper${element.tag}`}
             act={act}
+            admin={admin}
           />
           </div>
         )

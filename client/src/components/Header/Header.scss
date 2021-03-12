@@ -61,13 +61,33 @@ header {
     width:30%;
     text-decoration:none;
     color:$colorDark;
+
+    .adminMode {
+      font-size:80%;
+      padding:0 0.5vw;
+      color:$Wht;
+      background-color:$Org;
+
+      .exitBtn {
+        width:10vw;
+        margin:0.2vw 0.5vw;
+        min-height:2vw;
+        color:$Wht;
+        background-color:$Org;
+        border:$borderLight;
+        border-radius:$borderRadius;
+        &:hover {
+          background-color:$Red;
+        }
+      }
+    }
   
-    span {
+    .logoName {
       font-size:250%;
       font-weight:bold;
     }
   
-    img {
+    .logoImg {
       width:40%;
       margin:0.5vw;
     }

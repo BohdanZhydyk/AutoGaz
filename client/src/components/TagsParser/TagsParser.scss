@@ -42,23 +42,11 @@
   }
 }
 
-.tagH1 {
+.tagHeading {
   width:100%;
   margin:2vw 0;
-  font-size:300%;
+  font-size:200%;
   font-weight:bold;
-
-  &-light {
-    border-top:$borderDark;
-    border-bottom:$borderDark;
-    // background-image:linear-gradient( 90deg, $gradientLight );
-  }
-
-  &-dark {
-    border-top:$borderLight;
-    border-bottom:$borderLight;
-    // background-image:linear-gradient( 90deg, $gradientDark );
-  }
 }
 
 .tagP {
@@ -66,12 +54,43 @@
   text-indent:2vw;
   text-align:justify;
 
+  &-light {
+    border-top:$borderLight;
+    border-bottom:$borderLight;
+  }
+
+  &-dark {
+    border-top:$borderDark;
+    border-bottom:$borderDark;
+  }
+
   a {
     color:$lightGrn;
     font-weight:bold;
     margin:0 0.5rem;
 
     &:hover {color:$Red}
+  }
+
+  textarea {
+    width:88vw;
+    padding:0.5vw;
+  }
+
+  input {
+    width:40vw;
+    min-height:2vw;
+    margin:0.5vw;
+    padding:0 1vw;
+  }
+
+  &-admin {
+
+    &:hover {
+      background-color:#f001;
+      border-top:$borderDashedRed;
+      border-bottom:$borderDashedRed;
+    }
   }
 }
 

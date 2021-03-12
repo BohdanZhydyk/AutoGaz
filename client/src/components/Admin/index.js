@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Admin.scss'
 
 import { Header } from './Header'
@@ -8,40 +8,26 @@ import { Button } from './Button'
 
 const Admin = ({state, act})=>{
 
-  let adminObj
-  state.map( (el)=>{ if(el.tag === "admin") adminObj = el })
-
   let enter = (e)=>{
     if(e.key === "Enter"){ act({ addr:"admin", type:"CHECK_FOR_ADMIN", payload:true }) }
   }
 
-  let exit = ()=> act({ addr:"admin", type:"EXIT_ADMIN_MODE", payload:false })
-
-  // const [admin, setAdmin] = useState(state)
-
-  // const adm = (action)=> adminActions( action, admin, setAdmin )
-
-  // console.log('admin', admin)
-
   return(
     <div className="adminPannel flex">
     {
-      adminObj.pannel.active &&
-      <>
+      state.admin.pannel.active &&
+      <section>
       {
-        adminObj.pannel.adminMode
-        ?
-        <button className="exit" onClick={ ()=> exit() } >Exit AdminMode</button>
-        :
+        !state.admin.adminMode &&
         <div className="form flex column" onKeyUp={ (e)=> enter(e) } >
 
-          <Header txt={adminObj.pannel.header} />
+          <Header txt={state.admin.pannel.header} />
 
-          <Input name={"login"} input={adminObj.pannel.login} errors={adminObj.messages} act={act} />
+          <Input name={"login"} input={state.admin.pannel.login} errors={state.admin.messages} act={act} />
 
-          <Input name={"pass"} input={adminObj.pannel.pass} errors={adminObj.messages} act={act} />
+          <Input name={"pass"} input={state.admin.pannel.pass} errors={state.admin.messages} act={act} />
 
-          <Button txt={adminObj.pannel.buttonTxt} act={act} />
+          <Button txt={state.admin.pannel.buttonTxt} act={act} />
 
           <div className="info flex column">
           <div>pod czas dzialania strony w trybie testowym:</div>
@@ -51,7 +37,7 @@ const Admin = ({state, act})=>{
 
         </div>
       }
-      </>
+      </section>
       
     }
     </div>

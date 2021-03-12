@@ -3,19 +3,16 @@ export const footerActions = (type, payload, state, setState)=>{
   switch(type){
 
     case "COOKIES_ACCEPT":
-      setState(
-        state.map( (el)=>{
-          if( el.tag === "footer" ){
-            return {
-              ...el,
-              cookieline:{
-                ...el.cookieline,
-                active:payload
-              }
-            }
-          }else{ return el }
-        })
-      )
+      setState({
+        ...state,
+        footer: {
+          ...state.footer,
+          cookieline:{
+            ...state.footer.cookieline,
+            active:payload
+          }
+        }
+      })
       break
 
     default: break;

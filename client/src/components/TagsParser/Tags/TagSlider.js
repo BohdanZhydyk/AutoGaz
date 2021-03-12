@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 
+import { AddTagPannel } from './../AddTagPannel'
 
-export const TagSlider = ({ item, theme, index, act })=>{
+
+export const TagSlider = ({ item, theme, index, act, admin })=>{
 
   let initialSlider = {
     active: 0,
@@ -34,8 +36,14 @@ export const TagSlider = ({ item, theme, index, act })=>{
 
   return(
     <div className={`tagSlider tagSlider-${theme}`} key={`Slider${index}`} >
+
+      { item.editing && <AddTagPannel theme={theme} /> }
+
       <SliderTop slider={slider} index={index} sliderFn={sliderFn} />
       <SliderBottom slider={slider} sliderFn={sliderFn} />
+
+      { item.editing && <AddTagPannel theme={theme} /> }
+      
     </div>
   )
   // {
