@@ -83,8 +83,8 @@
           "content": [
             {
               "tag": "heading",
-              "inn": 1615555426561,
-              "txt": "Szanowni Państwo1",
+              "inn": 1615456861096,
+              "txt": "Szanowni Państwo",
               "editing": false
             },
             {
@@ -156,7 +156,7 @@
         },
         {
           "tag": "theme",
-          "inn": 1615551404987,
+          "inn": 1615551112706,
           "to": "/convergence",
           "txt": "Zbieznosc",
           "content": [
