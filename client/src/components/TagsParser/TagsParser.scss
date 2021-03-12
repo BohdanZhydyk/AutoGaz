@@ -173,17 +173,62 @@
 
 .tagUl {
   width:100%;
-  margin:2vw 1vw 1vw 1vw;
+  &-admin {
+
+    &:hover {
+      background-color:#f001;
+      border-top:$borderDashedRed;
+      border-bottom:$borderDashedRed;
+    }
+  }
+  &-light {
+    border-top:$borderLight;
+    border-bottom:$borderLight;
+  }
+  &-dark {
+    border-top:$borderDark;
+    border-bottom:$borderDark;
+  }
+
+  .ulArea {
+    width:100%;
+
+    input {
+      width:90%;
+      min-height:2vw;
+      padding:0 1vw;
+    }
+  }
 
   .ul {
+    width:90%;
     font-size:120%;
     font-weight:bold;
   }
   
   .li {
-    width:80%;
-    margin:0 0 0 3vw;
-    text-indent:-0.5vw;
+    width:calc(100% - 2vw - 2px);
+    margin:0 0 0 2vw;
+    font-size:80%;
+    font-weight:normal;
+    // text-indent:-0.5vw;
+  }
+
+  button {
+    margin:0 0 0 0.5vw;
+    font-size:1.2vw;
+    color:$Org;
+    border:$borderDark;
+    border-radius:$borderRadius;
+    background-color:#0000;
+    &:hover {
+      font-weight:bold;
+
+    }
+  }
+
+  .Edit-Delete {
+    width:2.5vw;
   }
 }
 

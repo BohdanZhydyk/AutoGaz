@@ -153,7 +153,20 @@ export const adminActions = ( type, payload, state, setState )=>{
       setState({
         ...state,
         content: state.content.map( (element)=>{
-          if(element.inn === payload.inn){ return{...element, editing:true} }
+          if(element.inn === payload.inn){
+            return{
+              ...element,
+              editing:true,
+              header: element.header.map( (el)=>{ return{...el, editing:false} }),
+              subMenu: element.subMenu.map( (el)=>{
+                return{
+                  ...el,
+                  editing:false,
+                  content:el.content.map( (item)=>{ return{...item, editing:false} })
+                }
+              })
+            }
+          }
           else{
             return{
               ...element,
