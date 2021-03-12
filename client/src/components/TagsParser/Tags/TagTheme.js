@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 
+import { EditDeletePannel } from './../EditDeletePannel'
+import { AddTagPannel } from './../AddTagPannel'
+
 
 export const TagTheme = ({ item, theme, index, act, admin })=>{
 
@@ -8,26 +11,44 @@ export const TagTheme = ({ item, theme, index, act, admin })=>{
   let edit = ()=> act({ addr:"admin", type:"EDIT_TAG", payload:{inn:target.inn} })
 
   return(
-    <h2 className={`tagTheme`} >
+    <section className={`tagTheme`} >
     {
 
       !target.editing
 
       ?
 
-      <div onClick={ ()=> admin && edit() } >
+      <div className="content" onClick={ ()=> admin && edit() } >
         <div className={`line line-${theme}`}></div>
-        <div className={`text text-${theme} flex`}>
-          <span className={`span span-${theme} flex`}>{item.txt}</span>
+        <div className={`text text-${theme} ${admin && 'text-admin'} flex`}>
+          <span className={`span span-${theme} flex`}>{target.txt}</span>
         </div>
       </div>
 
       :
 
-      <>editing</>
+      <div className="content" >
+
+        <AddTagPannel theme={theme} />
+
+        <section>
+          <div className={`line line-${theme}`}></div>
+          <div className={`text text-${theme} ${admin && 'text-admin'} flex`}>
+
+            <input className={`span span-${theme} flex`} type="text" placeholder="nazwa subMenu..."
+              value={target.txt} onChange={ (e)=> setTarget({...target, txt:e.target.value}) } />
+
+            <EditDeletePannel item={target} theme={theme} act={act} />
+          
+          </div>
+        </section>
+
+        <AddTagPannel theme={theme} />
+
+      </div>
 
     }
-    </h2>
+    </section>
   )
   // {
   //   tag:"theme",

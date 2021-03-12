@@ -11,21 +11,21 @@ export const TagP = ({ item, theme, index, act, admin })=>{
   let edit = ()=> act({ addr:"admin", type:"EDIT_TAG", payload:{inn:target.inn} })
 
   return(
-    <div className={`tagP tagP-${theme} ${admin && 'tagP-admin'}`} >
+    <section className={`tagP tagP-${theme} ${admin && 'tagP-admin'}`} >
     {
 
       !target.editing
 
       ?
 
-      <p onClick={ ()=> admin && edit() } >
+      <p className="content" onClick={ ()=> admin && edit() } >
         { target.txt }
         { target.a && <a href={target.href}>{` ${target.a}`}</a> }
       </p>
 
       :
 
-      <div className="flex column">
+      <div className="content flex column">
         <AddTagPannel theme={theme} />
 
         <div className="flex">
@@ -53,7 +53,7 @@ export const TagP = ({ item, theme, index, act, admin })=>{
       </div>
       
     }
-    </div>
+    </section>
   )
   // {
   //   tag:"p",
