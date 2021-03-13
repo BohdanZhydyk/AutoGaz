@@ -3,7 +3,7 @@ import './TagsParser.scss'
 
 import { TagMenu } from './Tags/TagMenu'
 import { TagTheme } from './Tags/TagTheme'
-import { TagHeading } from './Tags/TagHeading'
+import TagHeading from './Tags/TagHeading'
 import TagP from './Tags/TagP'
 import { TagImg } from './Tags/TagImg'
 import { TagUl } from './Tags/TagUl'

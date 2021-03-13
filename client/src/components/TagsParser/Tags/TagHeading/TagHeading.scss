@@ -1,0 +1,39 @@
+@import './../../../../Variables.scss';
+
+.tagHeading {
+  width:100%;
+  margin:1vw 0;
+  font-size:150%;
+  font-weight:bold;
+  &-admin {
+
+    &:hover {
+      background-color:#f001;
+      border-top:$borderDashedRed;
+      border-bottom:$borderDashedRed;
+    }
+  }
+  &-light {
+    border-top:$borderLight;
+    border-bottom:$borderLight;
+  }
+  &-dark {
+    border-top:$borderDark;
+    border-bottom:$borderDark;
+  }
+
+  .content {
+    width:100%;
+
+    input {
+      width:85vw;
+      min-height:2vw;
+      padding:0 1vw;
+      font-size:120%;
+    }
+  }
+
+  .Edit-Delete {
+    width:5vw;
+  }
+}
