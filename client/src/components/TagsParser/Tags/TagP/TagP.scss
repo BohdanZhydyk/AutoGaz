@@ -1,0 +1,46 @@
+@import './../../../../Variables.scss';
+
+.tagP {
+  width:100%;
+  text-indent:2vw;
+  text-align:justify;
+  &-admin {
+
+    &:hover {
+      background-color:#f001;
+      border-top:$borderDashedRed;
+      border-bottom:$borderDashedRed;
+    }
+  }
+  &-light {
+    border-top:$borderLight;
+    border-bottom:$borderLight;
+  }
+  &-dark {
+    border-top:$borderDark;
+    border-bottom:$borderDark;
+  }
+
+  a {
+    color:$lightGrn;
+    font-weight:bold;
+    margin:0 0.5rem;
+    &:hover {color:$Red}
+  }
+
+  textarea {
+    width:88vw;
+    padding:0.5vw;
+  }
+
+  input {
+    width:40vw;
+    min-height:2vw;
+    margin:0.5vw;
+    padding:0 1vw;
+  }
+
+  .Edit-Delete {
+    width:2.5vw;
+  }
+}

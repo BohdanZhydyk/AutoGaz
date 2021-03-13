@@ -1,11 +1,10 @@
 import React from 'react'
 
 
-export const EditDeletePannel = ({ props:{ item, theme, act } })=>{
+export const EditDeletePannel = ({ props:{ target, theme, act } })=>{
 
-  let edit = ()=> act({ addr:"admin", type:"EDIT_TAG", payload:{inn:item.inn} })
-  let save = ()=> act({ addr:"admin", type:"SAVE_TAG", payload:{...item} })
-  let del = ()=> act({ addr:"admin", type:"DELETE_TAG", payload:{inn:item.inn} })
+  let save = ()=> act({ addr:"admin", type:"SAVE_TAG", payload:{...target} })
+  let del = ()=> act({ addr:"admin", type:"DELETE_TAG", payload:{inn:target.inn} })
 
   return(
     <span className="Edit-Delete flex wrap">

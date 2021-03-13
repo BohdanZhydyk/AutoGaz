@@ -31,7 +31,7 @@ export const TagHeading = ({ item, theme, index, act, admin })=>{
           <input type="text" value={target.txt} placeholder={`text hedera...`}
               onChange={ (e)=> setTarget({...target, txt:e.target.value}) } />
 
-          <EditDeletePannel item={target} theme={theme} act={act} />
+          <EditDeletePannel props={{ target, theme, act }} />
           
         </div>
         

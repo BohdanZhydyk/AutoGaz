@@ -26,7 +26,7 @@ export const ColumnEditPannel = ({ props:{ target, tableFn } })=>{
               
               <span>{`<< ${oldWidth}% >>`}</span>
 
-              <button onClick={ ()=> sumWidth + 5 < 100 && COLUMN_WIDTH_EDIT( oldWidth+5, nr ) } > + </button>
+              <button onClick={ ()=> sumWidth + 5 < 95 && COLUMN_WIDTH_EDIT( oldWidth+5, nr ) } > + </button>
             
             </div>
 

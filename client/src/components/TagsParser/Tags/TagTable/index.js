@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './TagTable.scss'
 
 import { tableActions } from './tableActions'
 
@@ -9,6 +10,8 @@ import { TableEdit } from './TableEdit'
 const TagTable = ({ item, theme, index, act, admin })=>{
 
   const [target, setTarget] = useState(item)
+  
+  // console.log('TagTable', target)
 
   let tableFn = ({type, payload})=> tableActions(type, payload, target, setTarget)
 

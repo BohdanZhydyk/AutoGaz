@@ -38,7 +38,7 @@ export const TagTheme = ({ item, theme, index, act, admin })=>{
             <input className={`span span-${theme} flex`} type="text" placeholder="nazwa subMenu..."
               value={target.txt} onChange={ (e)=> setTarget({...target, txt:e.target.value}) } />
 
-            <EditDeletePannel item={target} theme={theme} act={act} />
+            <EditDeletePannel props={{ target, theme, act }} />
           
           </div>
         </section>

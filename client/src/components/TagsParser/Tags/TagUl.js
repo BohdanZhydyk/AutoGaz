@@ -67,7 +67,7 @@ export const TagUl = ({ item, theme, index, act, admin })=>{
 
           </ul>
 
-          <EditDeletePannel item={target} theme={theme} act={act} />
+          <EditDeletePannel props={{ target, theme, act }} />
 
         </div>
         

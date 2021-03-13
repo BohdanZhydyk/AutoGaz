@@ -23,6 +23,21 @@ export const tableActions = (type, payload, target, setTarget)=>{
         )
       })
       break
+    case "ADD_NEW_LINE":
+
+      let newContent = []
+      target.content.map( (item, index)=>
+        index === payload.nr
+        ? newContent.push( item, target.content[index].map( ()=> "" ) )
+        : newContent.push(item)
+      )
+
+      setTarget({
+        ...target,
+        content: newContent
+      })
+
+      break
     default: break
   }
 
