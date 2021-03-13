@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-export const EditDeletePannel = ({item, theme, act})=>{
+export const EditDeletePannel = ({ props:{ item, theme, act } })=>{
 
   let edit = ()=> act({ addr:"admin", type:"EDIT_TAG", payload:{inn:item.inn} })
   let save = ()=> act({ addr:"admin", type:"SAVE_TAG", payload:{...item} })

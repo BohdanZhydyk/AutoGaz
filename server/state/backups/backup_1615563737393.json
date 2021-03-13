@@ -207,8 +207,7 @@
                 "odgrzybianie metodą ozonowania",
                 "końcowy pomiar ciśnień",
                 "kontrola temperatury chłodzenia po przeglądzie"
-              ],
-              "editing": false
+              ]
             },
             {
               "tag": "ul",
@@ -217,8 +216,7 @@
               "li": [
                 "osuszenie układu",
                 "wprowadzenie czynnika UV umożliwiającego lokalizację nieszczelności"
-              ],
-              "editing": false
+              ]
             },
             {
               "tag": "ul",
@@ -229,8 +227,7 @@
                 "napełnianie czynnikiem R-134a",
                 "naprawa układu",
                 "odgrzybianie klimatyzacji ozonem"
-              ],
-              "editing": false
+              ]
             },
             {
               "tag": "img",
@@ -294,7 +291,7 @@
         },
         {
           "tag": "theme",
-          "inn": 1615563725355,
+          "inn": 1615456861061,
           "to": "/doortodoor",
           "txt": "Usluga Door-to-Door",
           "content": [
@@ -363,92 +360,90 @@
           "content": [
             {
               "tag": "table",
-              "inn": 1615592687365,
-              "width": [
-                35,
-                10
-              ],
-              "align": [
-                "start",
-                "end"
-              ],
-              "content": [
-                [
-                  "USŁUGA",
-                  "cena"
-                ],
-                [
-                  "Podstawowa diagnostyka silnika",
-                  "od 50,00 zł"
-                ],
-                [
-                  "Wymiana oleju silnikowego",
-                  "od 70,00 zł"
-                ],
-                [
-                  "Wymiana klocków hamulcowych",
-                  "od 70,00 zł"
-                ],
-                [
-                  "Wymiana tarcz hamulcowych",
-                  "od 150,00 zł"
-                ],
-                [
-                  "Wymiana amortyzatorów",
-                  "od 100,00 zł"
-                ],
-                [
-                  "Wymiana płynu chłodzącego",
-                  "od 50,00 zł"
-                ],
-                [
-                  "Wymiana płynu hamulcowego",
-                  "od 120,00 zł"
-                ],
-                [
-                  "Wymiana paska rozrządu",
-                  "od 120,00 zł"
-                ],
-                [
-                  "Podłączenie urządzenia, sprawdzenie ilości czynnika w układzie",
-                  "150,00 zł"
-                ],
-                [
-                  "Każde 100g uzupełnienia czynnika (R-134a)",
-                  "35,00 zł"
-                ],
-                [
-                  "Naprawa układu klimatyzacji",
-                  "od 50,00 zł"
-                ],
-                [
-                  "Dezynfekcja układu",
-                  "od 50,00 zł"
-                ],
-                [
-                  "Wymiana filtra kabinowego",
-                  "od 10,00 zł"
-                ],
-                [
-                  "Montaż haka holowniczego",
-                  "od 350,00 zł"
-                ],
-                [
-                  "Montaż świateł dziennych",
-                  "od 200,00 zł"
-                ],
-                [
-                  "Sprawdzenie auta przed zakupem",
-                  "od 150,00 zł"
-                ],
-                [
-                  "Zbieżność",
-                  "od 90,00 zł"
-                ],
-                [
-                  "Geometria",
-                  "od 150,00 zł"
-                ]
+              "inn": 1615456861051,
+              "lines": [
+                {
+                  "col1": {
+                    "txt": "usługa",
+                    "width": 40
+                  },
+                  "col2": {
+                    "txt": "cena",
+                    "width": 10
+                  }
+                },
+                {
+                  "col1": "Podstawowa diagnostyka silnika",
+                  "col2": "od 50,00 zł"
+                },
+                {
+                  "col1": "Wymiana oleju silnikowego",
+                  "col2": "od 70,00 zł"
+                },
+                {
+                  "col1": "Wymiana klocków hamulcowych",
+                  "col2": "od 70,00 zł"
+                },
+                {
+                  "col1": "Wymiana tarcz hamulcowych",
+                  "col2": "od 150,00 zł"
+                },
+                {
+                  "col1": "Wymiana amortyzatorów",
+                  "col2": "od 100,00 zł"
+                },
+                {
+                  "col1": "Wymiana płynu chłodzącego",
+                  "col2": "od 50,00 zł"
+                },
+                {
+                  "col1": "SWymiana płynu hamulcowego",
+                  "col2": "od 120,00 zł"
+                },
+                {
+                  "col1": "Wymiana paska rozrządu",
+                  "col2": "od 120,00 zł"
+                },
+                {
+                  "col1": "Podłączenie urządzenia, sprawdzenie ilości czynnika w układzie",
+                  "col2": "150,00 zł"
+                },
+                {
+                  "col1": "Każde 100g uzupełnienia czynnika (R-134a)",
+                  "col2": "35,00 zł"
+                },
+                {
+                  "col1": "Naprawa układu klimatyzacji",
+                  "col2": "od 50,00 zł"
+                },
+                {
+                  "col1": "Dezynfekcja układu",
+                  "col2": "od 50,00 zł"
+                },
+                {
+                  "col1": "Wymiana filtra kabinowego",
+                  "col2": "od 10,00 zł"
+                },
+                {
+                  "col1": "Montaż haka holowniczego",
+                  "col2": "od 350,00 zł"
+                },
+                {
+                  "col1": "Montaż świateł dziennych",
+                  "col2": "od 200,00 zł"
+                },
+                {
+                  "col1": "Sprawdzenie auta przed zakupem",
+                  "col2": "od 150,00 zł"
+                },
+                {
+                  "col1": "Zbieżność",
+                  "col2": "od 90,00 zł"
+                },
+                {
+                  "col1": "Geometria",
+                  "col2": "od 150,00 zł"
+                }
               ],
               "editing": false
             }
@@ -617,64 +612,62 @@
             },
             {
               "tag": "table",
-              "inn": 1615602172994,
-              "width": [
-                35,
-                10
-              ],
-              "align": [
-                "start",
-                "end"
-              ],
-              "content": [
-                [
-                  "usługa",
-                  "cena"
-                ],
-                [
-                  "Montaż instalacji LPG ( sekwencja )",
-                  "od 2400,00 zł"
-                ],
-                [
-                  "Montaż instalacji LPG ( II generacji )",
-                  "od 1800,00 zł"
-                ],
-                [
-                  "Wymiana zbiornika LPG",
-                  "od 580,00 zł"
-                ],
-                [
-                  "Przegląd instalacji LPG",
-                  "od 120,00 zł"
-                ],
-                [
-                  "Regulacja instalacji LPG",
-                  "od 50,00 zł"
-                ],
-                [
-                  "Samochody z sekwencyjnym wtryskiem gazu IV generacji 4 cylindry",
-                  "od 2300,00 zł"
-                ],
-                [
-                  "Samochody z sekwencyjnym wtryskiem gazu IV generacji 6 cylindrów",
-                  "od 3200,00 zł"
-                ],
-                [
-                  "Samochody z sekwencyjnym wtryskiem gazu IV generacji 8 cylindrów",
-                  "od 4200,00 zł"
-                ],
-                [
-                  "Regulacja samochodu",
-                  "od 20,00 zł"
-                ],
-                [
-                  "Wymiana filtra fazy ciekłej",
-                  "20,00 zł"
-                ],
-                [
-                  "Wymiana filtra fazy lotnej",
-                  "50,00 zł"
-                ]
+              "inn": 1515456862012,
+              "lines": [
+                {
+                  "col1": {
+                    "txt": "usługa",
+                    "width": 40
+                  },
+                  "col2": {
+                    "txt": "cena",
+                    "width": 10
+                  }
+                },
+                {
+                  "col1": "Montaż instalacji LPG ( sekwencja )",
+                  "col2": "od 2400,00 zł"
+                },
+                {
+                  "col1": "Montaż instalacji LPG ( II generacji )",
+                  "col2": "od 1800,00 zł"
+                },
+                {
+                  "col1": "Wymiana zbiornika LPG",
+                  "col2": "od 580,00 zł"
+                },
+                {
+                  "col1": "Przegląd instalacji LPG",
+                  "col2": "od 120,00 zł"
+                },
+                {
+                  "col1": "Regulacja instalacji LPG",
+                  "col2": "od 50,00 zł"
+                },
+                {
+                  "col1": "Samochody z sekwencyjnym wtryskiem gazu IV generacji 4 cylindry",
+                  "col2": "od 2300,00 zł"
+                },
+                {
+                  "col1": "Samochody z sekwencyjnym wtryskiem gazu IV generacji 6 cylindrów",
+                  "col2": "od 3200,00 zł"
+                },
+                {
+                  "col1": "Samochody z sekwencyjnym wtryskiem gazu IV generacji 8 cylindrów",
+                  "col2": "od 4200,00 zł"
+                },
+                {
+                  "col1": "Regulacja samochodu",
+                  "col2": "od 20,00 zł"
+                },
+                {
+                  "col1": "Wymiana filtra fazy ciekłej",
+                  "col2": "20,00 zł"
+                },
+                {
+                  "col1": "Wymiana filtra fazy lotnej",
+                  "col2": "50,00 zł"
+                }
               ],
               "editing": false
             },
@@ -875,80 +868,80 @@
             },
             {
               "tag": "table",
-              "inn": 1615602230383,
-              "width": [
-                10,
-                10,
-                15,
-                15
-              ],
-              "align": [
-                "center",
-                "center",
-                "end",
-                "end"
-              ],
-              "content": [
-                [
-                  "Koszt usługi",
-                  "LICZBA RAT",
-                  "Kwota raty Getin Bank",
-                  "Kwota raty Santander"
-                ],
-                [
-                  "1600,00",
-                  "12",
-                  "152,54 zł",
-                  "155,33 zł"
-                ],
-                [
-                  "1600,00",
-                  "24",
-                  "85,87 zł",
-                  "89,25 zł"
-                ],
-                [
-                  "2000,00",
-                  "12",
-                  "190,68 zł",
-                  "194,16 zł"
-                ],
-                [
-                  "2000,00",
-                  "24",
-                  "107,33 zł",
-                  "111,56 zł"
-                ],
-                [
-                  "2200,00",
-                  "12",
-                  "209,74 zł",
-                  "213,58 zł"
-                ],
-                [
-                  "2200,00",
-                  "24",
-                  "118,07 zł",
-                  "122,72 zł"
-                ],
-                [
-                  "2800,00",
-                  "12",
-                  "266,94 zł",
-                  "271,83 zł"
-                ],
-                [
-                  "2800,00",
-                  "24",
-                  "150,27 zł",
-                  "156,19 zł"
-                ]
+              "inn": 1515456862038,
+              "lines": [
+                {
+                  "col1": {
+                    "txt": "Koszt usługi",
+                    "width": 10
+                  },
+                  "col2": {
+                    "txt": "Liczba rat",
+                    "width": 10
+                  },
+                  "col3": {
+                    "txt": "Kwota raty Getin Bank",
+                    "width": 15
+                  },
+                  "col4": {
+                    "txt": "Kwota raty Santander",
+                    "width": 15
+                  }
+                },
+                {
+                  "col1": "1600,00",
+                  "col2": "12",
+                  "col3": "152,54 zł",
+                  "col4": "155,33 zł"
+                },
+                {
+                  "col1": "1600,00",
+                  "col2": "24",
+                  "col3": "85,87 zł",
+                  "col4": "89,25 zł"
+                },
+                {
+                  "col1": "2000,00",
+                  "col2": "12",
+                  "col3": "190,68 zł",
+                  "col4": "194,16 zł"
+                },
+                {
+                  "col1": "2000,00",
+                  "col2": "24",
+                  "col3": "107,33 zł",
+                  "col4": "111,56 zł"
+                },
+                {
+                  "col1": "2200,00",
+                  "col2": "12",
+                  "col3": "209,74 zł",
+                  "col4": "213,58 zł"
+                },
+                {
+                  "col1": "2200,00",
+                  "col2": "24",
+                  "col3": "118,07 zł",
+                  "col4": "122,72 zł"
+                },
+                {
+                  "col1": "2800,00",
+                  "col2": "12",
+                  "col3": "266,94 zł",
+                  "col4": "271,83 zł"
+                },
+                {
+                  "col1": "2800,00",
+                  "col2": "24",
+                  "col3": "150,27 zł",
+                  "col4": "156,19 zł"
+                }
               ],
               "editing": false
             },
             {
               "tag": "ul",
-              "inn": 1615580975509,
+              "inn": 1515456862039,
               "txt": "Raty można rozłożyć maksymalnie na 48 miesięcy. Koszt montażu instalacji gazowej ustala się indywidualnie, w zależności od:",
               "li": [
                 "rodzaju generacji instalacji gazowej",

@@ -239,45 +239,115 @@
 }
 
 .tagTable {
-  margin:2vw 0;
+  width:100%;
+  &-admin {
 
-  .title {
+    &:hover {
+      background-color:#f001;
+      border-top:$borderDashedRed;
+      border-bottom:$borderDashedRed;
+    }
+  }
+  &-light {
+    border-top:$borderLight;
+    border-bottom:$borderLight;
+  }
+  &-dark {
+    border-top:$borderDark;
+    border-bottom:$borderDark;
+  }
 
-    .col {
-      margin:1px;
-      padding:0.5vw;
-      font-weight:bold;
-      border-radius:$borderRadius;
+  .content {
+    width:100%;
 
-      &-light {
-        color:$fontLight;
-        background-color:$colorDark;
+    .columnEditPannel {
+      width:90vw;
+      margin-left:-4vw;
+
+      .columnEdit {
+        margin:0 0.5vw;
+        padding:0.5vw;
+        border:$borderDashedRed;
+        border-radius:$borderRadius;
+
+        .editWidthPannel {
+          width:9vw;
+
+        }
+
+        .editAlignPannel {
+          margin:0.5vw 0 0 0;
+
+          button {
+            width:33%;
+            margin:0 1px;
+            color:$Wht;
+            background-color:$Org;
+            &:hover {background-color:$Red;}
+          }
+
+          .active {
+            background-color:$Grn;
+            &:hover {background-color:$lightGrn;}
+          }
+        }
       }
+    }
 
-      &-dark {
-        color:$fontDark;
-        background-color:$colorLight;
+    .table {
+      width:90vw;
+
+      .tr {
+        width:100%;
+    
+        .th {
+          min-height:2vw;
+          margin:1px;
+          padding:0 1vw;
+          font-weight:bold;
+          border:$borderDark;
+          border-radius:$borderRadius;
+          &-light {
+            color:$fontLight;
+            background-color:$colorDark;
+          }
+          &-dark {
+            color:$fontDark;
+            background-color:$colorLight;
+          }
+        }
+        
+        .td {
+          min-height:1.5vw;
+          margin:1px;
+          padding:0 1vw;
+          color:$fontDark;
+          border-radius:$borderRadius;
+          &-light {border:$borderDark;}
+          &-dark {border:$borderLight;}
+        }
+
+        .colorOne {
+          &-light {background-color:colorOneLight;}
+          &-dark {background-color:$colorOneDark;}
+        }
+
+        .colorTwo {
+          &-light {background-color:$colorTwoLight;}
+          &-dark {background-color:$colorTwoDark;}
+        }
+      }
+    
+      input {
+        width:90%;
+        padding:0 0.5vw;
+        border:none;
       }
     }
   }
 
-  .line {
-
-    .colorOne {
-      &-light {background-color:#5555;}
-      &-dark {background-color:#5555;}
-    }
-  
-    .colorTwo {
-      &-light {background-color:#5552;}
-      &-dark {background-color:#5552;}
-    }
-
-    .col {
-      margin:1px;
-      padding:0.5vw;
-      border-radius:$borderRadius;
-    }
+  .Edit-Delete {
+    width:2.5vw;
   }
 }
 

@@ -363,22 +363,22 @@
           "content": [
             {
               "tag": "table",
-              "inn": 1615592687365,
+              "inn": 1615577007487,
               "width": [
-                35,
+                40,
                 10
               ],
               "align": [
                 "start",
-                "end"
+                "center"
               ],
               "content": [
                 [
-                  "USŁUGA",
+                  "usługaggg",
                   "cena"
                 ],
                 [
-                  "Podstawowa diagnostyka silnika",
+                  "Podstawowa diagnostyka silnikaggg",
                   "od 50,00 zł"
                 ],
                 [
@@ -387,7 +387,7 @@
                 ],
                 [
                   "Wymiana klocków hamulcowych",
-                  "od 70,00 zł"
+                  "od 70,00 złggg"
                 ],
                 [
                   "Wymiana tarcz hamulcowych",
@@ -617,14 +617,14 @@
             },
             {
               "tag": "table",
-              "inn": 1615602172994,
+              "inn": 1515456862012,
               "width": [
-                35,
+                40,
                 10
               ],
               "align": [
                 "start",
-                "end"
+                "center"
               ],
               "content": [
                 [
@@ -875,7 +875,7 @@
             },
             {
               "tag": "table",
-              "inn": 1615602230383,
+              "inn": 1515456862038,
               "width": [
                 10,
                 10,
@@ -883,15 +883,15 @@
                 15
               ],
               "align": [
-                "center",
+                "start",
                 "center",
                 "end",
-                "end"
+                "start"
               ],
               "content": [
                 [
                   "Koszt usługi",
-                  "LICZBA RAT",
+                  "Liczba rat",
                   "Kwota raty Getin Bank",
                   "Kwota raty Santander"
                 ],
@@ -948,7 +948,7 @@
             },
             {
               "tag": "ul",
-              "inn": 1615580975509,
+              "inn": 1515456862039,
               "txt": "Raty można rozłożyć maksymalnie na 48 miesięcy. Koszt montażu instalacji gazowej ustala się indywidualnie, w zależności od:",
               "li": [
                 "rodzaju generacji instalacji gazowej",

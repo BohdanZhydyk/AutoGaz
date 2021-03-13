@@ -9,14 +9,14 @@
       "buttonTxt": "Sprawdzić",
       "login": {
         "placeholder": "wpisz swoj login...",
-        "value": "",
+        "value": "admin",
         "type": "text",
         "legend": "login",
         "err": false
       },
       "pass": {
         "placeholder": "wpisz swoje hasło...",
-        "value": "",
+        "value": "admin",
         "type": "password",
         "legend": "hasło",
         "err": false
@@ -363,14 +363,14 @@
           "content": [
             {
               "tag": "table",
-              "inn": 1615592687365,
+              "inn": 1615577246850,
               "width": [
-                35,
+                40,
                 10
               ],
               "align": [
                 "start",
-                "end"
+                "center"
               ],
               "content": [
                 [
@@ -617,14 +617,14 @@
             },
             {
               "tag": "table",
-              "inn": 1615602172994,
+              "inn": 1515456862012,
               "width": [
-                35,
+                40,
                 10
               ],
               "align": [
                 "start",
-                "end"
+                "center"
               ],
               "content": [
                 [
@@ -875,7 +875,7 @@
             },
             {
               "tag": "table",
-              "inn": 1615602230383,
+              "inn": 1615580937441,
               "width": [
                 10,
                 10,
@@ -883,10 +883,10 @@
                 15
               ],
               "align": [
-                "center",
+                "start",
                 "center",
                 "end",
-                "end"
+                "start"
               ],
               "content": [
                 [
@@ -948,7 +948,7 @@
             },
             {
               "tag": "ul",
-              "inn": 1615580975509,
+              "inn": 1515456862039,
               "txt": "Raty można rozłożyć maksymalnie na 48 miesięcy. Koszt montażu instalacji gazowej ustala się indywidualnie, w zależności od:",
               "li": [
                 "rodzaju generacji instalacji gazowej",
