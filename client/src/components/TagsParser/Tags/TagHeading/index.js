@@ -5,7 +5,7 @@ import { HeadingRender } from './HeadingRender'
 import { HeadingEdit } from './HeadingEdit'
 
 
-const TagHeading = ({ item, theme, index, act, admin })=>{
+const TagHeading = ({ props:{ item, index, theme, act, admin } })=>{
 
   const [target, setTarget] = useState(item)
 

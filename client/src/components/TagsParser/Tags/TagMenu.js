@@ -1,7 +1,9 @@
 import React from 'react'
 
 
-export const TagMenu = ({ item, theme, index, act })=>{
+export const TagMenu = ({ props:{ item, index, theme, act, admin } })=>{
+
+  console.log(item)
 
   const link = `https://autogaz.bzdrive.com/images/logo/`
   const int = Math.floor(Math.random() * Math.floor(3))
@@ -9,7 +11,7 @@ export const TagMenu = ({ item, theme, index, act })=>{
   return(
     <div className={`tagTitle tagTitle-${theme} flex between`}>
       <img src={`${link}lineLogo-${`L`}-${theme}-${int}.png`} alt="scrLeft" />
-      <span className="flex">{item}</span>
+      <span className="flex">{item.txt}</span>
       <img src={`${link}lineLogo-${`R`}-${theme}-${int}.png`} alt="scrRight" />
     </div>
   )

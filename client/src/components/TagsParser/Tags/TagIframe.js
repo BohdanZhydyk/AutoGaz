@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-export const TagIframe = ({ item, theme, index, act })=>{
+export const TagIframe = ({ props:{ item, index, theme, act, admin } })=>{
   return(
     <div className="TagIframe flex" key={`Iframe${index}`}>
       <iframe

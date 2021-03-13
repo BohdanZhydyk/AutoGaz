@@ -5,7 +5,7 @@ import { ParagraphRender } from './ParagraphRender'
 import { ParagraphEdit } from './ParagraphEdit'
 
 
-const TagP = ({ item, theme, index, act, admin })=>{
+const TagP = ({ props:{ item, index, theme, act, admin } })=>{
 
   const [target, setTarget] = useState(item)
 

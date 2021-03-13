@@ -24,16 +24,12 @@ export const TableRender = ({ props:{ target, theme, act, admin } })=>{
           lineColor = !lineColor
 
           return(
-            <tr className={`tr line flex`}>
+            <tr className={`tr line flex`} key={`Tr${nr}`}>
             {
               line.map( (item, index)=>
-                <>
-                {
-                  nr === 0
-                  ? <ThRender props={{ item, index, width, theme }} />
-                  : <TdRender props={{ item, index, width, align, lineColor, theme }} />
-                }
-                </>
+                nr === 0
+                ? <ThRender props={{ item, index, width, theme }} key={`ThRender${nr+index}`} />
+                : <TdRender props={{ item, index, width, align, lineColor, theme }} key={`TdRender${nr+index}`} />
               )
             }
             </tr>

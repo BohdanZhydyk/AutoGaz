@@ -4,11 +4,11 @@ import { EditDeletePannel } from './../EditDeletePannel'
 import { AddTagPannel } from './../AddTagPannel'
 
 
-export const TagTheme = ({ item, theme, index, act, admin })=>{
+export const TagTheme = ({ props:{ item, index, theme, act, admin } })=>{
 
   const [target, setTarget] = useState(item)
 
-  let edit = ()=> act({ addr:"admin", type:"EDIT_TAG", payload:{inn:target.inn} })
+  let EDIT_TAG = ()=> act({ addr:"admin", type:"EDIT_TAG", payload:{inn:target.inn} })
 
   return(
     <section className={`tagTheme`} >
@@ -18,7 +18,7 @@ export const TagTheme = ({ item, theme, index, act, admin })=>{
 
       ?
 
-      <div className="content" onClick={ ()=> admin && edit() } >
+      <div className="content" onClick={ ()=> admin && EDIT_TAG() } >
         <div className={`line line-${theme}`}></div>
         <div className={`text text-${theme} ${admin && 'text-admin'} flex`}>
           <span className={`span span-${theme} flex`}>{target.txt}</span>

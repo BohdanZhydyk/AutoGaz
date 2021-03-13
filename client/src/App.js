@@ -39,13 +39,13 @@ function App() {
   return (
     <HashRouter className="App" >
 
-    { state !== "" && <Header state={state} act={act} admin={admin} /> }
+    { state !== "" && <Header props={{ state, act, admin }} /> }
 
-    { state !== "" && <Main state={state} act={act} admin={admin} /> }
+    { state !== "" && <Main props={{ state, act, admin }} /> }
 
-    { state !== "" && <Footer state={state} act={act} admin={admin} /> }
+    { state !== "" && <Footer props={{ state, act, admin }} /> }
 
-    { state !== "" && <Admin state={state} act={act} /> }
+    { state !== "" && <Admin props={{ state, act }} /> }
 
     </HashRouter>
   )

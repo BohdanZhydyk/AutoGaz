@@ -475,7 +475,7 @@
         },
         {
           "tag": "theme",
-          "inn": 1515456862095,
+          "inn": 1515436862095,
           "to": "/bmw_convergence",
           "txt": "Zbieznosc",
           "content": [],
@@ -1158,7 +1158,8 @@
   },
   "cookie": {
     "tag": "cookie",
-    "object": [
+    "inn": 1515454862049,
+    "content": [
       {
         "tag": "h1",
         "txt": "Polityka plików cookies"

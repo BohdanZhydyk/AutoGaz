@@ -10,21 +10,21 @@ import { Cookie } from './Cookie'
 // import { Error } from './Error'
 
 
-const Main = ({state, act, admin})=>{
+const Main = ({ props:{ state, act, admin } })=>{
   return(
     <main>
     {
       state.content.map( (element, index)=>{
         if(element.tag === "menu"){
           return(
-            <Switch key={`Switch${index}`} >
+            <Switch key={`Switch${element.inn}`} >
 
               <Route exact path={element.to} component={ ()=>
                 <>
                   <HeaderPannel element={element} index={index} theme="dark" act={act} admin={admin} />
                   {
                     element.subMenu &&
-                    <SubMenuPannels submenu={element.subMenu} act={act} admin={admin} />
+                    <SubMenuPannels props={{ submenu:element.subMenu, act, admin }} />
                   }
                 </>
               } />
@@ -33,8 +33,8 @@ const Main = ({state, act, admin})=>{
                 element.subMenu &&
                 element.subMenu.map( (el, nr)=>{
                   return(
-                    <Route exact path={el.to} component={ ()=>
-                      <SubMenuPannel el={el} nr={nr} theme="light" act={act} admin={admin} />
+                    <Route exact path={el.to} key={`Route${el.inn}`} component={ ()=>
+                      <SubMenuPannel props={{ el, nr, act, admin }} />
                     } />
                   )
                 })
@@ -49,7 +49,7 @@ const Main = ({state, act, admin})=>{
 
     <Switch>
       
-      <Route exact path="/cookie" component={ ()=> <Cookie state={state} theme="light" act={act} admin={admin} /> } />
+      <Route exact path="/cookie" component={ ()=> <Cookie props={{ state, act, admin }} /> } />
 
       {/* <Route path='*' component={ ()=> <Error state={state} act={act} /> } /> */}
 

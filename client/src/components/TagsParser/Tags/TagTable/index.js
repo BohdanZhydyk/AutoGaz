@@ -7,7 +7,7 @@ import { TableRender } from './TableRender'
 import { TableEdit } from './TableEdit'
 
 
-const TagTable = ({ item, theme, index, act, admin })=>{
+const TagTable = ({ props:{ item, index, theme, act, admin } })=>{
 
   const [target, setTarget] = useState(item)
   

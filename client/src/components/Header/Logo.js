@@ -1,11 +1,10 @@
 import React from 'react'
 
 
-export const Logo = ({logo, act, adminObj})=>{
+export const Logo = ({ props:{ logo, act, adminObj } })=>{
 
-  let clickOnLogo = ()=> act({ addr:"admin", type:"OPEN_ADMIN_PANNEL", payload:true })
-
-  let exit = ()=> act({ addr:"admin", type:"EXIT_ADMIN_MODE", payload:false })
+  let OPEN_ADMIN_PANNEL = ()=> act({ addr:"admin", type:"OPEN_ADMIN_PANNEL", payload:true })
+  let EXIT_ADMIN_MODE = ()=> act({ addr:"admin", type:"EXIT_ADMIN_MODE", payload:false })
 
   return(
     <div className="logo flex wrap">
@@ -16,14 +15,14 @@ export const Logo = ({logo, act, adminObj})=>{
 
           <span>{adminObj.messages[0]}</span>
 
-          <button className="exitBtn flex" onClick={ ()=> exit() } >
+          <button className="exitBtn flex" onClick={ ()=> EXIT_ADMIN_MODE() } >
             <span>Zachowac dane i wyjdz</span>
           </button>
 
         </section>
       }
 
-      <span className="logoName" onClick={ ()=> !adminObj.adminMode && clickOnLogo() } >
+      <span className="logoName" onClick={ ()=> !adminObj.adminMode && OPEN_ADMIN_PANNEL() } >
         {logo.name}
       </span>
 

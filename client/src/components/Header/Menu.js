@@ -3,12 +3,12 @@ import React from 'react'
 import { MenuItem } from './MenuItem'
 
 
-export const Menu = ({menu, act, admin})=>{
+export const Menu = ({ props:{ menu } })=>{
   return(
     <nav className="navMenu flex">
     {
-      menu.map( (btn, index)=>
-        <MenuItem btn={btn} act={act} admin={admin} key={`menuItem${index}`} />
+      menu.map( (item, index)=>
+        <MenuItem props={{ item, index }} key={`MenuItem${index+item.inn}`} />
       )
     }
     </nav>

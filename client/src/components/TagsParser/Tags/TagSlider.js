@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { AddTagPannel } from './../AddTagPannel'
 
 
-export const TagSlider = ({ item, theme, index, act, admin })=>{
+export const TagSlider = ({ props:{ item, index, theme, act, admin } })=>{
 
   let initialSlider = {
     active: 0,

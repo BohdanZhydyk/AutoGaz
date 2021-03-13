@@ -7,18 +7,23 @@ import { Copyright } from './Copyright'
 import { CookieLine } from './CookieLine'
 
 
-const Footer = ({state, act, admin})=>{
+const Footer = ({ props:{ state, act, admin } })=>{
+
+  let info = state.footer.info
+  let opened = state.footer.opened
+  let cookieline = state.footer.cookieline
+
   return(
     <footer>
 
       <div className="footerTop flex">
-        <Contacts info={state.footer.info} />
-        <Opened opened={state.footer.opened} />
+        <Contacts info={info} />
+        <Opened opened={opened} />
       </div>
 
-      <Copyright txt={state.footer.info.lines[0].name} act={act} admin={admin} />
+      <Copyright txt={info.lines[0].name} />
 
-      <CookieLine cookieline={state.footer.cookieline} act={act} />
+      <CookieLine props={{ cookieline, act }} />
 
     </footer>
   )

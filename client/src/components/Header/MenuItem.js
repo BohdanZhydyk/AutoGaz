@@ -2,20 +2,20 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 
-export const MenuItem = ({btn})=>{
+export const MenuItem = ({ props:{ item, index } })=>{
   return(
     <div className="menuItem" >
 
-      <NavLink to={btn.to} className="menuBtn flex" >
-        <span>{btn.txt}</span>
+      <NavLink to={item.to} className="menuBtn flex" >
+        <span>{item.txt}</span>
       </NavLink>
 
       <div className="subMenu">
       {
-        btn.subMenu &&
-        btn.subMenu.map( (subBtn, index)=>{
+        item.subMenu &&
+        item.subMenu.map( (subBtn, nr)=>{
           return(
-            <NavLink to={subBtn.to} className="subMenuBtn" key={`subMenuBtn${subBtn.to + index}`} >
+            <NavLink to={subBtn.to} className="subMenuBtn" key={`SubMenuBtn${index+nr}`} >
               <span>{subBtn.txt}</span>
             </NavLink>
           )

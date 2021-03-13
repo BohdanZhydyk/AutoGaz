@@ -4,7 +4,7 @@ import { EditDeletePannel } from './../EditDeletePannel'
 import { AddTagPannel } from './../AddTagPannel'
 
 
-export const TagUl = ({ item, theme, index, act, admin })=>{
+export const TagUl = ({ props:{ item, index, theme, act, admin } })=>{
 
   const [target, setTarget] = useState(item)
 

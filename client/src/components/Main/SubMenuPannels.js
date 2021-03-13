@@ -3,7 +3,7 @@ import React from 'react'
 import { SubMenuPannel } from './SubMenuPannel'
 
 
-export const SubMenuPannels = ({submenu, act, admin})=>{
+export const SubMenuPannels = ({ props:{ submenu, act, admin } })=>{
 
   let theme = "dark"
 
@@ -15,7 +15,7 @@ export const SubMenuPannels = ({submenu, act, admin})=>{
         switch(el.tag){
           case "theme":
             (theme === "light" ? theme = "dark" : theme = "light")
-            return <SubMenuPannel el={el} nr={nr} theme={theme} act={act} admin={admin} />
+            return <SubMenuPannel props={{ el, nr, theme, act, admin }} key={`suMenuPannel${el.inn+nr}`} />
           default: return
         }
       })

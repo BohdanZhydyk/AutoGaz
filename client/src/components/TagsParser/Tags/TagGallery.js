@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 
-export const TagGallery = ({ item, theme, index, act })=>{
+export const TagGallery = ({ props:{ item, index, theme, act, admin } })=>{
 
   let initialGallery = {
     mode: {

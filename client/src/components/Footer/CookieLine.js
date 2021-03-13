@@ -2,9 +2,9 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 
-export const CookieLine = ({cookieline, act})=>{
+export const CookieLine = ({ props:{ cookieline, act } })=>{
 
-  const btnClick = ()=> act({ addr:"footer", type:"COOKIES_ACCEPT", payload:false })
+  const COOKIES_ACCEPT = ()=> act({ addr:"footer", type:"COOKIES_ACCEPT", payload:false })
 
   return(
     <div className="cookie flex" >
@@ -18,7 +18,7 @@ export const CookieLine = ({cookieline, act})=>{
           <span>{cookieline.link.txt}</span>
         </NavLink>
 
-        <span className="btn flex" onClick={ ()=> btnClick() } >
+        <span className="btn flex" onClick={ ()=> COOKIES_ACCEPT() } >
           {cookieline.btn}
         </span>
 

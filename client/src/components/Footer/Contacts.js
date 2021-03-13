@@ -11,12 +11,8 @@ export const Contacts = ({info})=>{
         info.lines.map( (line, index)=>{
           return(
             line.href
-            ?
-            <a className="contactLine" href={line.href} target="_blank" rel="noreferrer" key={`footerContacts${index}`}>
-              {line.name}
-            </a>
-            :
-            <div className="contactLine" key={`footerContacts${index}`}>{line.name}</div>
+            ? <TypeA line={line} key={`footerContacts${index}`} />
+            : <TypeB line={line} key={`footerContacts${index}`} />
           )
         })
       }
@@ -24,3 +20,9 @@ export const Contacts = ({info})=>{
     </div>
   )
 }
+
+const TypeA = ({ line })=>
+  <a className="contactLine" href={line.href} target="_blank" rel="noreferrer"> {line.name}</a>
+  
+const TypeB = ({ line })=>
+  <div className="contactLine">{line.name}</div> 

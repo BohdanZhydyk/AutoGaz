@@ -14,80 +14,80 @@ import { TagSlider } from './Tags/TagSlider'
 import { TagGallery } from './Tags/TagGallery'
 
 
-const TagsParser = ({array, index, theme, act, admin})=>{
+const TagsParser = ({array, nr, theme, act, admin})=>{
   return(
     <>
     {
-      array.map( (item, nr)=>{
+      array.map( (item, index)=>{
 
         switch(item.tag){
-          case "menu":
-            return(
-              <div className="tag" key={`Menu${index.inn}`}>
-                <TagMenu item={item} theme={theme} index={index} act={act} admin={admin} />
-              </div>
-            )
+          // case "menu":
+          //   return(
+          //     <div className="tag" key={item.tag.toUpperCase()+item.inn} >
+          //       <TagMenu props={{ item, index, theme, act, admin }} />
+          //     </div>
+          //   )
           case "theme":
             return(
-              <div className="tag" key={`Theme${index.inn}`}>
-                <TagTheme item={item} theme={theme} index={index} act={act} admin={admin} />
+              <div className="tag" key={item.tag.toUpperCase()+item.inn} >
+                <TagTheme props={{ item, index, theme, act, admin }} />
               </div>
             )
           case "heading":
             return(
-              <div className="tag" key={`Heading${index.inn}`}>
-                <TagHeading item={item} theme={theme} index={index} act={act} admin={admin} />
+              <div className="tag" key={item.tag.toUpperCase()+item.inn} >
+                <TagHeading props={{ item, index, theme, act, admin }} />
               </div>
             )
           case "p":
             return(
-              <div className="tag" key={`Paragraph${index.inn}`}>
-                <TagP item={item} theme={theme} index={index} act={act} admin={admin} />
+              <div className="tag" key={item.tag.toUpperCase()+item.inn} >
+                <TagP props={{ item, index, theme, act, admin }} />
               </div>
             )
           case "img":
             return(
-              <div className="tag" key={`Image${index.inn}`}>
-                <TagImg item={item} theme={theme} index={index} act={act} admin={admin} />
+              <div className="tag" key={item.tag.toUpperCase()+item.inn} >
+                <TagImg props={{ item, index, theme, act, admin }} />
               </div>
             )
           case "ul":
             return(
-              <div className="tag" key={`Ul${index.inn}`}>
-                <TagUl item={item} theme={theme} index={index} act={act} admin={admin} />
+              <div className="tag" key={item.tag.toUpperCase()+item.inn} >
+                <TagUl props={{ item, index, theme, act, admin }} />
               </div>
             )
           case "iframe":
             return(
-              <div className="tag" key={`Iframe${index.inn}`}>
-                <TagIframe item={item} theme={theme} index={index} act={act} admin={admin} />
+              <div className="tag" key={item.tag.toUpperCase()+item.inn} >
+                <TagIframe props={{ item, index, theme, act, admin }} />
               </div>
             )
           case "table":
             return(
-              <div className="tag" key={`Table${index.inn}`}>
-                <TagTable item={item} theme={theme} index={index} act={act} admin={admin} />
+              <div className="tag" key={item.tag.toUpperCase()+item.inn} >
+                <TagTable props={{ item, index, theme, act, admin }} />
               </div>
             )
           case "wrapper":
             return(
-              <div className="tag" key={`Wrapper${index.inn}`}>
-                <TagWrapper item={item} theme={theme} index={index} act={act} admin={admin} />
+              <div className="tag" key={item.tag.toUpperCase()+item.inn} >
+                <TagWrapper props={{ item, index, theme, act, admin }} />
               </div>
             )
           case "slider":
             return(
-              <div className="tag" key={`Slider${index.inn}`}>
-                <TagSlider item={item} theme={theme} index={index} act={act} admin={admin} />
+              <div className="tag" key={item.tag.toUpperCase()+item.inn} >
+                <TagSlider props={{ item, index, theme, act, admin }} />
               </div>
             )
           case "gallery":
             return(
-              <div className="tag" key={`Gallery${index.inn}`}>
-                <TagGallery item={item} theme={theme} index={index} act={act} admin={admin} />
+              <div className="tag" key={item.tag.toUpperCase()+item.inn} >
+                <TagGallery props={{ item, index, theme, act, admin }} />
               </div>
             )
-          default: return <></>
+          default: return
         }
 
       })

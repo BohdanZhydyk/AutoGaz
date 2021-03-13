@@ -5,13 +5,13 @@ import { Logo } from './Logo'
 import { Menu } from './Menu'
 
 
-const Header = ({state, act, admin})=>{
+const Header = ({ props:{ state, act, admin } })=>{
   return(
     <header className="header flex">
 
-      <Menu menu={state.content} act={act} admin={admin} />
+      <Menu props={{ menu:state.content, act, admin }} />
 
-      { state.logo && <Logo logo={state.logo} act={act} adminObj={state.admin} /> }
+      { state.logo && <Logo props={{ logo:state.logo, act, adminObj:state.admin }} /> }
       
     </header>
   )

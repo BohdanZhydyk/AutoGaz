@@ -6,7 +6,7 @@ import { Input } from './Input'
 import { Button } from './Button'
 
 
-const Admin = ({state, act})=>{
+const Admin = ({ props:{ state, act } })=>{
 
   let enter = (e)=>{
     if(e.key === "Enter"){ act({ addr:"admin", type:"CHECK_FOR_ADMIN", payload:true }) }
