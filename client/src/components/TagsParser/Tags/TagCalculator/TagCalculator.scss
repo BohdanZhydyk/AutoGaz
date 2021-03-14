@@ -4,77 +4,116 @@
   width:100%;
   margin:0 0 1vw 0;
 
-  .checkPetrol {
-    width:90%;
-
-    .petrolBtn {
-      width:25%;
-      min-height:2vw;
-      border-top:1px solid $Wht;
-      border-right:1px solid $Wht;
-      border-left:1px solid $Wht;
-      border-bottom:$borderDashedRed;
-      background-color:#ddd9;
-
-      &-active {
-        border-top:$borderDashedRed;
-        border-right:$borderDashedRed;
-        border-left:$borderDashedRed;
-        border-bottom:1px solid #ddd;
-        background-color:#ddd;
-      }
-    }
-  }
-
+  
   .content {
-    position:relative;
     width:100%;
 
-    .ranges {
-      width:95%;
-      background-color:#ddd;
+    .checkFuel {
+      position:relative;
+      top:1px;
+      width:100%;
 
-      .rangeLine {
-        position:relative;
+      .left {
         width:60%;
-        margin:1vw 0 0 0;
-        padding:0.5vw;
 
-        .text {
-          position:absolute;
-          top:0;
-        }
-
-        .petrolName {
-          width:8vw;
+        .btn {
+          width:20%;
           min-height:2vw;
-          border:$borderRed;
-          border-radius:$borderRadius;
-        }
-
-        .line {
-          width:40vw;
-        }
-
-        .priceLine {
-          width:15vw;
-          margin:0 0.5vw;
-          font-size:200%;
-          // background-color:green;
-
-          .price {
-            width:40%;
-            
-            // background-color:red;
-          }
-          .units {
-            margin-left:0.5vw;
-            width:50%;
-            // background-color:yellow;
+          font-weight:bold;
+          background-color:#ddd9;
+          border-top:1px solid $Wht;
+          border-right:1px solid $Wht;
+          border-left:1px solid $Wht;
+          border-bottom:1px solid $Wht;
+          border-radius:$borderRadius $borderRadius 0 0;
+    
+          &-active {
+            min-height:calc(2vw + 1px);
+            background-color:#ddd;
+            border-top:$borderDark;
+            border-right:$borderDark;
+            border-left:$borderDark;
+            border-bottom:1px solid #ddd;
+            z-index:20;
           }
         }
       }
+
+      .right {
+        width:40%;
+
+        span {
+          width:80%;
+          min-height:2vw;
+          font-weight:bold;
+          background-color:#ddd9;
+          border-top:1px solid $Wht;
+          border-right:1px solid $Wht;
+          border-left:1px solid $Wht;
+          border-bottom:1px solid $Wht;
+          border-radius:$borderRadius $borderRadius 0 0;
+        }
+      }
     }
+
+    .pannel {
+      width:100%;
+      background-color:#ddd;
+      border-top:$borderDark;
+      border-right:$borderDark;
+      border-left:$borderDark;
+      border-bottom:$borderDark;
+      border-radius:$borderRadius;
+      z-index:10;
+
+      .ranges {
+        width:60%;
+  
+        .rangeLine {
+          position:relative;
+          width:100%;
+          margin:1vw 0 0 0;
+          padding:0.5vw;
+  
+          .text {
+            position:absolute;
+            top:0;
+          }
+  
+          .name {
+            width:8vw;
+            min-height:2vw;
+            border:$borderRed;
+            border-radius:$borderRadius;
+          }
+  
+          .line {
+            width:50%;
+          }
+  
+          .valueLine {
+            width:15vw;
+            margin:0 0.5vw;
+            font-size:200%;
+  
+            .value {
+              width:40%;
+            }
+            .units {
+              margin-left:0.5vw;
+              width:50%;
+            }
+          }
+        }
+      }
+
+      .results {
+        width:40%;
+      }
+    }
+  
+
+
 
 
     

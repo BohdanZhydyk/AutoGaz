@@ -14,20 +14,20 @@ export const TablePannelEditing = ({ props:{ target, theme, tableFn } })=>{
   let ADD_NEW_LINE = (nr)=> tableFn({ type:"ADD_NEW_LINE", payload:{ nr } })
 
   return(
-    <table className="table">
+    <table className="table"><tbody className="body">
     {
       content.map( (line, nr)=>{
 
         lineColor = !lineColor
         
         return(
-          <tr className="tr flex">
+          <tr className="tr flex" key={`trEdit${nr}`}>
 
             {
               line.map( (item, index)=>
                 nr === 0
-                ? <ThEditing props={{ item, index, nr, width, theme, tableFn }} />
-                : <TdEditing props={{ item, index, nr, width, align, theme, lineColor, tableFn }} />
+                ? <ThEditing props={{ item, index, nr, width, theme, tableFn }} key={`thEdit${nr+index}`} />
+                : <TdEditing props={{ item, index, nr, width, align, theme, lineColor, tableFn }} key={`tdEdit${nr+index}`} />
                 
               )
             }
@@ -38,6 +38,6 @@ export const TablePannelEditing = ({ props:{ target, theme, tableFn } })=>{
         )
       })
     }
-    </table>
+    </tbody></table>
   )
 }

@@ -18,7 +18,7 @@ export const ColumnEditPannel = ({ props:{ target, tableFn } })=>{
     {
       width.map( (oldWidth, nr)=>{
         return(
-          <div className="columnEdit flex column" style={{ width: width[nr]+"%" }} >
+          <div className="columnEdit flex column" style={{ width: width[nr]+"%" }} key={`columnEdit${nr}`} >
 
             <div className="editWidthPannel flex between">
 
@@ -32,10 +32,12 @@ export const ColumnEditPannel = ({ props:{ target, tableFn } })=>{
 
             <div className="editAlignPannel flex">
             {
-              alignBtns.map( (btn)=>{
+              alignBtns.map( (btn, index)=>{
                 let classes = { button:`flex ${align[nr] === btn && `active`}` }
                 return(
-                  <button className={classes.button} onClick={ ()=> COLUMN_ALIGN_EDIT( btn, nr ) } >
+                  <button className={classes.button} key={`newLineBtn${nr+index}`}
+                    onClick={ ()=> COLUMN_ALIGN_EDIT( btn, nr ) }
+                  >
                     {btn}
                   </button>
                 )

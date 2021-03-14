@@ -17,14 +17,14 @@ export const TableRender = ({ props:{ target, theme, act, admin } })=>{
   return(
     <section className="content" onClick={ ()=> admin && EDIT_TAG() } >
 
-      <table className="table">
+      <table className="table"><tbody className="body">
       {
         content.map( (line, nr)=>{
           
           lineColor = !lineColor
 
           return(
-            <tr className={`tr line flex`} key={`Tr${nr}`}>
+            <tr className="tr flex" key={`Tr${nr}`}>
             {
               line.map( (item, index)=>
                 nr === 0
@@ -36,7 +36,7 @@ export const TableRender = ({ props:{ target, theme, act, admin } })=>{
           )
         })
       }
-      </table>
+      </tbody></table>
 
     </section>
   )
