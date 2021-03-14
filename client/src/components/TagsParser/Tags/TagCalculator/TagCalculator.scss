@@ -1,0 +1,155 @@
+@import './../../../../Variables.scss';
+
+.tagCalculator {
+  width:100%;
+  margin:0 0 1vw 0;
+
+  .checkPetrol {
+    width:90%;
+
+    .petrolBtn {
+      width:25%;
+      min-height:2vw;
+      border-top:1px solid $Wht;
+      border-right:1px solid $Wht;
+      border-left:1px solid $Wht;
+      border-bottom:$borderDashedRed;
+      background-color:#ddd9;
+
+      &-active {
+        border-top:$borderDashedRed;
+        border-right:$borderDashedRed;
+        border-left:$borderDashedRed;
+        border-bottom:1px solid #ddd;
+        background-color:#ddd;
+      }
+    }
+  }
+
+  .content {
+    position:relative;
+    width:100%;
+
+    .ranges {
+      width:95%;
+      background-color:#ddd;
+
+      .rangeLine {
+        position:relative;
+        width:60%;
+        margin:1vw 0 0 0;
+        padding:0.5vw;
+
+        .text {
+          position:absolute;
+          top:0;
+        }
+
+        .petrolName {
+          width:8vw;
+          min-height:2vw;
+          border:$borderRed;
+          border-radius:$borderRadius;
+        }
+
+        .line {
+          width:40vw;
+        }
+
+        .priceLine {
+          width:15vw;
+          margin:0 0.5vw;
+          font-size:200%;
+          // background-color:green;
+
+          .price {
+            width:40%;
+            
+            // background-color:red;
+          }
+          .units {
+            margin-left:0.5vw;
+            width:50%;
+            // background-color:yellow;
+          }
+        }
+      }
+    }
+
+
+    
+  //     .line {
+  //     position:relative;
+  //     top:1.7vw;
+  //     min-height:1vw;
+  //     border-radius:0.3vw;
+
+  //     &-light {
+  //       border-top:$borderDark;
+  //       border-bottom:$borderDark;
+  //       border-width:3px;
+  //     }
+  //     &-dark {
+  //       border-top:$borderLight;
+  //       border-bottom:$borderLight;
+  //       border-width:3px;
+  //     }
+  //   }
+
+  //   .text {
+  //     position:relative;
+  //     top:calc(-0.25vw - 6px);
+
+  //     input {
+  //       &:focus {
+  //         color:$fontDark;
+  //         background-color:$lightGry;
+  //       }
+  //     }
+
+  //     &-admin {
+
+  //       &:hover {
+  //         background-color:#f001;
+  //         border-top:$borderDashedRed;
+  //         border-bottom:$borderDashedRed;
+  //       }
+  //     }
+
+  //     .span {
+  //       min-height:2vw;
+  //       padding:0.5vw 2vw;
+  //       font-size:120%;
+  //       font-weight:bold;
+  //       border-radius:$borderRadius;
+  //     }
+
+  //     &-light {
+  //       border-top:$borderLight;
+  //       border-bottom:$borderLight;
+
+  //       .span {
+  //         color:$colorDark;
+  //         background-color:$colorLight;
+  //         border:$borderDark;
+  //       }
+  //     }
+
+  //     &-dark {
+  //       border-top:$borderDark;
+  //       border-bottom:$borderDark;
+
+  //       .span {
+  //         color:$colorLight;
+  //         background-color:$colorDark;
+  //         border:$borderLight;
+  //       }
+  //     }
+  //   }
+  }
+  
+  // .Edit-Delete {
+  //   width:5vw;
+  // }
+
+}

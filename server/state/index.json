@@ -798,17 +798,11 @@
           "txt": "Oblicz korżyści",
           "content": [
             {
-              "tag": "iframe",
-              "inn": 1515456862028,
-              "title": "iframe-gazeo",
-              "style": {
-                "border": "0",
-                "width": "700px",
-                "minHeight": "20vw"
+              "tag": "calculator",
+              "inn": 1415456862028,
+              "content": {
+                "txt": "calkulator"
               },
-              "allowfullscreen": "",
-              "loading": "lazy",
-              "src": "http://gazeo.pl/ajax/widget_preview.php?theme=new2&amp;type=pb&amp;width=800&amp;color1=2&amp;color2=6&amp;color3=7&amp;lang=pl&amp;nomove=1",
               "editing": false
             }
           ],

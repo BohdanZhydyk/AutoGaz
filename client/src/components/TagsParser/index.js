@@ -12,6 +12,7 @@ import TagTable from './Tags/TagTable'
 import { TagWrapper } from './Tags/TagWrapper'
 import { TagSlider } from './Tags/TagSlider'
 import { TagGallery } from './Tags/TagGallery'
+import TagCalculator from './Tags/TagCalculator'
 
 
 const TagsParser = ({array, nr, theme, act, admin})=>{
@@ -85,6 +86,12 @@ const TagsParser = ({array, nr, theme, act, admin})=>{
             return(
               <div className="tag" key={item.tag.toUpperCase()+item.inn} >
                 <TagGallery props={{ item, index, theme, act, admin }} />
+              </div>
+            )
+          case "calculator":
+            return(
+              <div className="tag" key={item.tag.toUpperCase()+item.inn} >
+                <TagCalculator props={{ item, index, theme, act, admin }} />
               </div>
             )
           default: return
