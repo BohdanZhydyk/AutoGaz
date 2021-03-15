@@ -8,13 +8,30 @@ body {
   font-size:$fontSize;
   color:$fontDark;
   background-color:$colorLight;
-  font-family: "Josefin Sans", Helvetica, Arial, sans-serif
-}
+  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
 
-.flex 		{display:flex; justify-content:center; align-items:center;}
-.wrap 		{flex-wrap:wrap;}
-.stretch 	{align-items:stretch;}
-.column		{flex-direction:column;}
-.start		{justify-content:flex-start;}
-.end			{justify-content:flex-end;}
-.between	{justify-content:space-between;}
+  .fullScreenPannel {
+    position:fixed;
+    top:0;
+    z-index:-100;
+    width:100%;
+    min-height:100%;
+  }
+  
+  .size {
+    position:fixed;
+    top:0;
+    left:0;
+    color:#f00;
+    background-color:#111;
+    z-index:1001;
+  }
+
+  .flex 		{display:flex; justify-content:center; align-items:center;}
+  .wrap 		{flex-wrap:wrap;}
+  .stretch 	{align-items:stretch;}
+  .column		{flex-direction:column;}
+  .start		{justify-content:flex-start;}
+  .end			{justify-content:flex-end;}
+  .between	{justify-content:space-between;}
+}

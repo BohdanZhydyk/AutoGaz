@@ -12,6 +12,9 @@ import Footer from './components/Footer'
 import Admin from './components/Admin'
 
 
+import { useResizeDetector } from 'react-resize-detector'
+
+
 function App() {
 
   let admin
@@ -35,17 +38,55 @@ function App() {
     }
   }
 
+  let size = {
+    width:false,
+    height:false,
+    device:false,
+    orientation:false,
+  }
 
+  const { width, height, ref } = useResizeDetector()
+
+  let getSize = (width, height)=>{
+
+    let device = "ESD"
+    if( width >= 600 ){ device = "SD" }
+    if( width >= 768 ){ device = "MD" }
+    if( width >= 992 ){ device = "LD" }
+    if( width > 1200 ){ device = "ELD" }
+
+    let orientation = "landscape"
+    if(width > height){ orientation = "landscape" }
+    else{ orientation = "portrait" }
+
+    size = {
+      width,
+      height,
+      device,
+      orientation
+    }
+
+  }
+  
+  
   return (
     <HashRouter className="App" >
 
-    { state !== "" && <Header props={{ state, act, admin }} /> }
+    <div className="fullScreenPannel" ref={ref}></div>
 
-    { state !== "" && <Main props={{ state, act, admin }} /> }
+      { getSize(width, height) }
 
-    { state !== "" && <Footer props={{ state, act, admin }} /> }
+      { admin && <span className="size">{`${size.device} ${size.orientation} ${size.width}px X ${size.height}px`}</span> }
 
-    { state !== "" && <Admin props={{ state, act }} /> }
+
+
+      { state !== "" && <Header props={{ state, act, admin }} /> }
+
+      { state !== "" && <Main props={{ state, act, admin }} /> }
+
+      { state !== "" && <Footer props={{ state, act, admin }} /> }
+
+      { state !== "" && <Admin props={{ state, act }} /> }
 
     </HashRouter>
   )

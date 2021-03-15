@@ -63,6 +63,9 @@ header {
     color:$colorDark;
 
     .adminMode {
+      position:absolute;
+      top:0;
+      right:0;
       font-size:80%;
       padding:0 0.5vw;
       color:$Wht;
