@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-export const CheckFuel = ({ props: { sets, editing, calcFn } }) => {
+export const CheckFuel = ({ props: { sets, theme, editing, calcFn } }) => {
 
   let CHANGE_FUEL = (nr) => calcFn({ type: "CHANGE_FUEL", payload: { nr } })
 
@@ -12,7 +12,7 @@ export const CheckFuel = ({ props: { sets, editing, calcFn } }) => {
         {
           sets.map((item, index) => {
 
-            let classes = `btn ${item.active && `btn-active`} flex`
+            let classes = `btn btn-${theme} ${item.active && `btn-active btn-active-${theme}`} flex`
 
             return (
               <span
@@ -28,8 +28,8 @@ export const CheckFuel = ({ props: { sets, editing, calcFn } }) => {
         }
       </div>
 
-      <div className="right flex">
-        <span className="flex">Wyniki obliczeń</span>
+      <div className="right flex" >
+        <span className={`btn btn-${theme} flex`} >Wyniki obliczeń</span>
       </div>
 
     </div>

@@ -41,21 +41,29 @@
           width:20%;
           min-height:2vw;
           font-weight:bold;
-          background-color:#ddd9;
-          border-top:1px solid $Wht;
-          border-right:1px solid $Wht;
-          border-left:1px solid $Wht;
-          border-bottom:1px solid $Wht;
           border-radius:$borderRadius $borderRadius 0 0;
+          &-light {
+            border:$borderLight;
+            background-color:rgba(200,200,200, 0.4);
+          }
+          &-dark {
+            background-color:rgba(200,200,200, 0.2);
+            border:$borderDark;
+          }
     
           &-active {
             min-height:calc(2vw + 1px);
-            background-color:#ddd;
-            border-top:$borderDark;
-            border-right:$borderDark;
-            border-left:$borderDark;
-            border-bottom:1px solid #ddd;
             z-index:20;
+            &-light {
+              border:$borderDark;
+              border-bottom:$borderLight;
+              background-color:$colorLight;
+            }
+            &-dark {
+              border:$borderLight;
+              border-bottom:$borderDark;
+              background-color:$colorDark;
+            }
           }
         }
       }
@@ -63,31 +71,38 @@
       .right {
         width:40%;
 
-        span {
+        .btn {
           width:80%;
           min-height:2vw;
           font-weight:bold;
-          background-color:#ddd9;
-          border-top:1px solid $Wht;
-          border-right:1px solid $Wht;
-          border-left:1px solid $Wht;
-          border-bottom:1px solid $Wht;
           border-radius:$borderRadius $borderRadius 0 0;
+          &-light {
+            border:$borderLight;
+            background-color:rgba(200,200,200, 0.4);
+          }
+          &-dark {
+            background-color:rgba(200,200,200, 0.2);
+            border:$borderDark;
+          }
         }
       }
     }
 
     .pannel {
       width:100%;
-      background-color:#ddd;
-      border-top:$borderDark;
-      border-right:$borderDark;
-      border-left:$borderDark;
-      border-bottom:$borderDark;
       border-radius:$borderRadius;
       z-index:10;
+      &-light {
+        border:$borderDark;
+        background-color:$colorLight;
+      }
+      &-dark {
+        border:$borderLight;
+        background-color:$colorDark;
+      }
 
       .ranges {
+        margin:1vw 0;
         width:60%;
   
         .rangeLine {
@@ -130,86 +145,68 @@
 
       .results {
         width:40%;
+        padding:2vw 0;
+
+        table {
+          width:100%;
+
+          tbody {
+            width:90%;
+
+            tr {
+              width:100%;
+  
+              th {
+                margin:0.5vw;
+              }
+              td {
+                margin:0.5vw;
+              }
+              .col0 {
+                width:40%;
+              }
+              .col1 {
+                width:20%;
+              }
+              .col2 {
+                width:20%;
+              }
+            }
+          }
+        }
+
+        .economy {
+          margin:2vw 0;
+          font-size:150%;
+          font-weight:bold;
+
+          .txt {
+            margin:0 5vw 0 0;
+          }
+
+          .value {
+            color:$Red;
+
+            span {
+              font-size:200%;
+            }
+          }
+        }
+
+        .remark {
+          width:90%;
+          border-radius:$borderRadius;
+          &-light {border:$borderDark;}
+          &-dark {border:$borderLight;}
+
+          p {
+            padding:0.5vw;
+            font-size:80%;
+            text-indent:2vw;
+            text-align:justify;
+          }
+        }
       }
     }
-  
-
-
-
-
-    
-  //     .line {
-  //     position:relative;
-  //     top:1.7vw;
-  //     min-height:1vw;
-  //     border-radius:0.3vw;
-
-  //     &-light {
-  //       border-top:$borderDark;
-  //       border-bottom:$borderDark;
-  //       border-width:3px;
-  //     }
-  //     &-dark {
-  //       border-top:$borderLight;
-  //       border-bottom:$borderLight;
-  //       border-width:3px;
-  //     }
-  //   }
-
-  //   .text {
-  //     position:relative;
-  //     top:calc(-0.25vw - 6px);
-
-  //     input {
-  //       &:focus {
-  //         color:$fontDark;
-  //         background-color:$lightGry;
-  //       }
-  //     }
-
-  //     &-admin {
-
-  //       &:hover {
-  //         background-color:#f001;
-  //         border-top:$borderDashedRed;
-  //         border-bottom:$borderDashedRed;
-  //       }
-  //     }
-
-  //     .span {
-  //       min-height:2vw;
-  //       padding:0.5vw 2vw;
-  //       font-size:120%;
-  //       font-weight:bold;
-  //       border-radius:$borderRadius;
-  //     }
-
-  //     &-light {
-  //       border-top:$borderLight;
-  //       border-bottom:$borderLight;
-
-  //       .span {
-  //         color:$colorDark;
-  //         background-color:$colorLight;
-  //         border:$borderDark;
-  //       }
-  //     }
-
-  //     &-dark {
-  //       border-top:$borderDark;
-  //       border-bottom:$borderDark;
-
-  //       .span {
-  //         color:$colorLight;
-  //         background-color:$colorDark;
-  //         border:$borderLight;
-  //       }
-  //     }
-  //   }
   }
-  
-  // .Edit-Delete {
-  //   width:5vw;
-  // }
-
 }

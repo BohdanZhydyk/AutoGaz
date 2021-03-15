@@ -34,6 +34,8 @@
           padding:0.5vw;
           border:$borderDashedRed;
           border-radius:$borderRadius;
+          &-light {background-color:$colorLight;}
+          &-dark {background-color:$colorDark;}
   
           .editWidthPannel {
             width:9vw;

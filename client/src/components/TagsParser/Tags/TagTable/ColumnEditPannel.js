@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-export const ColumnEditPannel = ({ props:{ width, align, tableFn } })=>{
+export const ColumnEditPannel = ({ props:{ width, align, theme, tableFn } })=>{
 
   let sumWidth = 0
     width.map( (oldWidth)=> sumWidth += oldWidth )
@@ -16,7 +16,7 @@ export const ColumnEditPannel = ({ props:{ width, align, tableFn } })=>{
     {
       width.map( (oldWidth, nr)=>{
         return(
-          <div className="columnEdit flex column" style={{ width: width[nr]+"%" }} key={`columnEdit${nr}`} >
+          <div className={`columnEdit columnEdit-${theme} flex column`} style={{ width: width[nr]+"%" }} key={`columnEdit${nr}`} >
 
             <div className="editWidthPannel flex between">
 

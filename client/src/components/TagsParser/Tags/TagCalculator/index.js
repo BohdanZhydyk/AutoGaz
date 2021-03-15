@@ -37,9 +37,9 @@ const TagCalculator = ({ props: { item, index, theme, act, admin } }) => {
 
       <div className="content flex column">
 
-        <CheckFuel props={{ sets, editing, calcFn }} />
+        <CheckFuel props={{ sets, theme, editing, calcFn }} />
 
-        <Pannel props={{ sets, ranges, editing, calcFn }} />
+        <Pannel props={{ sets, ranges, theme, editing, calcFn }} />
 
       </div>
 

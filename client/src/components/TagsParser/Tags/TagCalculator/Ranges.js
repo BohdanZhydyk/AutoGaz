@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-export const Ranges = ({ props:{ set, ranges, editing, calcFn } })=>{
+export const Ranges = ({ props:{ set, ranges, theme, editing, calcFn } })=>{
 
   let CHANGE_VALUE = (name, value) => calcFn({ type: "CHANGE_VALUE", payload: { name, value } })
 
@@ -19,11 +19,8 @@ export const Ranges = ({ props:{ set, ranges, editing, calcFn } })=>{
 
               <span className="name flex">{range.name}</span>
 
-              <input
-                className="line"
-                type="range"
-                min={range.min}
-                max={range.max}
+              <input className="line"
+                type="range" min={range.min} max={range.max}
                 value={(range.value * range.multiplier)}
                 onChange={(e) => CHANGE_VALUE(range.name, e.target.value)}
               />

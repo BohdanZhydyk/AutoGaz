@@ -27,7 +27,6 @@ const TagTable = ({ props:{ item, index, theme, act, admin } })=>{
   let tableFn = ({type, payload})=> tableActions(type, payload, target, setTarget)
 
   let EDIT_TAG = ()=> admin && act({ addr:"admin", type:"EDIT_TAG", payload:{inn} })
-  let ADD_NEW_LINE = (nr)=> tableFn({ type:"ADD_NEW_LINE", payload:{ nr } })
 
   return(
     <section className={`tagTable tagTable-${theme} ${admin && 'tagTable-admin'}`} >
@@ -38,7 +37,7 @@ const TagTable = ({ props:{ item, index, theme, act, admin } })=>{
 
       <div className="tablePannel">
 
-      { editing && <ColumnEditPannel props={{ width, align, tableFn }} /> }
+      { editing && <ColumnEditPannel props={{ width, align, theme, tableFn }} /> }
 
       <table className="table">
       <tbody className="body">
