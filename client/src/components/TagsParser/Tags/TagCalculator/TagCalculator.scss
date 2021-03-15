@@ -3,10 +3,31 @@
 .tagCalculator {
   width:100%;
   margin:0 0 1vw 0;
+  &-admin {
 
+    &:hover {
+      background-color:#f001;
+      border-top:$borderDashedRed;
+      border-bottom:$borderDashedRed;
+    }
+  }
+  &-light {
+    border-top:$borderLight;
+    border-bottom:$borderLight;
+  }
+  &-dark {
+    border-top:$borderDark;
+    border-bottom:$borderDark;
+  }
+
+  .header {
+    padding:0.5vw 0;
+    font-size:150%;
+    font-weight:bold;
+  }
   
   .content {
-    width:100%;
+    width:98%;
 
     .checkFuel {
       position:relative;

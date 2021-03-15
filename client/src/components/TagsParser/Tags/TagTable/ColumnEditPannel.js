@@ -1,10 +1,8 @@
 import React from 'react'
 
 
-export const ColumnEditPannel = ({ props:{ target, tableFn } })=>{
+export const ColumnEditPannel = ({ props:{ width, align, tableFn } })=>{
 
-  let align = target.align
-  let width = target.width
   let sumWidth = 0
     width.map( (oldWidth)=> sumWidth += oldWidth )
 
@@ -33,7 +31,9 @@ export const ColumnEditPannel = ({ props:{ target, tableFn } })=>{
             <div className="editAlignPannel flex">
             {
               alignBtns.map( (btn, index)=>{
+
                 let classes = { button:`flex ${align[nr] === btn && `active`}` }
+                
                 return(
                   <button className={classes.button} key={`newLineBtn${nr+index}`}
                     onClick={ ()=> COLUMN_ALIGN_EDIT( btn, nr ) }

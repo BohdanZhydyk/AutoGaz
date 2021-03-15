@@ -14,8 +14,6 @@ export const SubMenuPannel = ({ props:{ el, nr, theme="light", act, admin } })=>
 
         { el.content && <TagsParser array={el.content} nr={nr} theme={theme} act={act} admin={admin} /> }
 
-        { admin && <AddTagPannel theme={theme} /> }
-
       </div>
 
     </div>

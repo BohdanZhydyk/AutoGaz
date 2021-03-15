@@ -22,93 +22,101 @@
   .content {
     width:100%;
 
-    .columnEditPannel {
+    .tablePannel {
       width:90vw;
-      margin-left:-5vw;
 
-      .columnEdit {
-        margin:0 0.5vw;
-        padding:0.5vw;
-        border:$borderDashedRed;
-        border-radius:$borderRadius;
-
-        .editWidthPannel {
-          width:9vw;
-
-        }
-
-        .editAlignPannel {
-          margin:0.5vw 0 0 0;
-
-          button {
-            width:33%;
-            margin:0 1px;
-            color:$Wht;
-            background-color:$Org;
-            &:hover {background-color:$Red;}
+      .columnEditPannel {
+        width:90vw;
+        margin-left:-1vw;
+  
+        .columnEdit {
+          margin:0 0.5vw;
+          padding:0.5vw;
+          border:$borderDashedRed;
+          border-radius:$borderRadius;
+  
+          .editWidthPannel {
+            width:9vw;
           }
-
-          .active {
-            background-color:$Grn;
-            &:hover {background-color:$lightGrn;}
+  
+          .editAlignPannel {
+            margin:0.5vw 0 0 0;
+  
+            button {
+              width:33%;
+              margin:0 1px;
+              color:$Wht;
+              background-color:$Org;
+              &:hover {background-color:$Red;}
+            }
+  
+            .active {
+              background-color:$Grn;
+              &:hover {background-color:$lightGrn;}
+            }
           }
         }
       }
-    }
 
-    .table {
-      width:90vw;
-
-      .body {
+      .table {
         width:100%;
-    
-        .th {
-          min-height:2vw;
-          margin:1px;
-          padding:0 1vw;
-          font-weight:bold;
-          border:$borderDark;
-          border-radius:$borderRadius;
-          &-light {
-            color:$fontLight;
-            background-color:$colorDark;
+
+        .body {
+          width:100%;
+      
+          .th {
+            min-height:2vw;
+            margin:1px;
+            padding:0 1vw;
+            font-weight:bold;
+            border:$borderDark;
+            border-radius:$borderRadius;
+            &-light {
+              color:$fontLight;
+              background-color:$colorDark;
+            }
+            &-dark {
+              color:$fontDark;
+              background-color:$colorLight;
+            }
           }
-          &-dark {
+          
+          .td {
+            min-height:1.5vw;
+            margin:1px;
+            padding:0 1vw;
             color:$fontDark;
-            background-color:$colorLight;
+            border-radius:$borderRadius;
+            &-light {border:$borderDark;}
+            &-dark {border:$borderLight;}
+          }
+
+          .plus {
+            width:1.5vw;
+            min-height:1vw;
+            margin:0 0 0 0.5vw;
+            color:$Org;
+            border-radius:$borderRadius;
+            &-light {border:$borderDark;}
+            &-dark {border:$borderLight;}
+          }
+
+          .colorOne {
+            &-light {background-color:colorOneLight;}
+            &-dark {background-color:$colorOneDark;}
+          }
+
+          .colorTwo {
+            &-light {background-color:$colorTwoLight;}
+            &-dark {background-color:$colorTwoDark;}
           }
         }
-        
-        .td {
-          min-height:1.5vw;
-          margin:1px;
-          padding:0 1vw;
-          color:$fontDark;
-          border-radius:$borderRadius;
-          &-light {border:$borderDark;}
-          &-dark {border:$borderLight;}
+      
+        input {
+          width:90%;
+          padding:0 0.5vw;
+          border:none;
         }
-
-        button {
-          margin:0 0 0 0.5vw;
-          color:$Org;
-        }
-
-        .colorOne {
-          &-light {background-color:colorOneLight;}
-          &-dark {background-color:$colorOneDark;}
-        }
-
-        .colorTwo {
-          &-light {background-color:$colorTwoLight;}
-          &-dark {background-color:$colorTwoDark;}
-        }
-      }
-    
-      input {
-        width:90%;
-        padding:0 0.5vw;
-        border:none;
       }
     }
   }
